@@ -1,0 +1,36 @@
+html, body {
+	font-family: Menlo, Helvetica, sans-serif;
+	height: 100%;
+	margin: 2%;
+	padding: 0;
+	font-size: 13px;
+	color: #E5E9F0; /*colore*/
+}
+
+.wrapper {
+	background-color: #fff; /*colore*/
+	color: #444; /*colore*/
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 30px;
+	grid-column-gap: 10px;
+}
+
+.box {
+	background-color: green; /*colore*/
+	color: #ffffff; /*colore*/
+	padding: 5px;
+	text-align: center;
+}
+
+.a {
+
+}
+
+.b {
+
+}
+
+.c {
+
+}
