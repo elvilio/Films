@@ -4,10 +4,13 @@
   "main": "index.js",
   "author": "aziis98 <antonio.delucreziis@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "stylus": "^0.54.5"
-  },
+  "devDependencies": {},
   "scripts": {
-    "build": "stylus ./client/styles/main.styl -o ./client/styles/main.css"
+    "dev:client": "http-server ./server/client",
+    "start": "node ./server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "ramda": "^0.25.0"
   }
 }

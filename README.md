@@ -1,6 +1,22 @@
 # Maquindi Films
 
-## API End Points
+## All Api Routes
+
+### GET /users
+
+### GET /user
+
+### GET /films
+
+#### POST /films/add
+
+#### POST /films/vote
+
+### POST /login
+
+### GET /apikeys
+
+## Vendor API End Points
 
 ### Search
 
@@ -13,3 +29,4 @@
 ### Film Image
 
 	`http://image.tmdb.org/t/p/w${ imageWidth }/${ imagePath }`
+
