@@ -30,22 +30,23 @@ body {
 }
 
 .img1 {
-
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
 	background-size: cover;
 	
 	-webkit-transition: background-image 4s ease-in-out;
-	-moz-transition: background-image 4s ease-in-out;
 	transition: background-image 4s ease-in-out;
-
+	
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	-webkit-filter: blur(5px); /* Safari */
 	filter: blur(5px);
+	-webkit-filter: grayscale(50%); /* Safari */
+    filter: grayscale(50%);
 	z-index: -100;
 }
 
