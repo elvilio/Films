@@ -1,6 +1,8 @@
 
 # Created by https://www.gitignore.io/api/web,node
 
+.DS_Store
+
 ### Node ###
 # Logs
 logs
@@ -60,5 +62,7 @@ typings/
 
 # dotenv environment variables file
 .env
+
+*.store.json
 
 # End of https://www.gitignore.io/api/web,node
