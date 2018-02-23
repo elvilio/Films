@@ -18,3 +18,15 @@ const app = new Vue({
 		this.username = localStorage.getItem('maquindi-films-username');
 	}
 })
+
+const apph2 = new Vue({
+
+	el:'#apph2',
+	data: {
+		username: '',
+	},
+
+	created() {
+		this.username = localStorage.getItem('maquindi-films-username');
+	}
+})
