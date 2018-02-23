@@ -1,38 +1,23 @@
-const apph2 = new Vue({
-
-	el:'#apph2',
-	data: {
-		username: '',
-	},
-
-	created() {
-		this.username = localStorage.getItem('maquindi-films-username');
-	}
-})
-
 const app = new Vue({
-	el: '#app',
+	el: '.cont',
 	data: {
 		films: [],
 		username: '',
 	},
-
+	created() {
+		// request from server at /api/films
+		this.getJSONFilms();
+		this.username = localStorage.getItem('maquindi-films-username');
+	},
 	methods: {
-		async getJSONfilm() {
-			try {
-				const {data:{json:{film}}} = await axios.get('http://localhost:8000/api/films');
-				return film;
-			}
-			catch (error) {
-				console.log(error);
-				return [];
-			}
-		},
-
-		created() {
-			// request from server at /api/films
-			this.films = this.getJSONfilm();
-			this.username = localStorage.getItem('maquindi-films-username');
+		getJSONFilms() {
+			axios.get('/api/films')
+				.then(res => {
+					this.films = res.data;
+				})
+				.catch(err => {
+					throw err;	
+				});
 		}
 	}
 })

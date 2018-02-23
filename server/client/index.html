@@ -29,15 +29,16 @@
 		<main id="app" class="scatola film">
 			<ul class="film-list">
 				<li class="film-item" v-for="film in films">
-					{{film}} --- {{film.votes}}
+					{{ JSON.stringify(film) }} --- {{film.votedBy.length}}
 				</li>
 			</ul>
 		</main>
 	</div>
 
 
-	<!-- VueJS -->
+	<!-- VueJS & Axios -->
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<!-- Custom JS -->
 	<script src="./index.js"></script>
 	<script src="./sfondo.js"></script>
