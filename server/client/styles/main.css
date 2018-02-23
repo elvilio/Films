@@ -4,33 +4,49 @@ html, body {
 	margin: 2%;
 	padding: 0;
 	font-size: 13px;
-	color: #E5E9F0; /*colore*/
+	color: #4C578E;
+}
+
+body {
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	background-size: cover;
+	
+	-webkit-transition: background-image 4s ease-in-out;
+	-moz-transition: background-image 4s ease-in-out;
+	transition: background-image 4s ease-in-out;
 }
 
 .wrapper {
-	background-color: #fff; /*colore*/
-	color: #444; /*colore*/
+	background-color: rgba(0, 0, 0, 0);
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 30px;
 	grid-column-gap: 10px;
+	justify-items: stretch;
+	grid-template-areas: 
+		"a c b";
 }
 
 .box {
-	background-color: green; /*colore*/
-	color: #ffffff; /*colore*/
+	background-color: rgba(232, 160, 44, 0.8); /*colore*/
 	padding: 5px;
+	padding-top: 7px;
 	text-align: center;
 }
 
-.a {
-
+.wrapper .active {
+	background-color: rgba(214, 255, 76, 0.8);
 }
 
-.b {
+.a { grid-area: a; }
 
-}
+.b { grid-area: b; }
 
-.c {
+.c { grid-area: c; }
 
+a:link, a:visited {
+	text-decoration: none;
+	color: #4C578E;
 }
