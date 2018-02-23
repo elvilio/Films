@@ -31,7 +31,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 30px;
-	grid-column-gap: 10px;
+	grid-column-gap: 0px;
 	justify-items: stretch;
 	grid-template-areas: 
 		"a c b";
@@ -40,7 +40,7 @@ body {
 }
 
 .box {
-	background-color: #EE562285; /*colore*/
+	background-color: #EE562285;
 	padding: 5px;
 	padding-top: 7px;
 	text-align: center;
@@ -69,7 +69,7 @@ a:link, a:visited {
 .form {
 	position: relative;
 	z-index: 1;
-	background: #fff;
+	background: #FFFFFF;
 	max-width: 360px;
 	padding: 30px;
 	text-align: center;
@@ -78,7 +78,7 @@ a:link, a:visited {
 
 .form input {
 	outline: 0;
-	background: #FFFEF8;
+	background: #F7F4EE;
 	width: 100%;
 	border: 0;
 	margin: 0 0 15px;
@@ -88,10 +88,9 @@ a:link, a:visited {
 }
 
 .form button {
-	font-family: Menlo, sans-serif;
 	text-transform: uppercase;
 	outline: 0;
-	background: #4CAF50;
+	background: #44355B;
 	width: 100%;
 	border: 0;
 	padding: 15px;
@@ -103,5 +102,5 @@ a:link, a:visited {
 }
 
 .form button:hover,.form button:active,.form button:focus {
-	background: #43A047;
+	background: #422174;
 }

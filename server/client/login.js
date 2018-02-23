@@ -15,3 +15,7 @@ const app = new Vue({
 		}
 	}
 })
+
+function send(){
+	return document.getElementById("username").value
+}
