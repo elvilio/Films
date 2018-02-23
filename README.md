@@ -4,17 +4,25 @@
 
 ### GET /users
 
-### GET /user
+ok
+
+### (AUTH) GET /user/:id
+
+ok
 
 ### GET /films
 
-#### POST /films/add
+ok
 
-#### POST /films/vote
+#### (AUTH) POST /films/add
+
+#### (AUTH) POST /films/vote
 
 ### POST /login
 
 ### GET /apikeys
+
+ok
 
 ## Vendor API End Points
 
@@ -32,7 +40,8 @@
 
 	
 
-####todo:
+## TODO
+
 4 pagine html:
 
 	--> FILMS che lista: 4 film da votare, tutti i film che sono da vedere,

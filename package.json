@@ -4,13 +4,18 @@
   "main": "index.js",
   "author": "aziis98 <antonio.delucreziis@gmail.com>",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  },
   "scripts": {
     "dev:client": "http-server ./server/client",
     "start": "node ./server/index.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "moment": "^2.20.1",
     "ramda": "^0.25.0"
   }
 }
