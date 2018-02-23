@@ -8,29 +8,38 @@ html, body {
 }
 
 .wrapper {
-	background-color: #fff; /*colore*/
+	background-color: #ffffff;
 	color: #444; /*colore*/
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 30px;
 	grid-column-gap: 10px;
+	justify-items: stretch;
+	grid-template-areas: 
+		"a c b";
 }
 
 .box {
-	background-color: green; /*colore*/
-	color: #ffffff; /*colore*/
+	background-color: #E8A02C; /*colore*/
+	color: black; /*colore*/
+	
 	padding: 5px;
 	text-align: center;
 }
 
 .a {
-
+	grid-area: a;
 }
 
 .b {
-
+	grid-area: b;
 }
 
 .c {
+	grid-area: c;
+}
 
+
+.background_image {
+	background-image: url('./Photos/fern.jpg');
 }

@@ -7,32 +7,34 @@
 	<title>Home | Maquindi Film</title>
 	
 	<!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet"> -->
 	<!-- Custom Css -->
 	<link rel="stylesheet" href="./styles/main.css">
 
 </head>
 <body>
-	<div class="wrapper">
-		<div class="box a"><a href="/"><div>Home</div></a></div>
-		<div class="box b"><a href="/login"><div>Login</div></a></div>
-		<div class="box c"><a href="/"><div>Add New Film</div></a></div>
+	<div class="background_image">
+		<div class="wrapper">
+			<div class="box a"><a href="/"><div>Home</div></a></div>
+			<div class="box b"><a href="/login"><div>Login</div></a></div>
+			<div class="box c"><a href="/"><div>Add New Film</div></a></div>
+		</div>
+
+		<main id="app">
+			<h1>Films</h1>
+
+			<ul class="film-list">
+				<li class="film-item" v-for="film in films">
+					{{film.name}} --- {{film.votes}}
+				</li>
+			</ul>
+
+		</main>
+
+		<!-- VueJS -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<!-- Custom JS -->
+		<script src="./index.js"></script>
 	</div>
-
-	<main id="app">
-		<h1>Films</h1>
-
-		<ul class="film-list">
-			<li class="film-item" v-for="film in films">
-				{{film.name}} --- {{film.votes}}
-			</li>
-		</ul>
-
-	</main>
-
-	<!-- VueJS -->
-	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-	<!-- Custom JS -->
-	<script src="./index.js"></script>
 </body>
 </html>
