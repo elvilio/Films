@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home | Maquindi Film</title>
+	
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
+	<!-- Custom Css -->
+	<link rel="stylesheet" href="./styles/main.css">
+
+</head>
+<body>
+	
+	<nav>
+		<a class="nav-item" href="/">Home</a>
+		<a class="nav-item" href="/login">Login</a>
+	</nav>
+
+	<main id="app">
+
+		<h1>Films</h1>
+
+		<ul class="film-list">
+			<li class="film-item" v-for="film in films">
+				{{film.name}} --- {{film.votes}}
+			</li>
+		</ul>
+
+	</main>
+
+	<!-- VueJS -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<!-- Custom JS -->
+	<script src="/index.js"></script>
+</body>
+</html>

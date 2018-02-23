@@ -1,0 +1,13 @@
+{
+  "name": "maquindi-films",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "aziis98 <antonio.delucreziis@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "stylus": "^0.54.5"
+  },
+  "scripts": {
+    "build": "stylus ./client/styles/main.styl -o ./client/styles/main.css"
+  }
+}
