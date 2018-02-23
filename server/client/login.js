@@ -1,8 +1,9 @@
 const app = new Vue({
 	
-	el: '#app',
+	el: '#login',
 	data: {
 		films: [],
+		username: "",
 	},
 
 	created() {
@@ -13,9 +14,13 @@ const app = new Vue({
 				"addedBy": "aziis98",
 			},
 		}
+	},
+
+	methods: {
+		log_in: function (event) {
+			localStorage.setItem('maquindi-films-username', this.username);
+			console.log('fglsnhgfd');
+		},
 	}
 })
 
-function send(){
-	return document.getElementById("username").value
-}

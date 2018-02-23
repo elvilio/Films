@@ -3,6 +3,7 @@ const app = new Vue({
 	el: '#app',
 	data: {
 		films: [],
+		username: '',
 	},
 
 	created() {
@@ -13,5 +14,7 @@ const app = new Vue({
 				"addedBy": "aziis98",
 			},
 		}
+
+		this.username = localStorage.getItem('maquindi-films-username');
 	}
 })

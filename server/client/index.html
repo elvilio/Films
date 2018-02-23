@@ -12,28 +12,30 @@
 	<link rel="stylesheet" href="./styles/main.css">
 
 </head>
-<body id="img1" background="">
-	<div class="wrapper">
-		<div class="box a active"><a href="#"><div>Home</div></a></div>
-		<div class="box b"><a href="/login"><div>Login</div></a></div>
-		<div class="box c"><a href="/addfilm"><div>Add New</div></a></div>
-	</div>
+<body>
+	<div class="img1" id="img1" background=""></div>
+		<div class="wrapper">
+			<div class="box a active"><a href="#"><div>Home</div></a></div>
+			<div class="box b"><a href="/login"><div>Login</div></a></div>
+			<div class="box c"><a href="/addfilm"><div>Add New</div></a></div>
+		</div>
 
-	<main id="app">
-		<h1>Films</h1>
+		<main id="app">
+			<h1>Films</h1>
+			<h2>Ciao {{username}}</h2>
 
-		<ul class="film-list">
-			<li class="film-item" v-for="film in films">
-				{{film.name}} --- {{film.votes}}
-			</li>
-		</ul>
+			<ul class="film-list">
+				<li class="film-item" v-for="film in films">
+					{{film.name}} --- {{film.votes}}
+				</li>
+			</ul>
 
-	</main>
+		</main>
 
-	<!-- VueJS -->
-	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-	<!-- Custom JS -->
-	<script src="./index.js"></script>
-	<script src="./sfondo.js"></script>
+		<!-- VueJS -->
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<!-- Custom JS -->
+		<script src="./index.js"></script>
+		<script src="./sfondo.js"></script>
 </body>
 </html>

@@ -9,10 +9,12 @@
 	<!-- Fonts -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet"> -->
 	<!-- Custom Css -->
+	<link rel="stylesheet" href="./styles/main.css">
 	<link rel="stylesheet" href="./styles/login.css">
 	
 </head>
-<body  id="img1" background="">
+<body>
+	<div class="img1" id="img1" background=""></div>
 	<div class="wrapper">
 		<div class="box a"><a href="/"><div>Home</div></a></div>
 		<div class="box b active"><a href="#"><div>Login</div></a></div>
@@ -21,10 +23,10 @@
 
 	<div id="login" class="login-page">
 		<div class="form">
-			<form class="login-form">
-				<input id="username" type="text" placeholder="username"/>
-				<button onclick="send();">login</button>
-			</form>
+			<div class="login-form">
+				<input type="text" placeholder="username" v-model="username"/>
+				<button v-on:click="log_in">login</button>
+			</div>
 		</div>
 	</div>
 
