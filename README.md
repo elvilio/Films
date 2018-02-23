@@ -16,9 +16,15 @@ ok
 
 #### (AUTH) POST /films/add
 
+ok
+
 #### (AUTH) POST /films/vote
 
+ok
+
 ### POST /login
+
+ehm...
 
 ### GET /apikeys
 

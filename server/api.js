@@ -24,7 +24,7 @@ router.get('/films', (req, res) => {
 
 router.post('/film/add', (req, res) => {
 
-	let { filmID, userID, addedOn, external } = req.body;
+	let { filmID, userID, addedOn, external, name } = req.body;
 
 	if (storeManager.store.films[filmID]) {
 		res.status(410).json('film already present!')
@@ -43,18 +43,23 @@ router.post('/film/add', (req, res) => {
 		if (!external) {
 			axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?api_key=${ API_KEYS.imdb }`)
 				.then(req => {
+					// retrive name and image and save the store to disk
 					storeManager.store.films[filmID].name = req.data.title;
 					storeManager.store.films[filmID].image = req.data.poster_path;
+					storeManager.saveStore();
 					res.sendStatus(200);
 				})
 				.catch(err => {
 					console.log('Error during request for "' + filmID + '" provided by user ' + storeManager.store.users[userID]);
 					res.sendStatus(500);
 				});
-
+		}
+		else {
+			// adds the name passed by the user and saves the store to disk
+			storeManager.store.films[filmID].name = name;
+			storeManager.saveStore();
 		}
 
-		storeManager.saveStore();
 	}
 
 });
@@ -93,12 +98,23 @@ router.get('/users', (req, res) => {
 });
 
 router.get('/user/:id', (req, res) => {
-	
+
+	let authUserID = req.query.auth;
+
 	let userID = req.params.id;
 	let user = storeManager.store.users[userID];
-	let reducedUser = R.pick(['id', 'name'], user);
+	
+	if (authUserID === userID) {
+		res.json(user);
+	}
+	else if (user) {
+		let reducedUser = R.pick(['id', 'name'], user);
+		res.json(reducedUser);
+	}
+	else {
+		res.sendStatus(404);
+	}
 
-	res.json(reducedUser);
 });
 
 router.get('/apikey', (req, res) => {
