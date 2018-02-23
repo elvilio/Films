@@ -9,21 +9,29 @@
 	<!-- Fonts -->
 	<!-- <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet"> -->
 	<!-- Custom Css -->
-	<link rel="stylesheet" href="./styles/main.css">
+	<link rel="stylesheet" href="./styles/login.css">
+	
 </head>
-<body  id="img1" background="./photos/w1.jpg">
+<body  id="img1" background="">
 	<div class="wrapper">
 		<div class="box a"><a href="/"><div>Home</div></a></div>
 		<div class="box b active"><a href="#"><div>Login</div></a></div>
-		<div class="box c"><a href="/newfilm"><div>Add New</div></a></div>
+		<div class="box c"><a href="/addfilm"><div>Add New</div></a></div>
 	</div>
 
-	<h1>Login</h1>
-	<h2>WORK IN PROGRESS</h2>
+	<div id="login" class="login-page">
+		<div class="form">
+			<form class="login-form">
+				<input type="text" placeholder="username"/>
+				<button>login</button>
+			</form>
+		</div>
+	</div>
 
 	<!-- VueJS -->
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	<!-- Custom JS -->
-	<script src="./index.js"></script>
+	<script src="./login.js"></script>
+	<script src="./sfondo.js"></script>
 </body>
 </html>
