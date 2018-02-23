@@ -5,7 +5,7 @@ const app = express();
 // Website Routes
 
 app.get('/', (req, res) => {
-	res.sendFile('./server/client/index.html');
+	res.sendFile(__dirname + '/client/index.html');
 });
 
 // API Things
