@@ -72,3 +72,5 @@ server/client/.DS_Store
 .vscode/
 .DS_Store
 server/client/.DS_Store
+
+*.apikey
