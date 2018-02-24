@@ -55,7 +55,7 @@ body {
 .box a {
 }
 
-.img1 {
+.img1, .img2 {
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
@@ -66,31 +66,18 @@ body {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	filter: blur(5px) grayscale(50%);
+	filter: blur(5px);
 
 	transform: scale(1.03); /* per fixare il bordo sullo sfondo */
+}
 
+.img1 {
 	z-index: -90;
 	opacity: 100;
 	transition: opacity 4s ease-in-out;
 }
 
 .img2 {
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-attachment: fixed;
-	background-size: cover;
-	
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	filter: blur(5px) grayscale(50%);
-	
-	transform: scale(1.03); /* per fixare il bordo sullo sfondo */
-	
-	opacity: 60;
 	z-index: -100;
 }
 
