@@ -66,5 +66,7 @@ typings/
 *.store.json
 
 # End of https://www.gitignore.io/api/web,node
+
 server/client/.DS_Store
 .DS_Store
+.vscode/
