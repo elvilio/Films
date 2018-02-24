@@ -74,11 +74,12 @@ body {
 .img1 {
 	z-index: -90;
 	opacity: 1;
+	transition: opacity 4s ease-in-out;
 }
 
 .img2 {
 	z-index: -100;
-	opacity: 0;
+	opacity: 1;
 }
 
 

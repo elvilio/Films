@@ -47,29 +47,21 @@ let getNextImage = () => {
 
 async function change_image_2() {
 
-	// La foto visibile farà la transizione, l'altra no
-	$img1.style.transition = 'opacity 4s ease-in-out';
-	$img2.style.transition = '';
-
-	// Prepara la nuova immagine in background
 	setImage($img2, getNextImage());
 
 	await sleep(WAIT_TIME);
 
-	// L'immagine sullo sfondo diventa subito visibile, mentre l'altra fa una transizione
 	$img1.style.opacity = 0.0;
-	$img2.style.opacity = 1.0;
 
 	await sleep(4000);
 
-	// Swappa le immagini
-	$img2.style.zIndex = -80;
-	$img1.style.zIndex = -100;
-	$img2.style.zIndex = -90;
+	setImage($img1, getNextImage());
 
-	let $tmp = $img1;
-	$img1 = $img2;
-	$img2 = $tmp;
+	await sleep(WAIT_TIME);
+
+	$img1.style.opacity = 1.0;
+
+	await sleep(4000);
 
 	change_image_2();
 
