@@ -16,6 +16,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
+	overflow: hidden; /* per fixare il bordo sullo sfondo */
 }
 
 .wrapper {
@@ -66,6 +68,8 @@ body {
 	right: 0;
 	filter: blur(5px) grayscale(50%);
 
+	transform: scale(1.03); /* per fixare il bordo sullo sfondo */
+
 	z-index: -90;
 	opacity: 100;
 	transition: opacity 4s ease-in-out;
@@ -83,6 +87,8 @@ body {
 	left: 0;
 	right: 0;
 	filter: blur(5px) grayscale(50%);
+	
+	transform: scale(1.03); /* per fixare il bordo sullo sfondo */
 	
 	opacity: 60;
 	z-index: -100;
