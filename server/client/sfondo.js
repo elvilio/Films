@@ -5,7 +5,7 @@ function sleep(ms) {
 let $img1 = document.querySelector(".img1");
 let $img2 = document.querySelector(".img2");
 
-const WAIT_TIME = 5000; // 50000
+const WAIT_TIME = 50000; // 50000
 
 let setImage = ($img, url) => {
 	$img.style.backgroundImage = url;
