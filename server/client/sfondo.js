@@ -10,7 +10,7 @@ async function change_image(){
 	}
 
 	await sleep(2500);
-	var img="url(./photos/w"+i+'.jpg)'
+	var img="url(./photos/w"+i+'@small.jpg)'
 	document.querySelector(".img2").style.backgroundImage=img;
 	await sleep(2500);
 
