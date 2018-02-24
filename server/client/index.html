@@ -16,7 +16,8 @@
 	<div class="img1" id="img1" background=""></div>
 	<div class="wrapper">
 		<div class="box a active"><a href="#"><div>Home</div></a></div>
-		<div class="box b"><a href="/login"><div>Login</div></a></div>
+		<div v-if="username" id="cont" class="box b" ><div>Hello {{username}}</div></div>
+		<div v-else class="box b" id="cont"><a href="/login"><div>Login</div></a></div>
 		<div class="box c"><a href="/addfilm"><div>Add New</div></a></div>
 	</div>
 
@@ -27,11 +28,12 @@
 		<h2 id="apph2" class="scatola due">Ciao {{username}} </h2>
 
 		<main id="app" class="scatola film">
-			<ul class="film-list">
-				<li class="film-item" v-for="film in films">
-					{{ JSON.stringify(film) }} --- {{film.votedBy.length}}
-				</li>
-			</ul>
+			<div class="film-list">
+				<div class="film-item sctl" v-for="film in films">
+					<div class="filmName">{{JSON.stringify(film.name)}} </div>
+					<div class="filmRating">{{film.votedBy.length}} </div>
+				</div>
+			</div>
 		</main>
 	</div>
 
