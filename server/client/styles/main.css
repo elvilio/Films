@@ -3,7 +3,8 @@
 }
 
 html, body {
-	font-family: Menlo, Helvetica, sans-serif;
+	/* Monospace di riserva */
+	font-family: Menlo, Helvetica, 'Inconsolata', sans-serif;
 	height: 100%;
 	margin: 0px;
 	padding: 10px;

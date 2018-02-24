@@ -7,35 +7,43 @@
 	<title>Home | Maquindi Film</title>
 	
 	<!-- Fonts -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<!-- Custom Css -->
 	<link rel="stylesheet" href="./styles/main.css">
 	<link rel="stylesheet" href="./styles/films.css">
 </head>
 <body>
-	<div class="img1" id="img1" background=""></div>
-	<div class="wrapper">
-		<div class="box a active"><a href="#"><div>Home</div></a></div>
-		<div v-if="username" id="cont" class="box b" ><div>Hello {{username}}</div></div>
-		<div v-else class="box b" id="cont"><a href="/login"><div>Login</div></a></div>
-		<div class="box c"><a href="/addfilm"><div>Add New</div></a></div>
-	</div>
+	<main id="app">
 
+		<div class="img1" id="img1" background=""></div>
 
-	<div class="cont">
-
-		<h1 class="scatola uno">Films</h1>
-		<h2 id="apph2" class="scatola due">Ciao {{username}} </h2>
-
-		<main id="app" class="scatola film">
-			<div class="film-list">
-				<div class="film-item sctl" v-for="film in films">
-					<div class="filmName">{{JSON.stringify(film.name)}} </div>
-					<div class="filmRating">{{film.votedBy.length}} </div>
+		<div class="wrapper">
+			<div class="box a active"><a href="#"><div>Home</div></a></div>
+			<div v-if="username" class="box b" >
+				<!-- Dato che questo non era un link lo posizionava male -->
+				<a href="#"><div>Hello {{username}}</div></a>
+			</div>
+			<div v-else class="box b">
+				<a href="/login"><div>Login</div></a>
+			</div>
+			<div class="box c"><a href="/addfilm"><div>Add New</div></a></div>
+		</div>
+		
+		<div class="cont">
+			
+			<h1 class="scatola uno">Films</h1>
+			<h2 v-if="username" class="scatola due">Ciao {{username}}</h2>
+			
+			<div class="scatola film">
+				<div class="film-list">
+					<div class="film-item sctl" v-for="film in films">
+						<div class="filmName">{{ film.name }} </div>
+						<div class="filmRating">{{ film.votedBy.length }} </div>
+					</div>
 				</div>
 			</div>
-		</main>
-	</div>
+		</div>
+	</main>
 
 
 	<!-- VueJS & Axios -->
