@@ -14,7 +14,9 @@
 	
 </head>
 <body>
-	<div class="img1" id="img1" background=""></div>
+	<div class="img1" id="img1" background="./photos/w1@small.jpg"></div>
+	<div class="img2" id="img2" background="./photos/w1@small.jpg"></div>
+	
 	<div class="wrapper">
 		<div class="box a"><a href="/"><div>Home</div></a></div>
 		<div class="box b active"><a href="#"><div>Login</div></a></div>
@@ -25,7 +27,7 @@
 		<div class="form">
 			<div class="login-form">
 				<input type="text" placeholder="username" v-model="username"/>
-				<button v-on:click="log_in">login</button>
+				<button @click="log_in">login</button>
 			</div>
 		</div>
 	</div>

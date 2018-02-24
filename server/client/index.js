@@ -1,5 +1,5 @@
 const app = new Vue({
-	el: '.cont',
+	el: '#app',
 	data: {
 		films: [],
 		username: '',

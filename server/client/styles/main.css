@@ -3,7 +3,8 @@
 }
 
 html, body {
-	font-family: Menlo, Helvetica, sans-serif;
+	/* Monospace di riserva */
+	font-family: Menlo, Helvetica, 'Inconsolata', sans-serif;
 	height: 100%;
 	margin: 0px;
 	padding: 10px;
@@ -42,15 +43,14 @@ body {
 .box {
 	background-color: #EE562285;
 	text-align: center;
-}
-
-.box a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	height: 100%;
 	padding: 5px 0;
+}
+
+.box a {
 }
 
 .img1 {
@@ -59,20 +59,35 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	
-	-webkit-transition: background-image 4s ease-in-out;
-	transition: background-image 4s ease-in-out;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	filter: blur(5px) grayscale(50%);
+
+	z-index: -90;
+	opacity: 100;
+	transition: opacity 4s ease-in-out;
+}
+
+.img2 {
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	background-size: cover;
 	
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	-webkit-filter: blur(5px); /* Safari */
-	filter: blur(5px);
-	-webkit-filter: grayscale(50%); /* Safari */
-    filter: grayscale(50%);
+	filter: blur(5px) grayscale(50%);
+	
+	opacity: 60;
 	z-index: -100;
 }
+
 
 a:link, a:visited {
 	text-decoration: none;
