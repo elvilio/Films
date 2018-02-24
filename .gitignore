@@ -70,3 +70,5 @@ typings/
 server/client/.DS_Store
 .DS_Store
 .vscode/
+.DS_Store
+server/client/.DS_Store
