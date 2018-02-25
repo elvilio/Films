@@ -32,9 +32,15 @@
 		<div class="login-page">
 			<div class="form">
 				<div class="login-form">
-					<input type="text" placeholder="username" v-if="!username" v-model="fieldUsername"/>
-					<button v-if="!username" @click="log_in">login</button>
-					<button v-else @click="log_out">logout</button>
+					
+					<div class="row">
+						<input type="text" placeholder="username" v-if="!username" v-model="fieldUsername"/>
+					</div>
+
+					<div class="row">
+						<button v-if="!username" @click="log_in">login</button>
+						<button v-else @click="log_out">logout</button>
+					</div>
 				</div>
 			</div>
 		</div>

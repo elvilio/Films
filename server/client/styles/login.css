@@ -6,12 +6,15 @@
 .form {
 	position: relative;
 	z-index: 1;
-	background: #FFFFFF;
+	background: #FFFFFF; /* cambiare questo al colore semitrasparente in modo da rendere tutto consistente? */
 	max-width: 360px;
 	padding: 30px;
 	text-align: center;
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
+/* 
+spostato in main.css
 
 .form input {
 	outline: 0;
@@ -40,4 +43,4 @@
 
 .form button:hover,.form button:active,.form button:focus {
 	background: #422174;
-}
+} */

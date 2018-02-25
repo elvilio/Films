@@ -11,7 +11,7 @@ const router = express.Router();
 const storeManager = require('./store.js');
 
 const API_KEYS = {
-	imdb: fs.readFileSync(__dirname + '/tmdb.apikey', 'utf8'),
+	tmdb: fs.readFileSync(__dirname + '/tmdb.apikey', 'utf8'),
 }
 
 router.get('/films', (req, res) => {

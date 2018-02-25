@@ -4,20 +4,19 @@
 
 html, body {
 	/* Monospace di riserva */
-	font-family: Menlo, Helvetica, 'Inconsolata', sans-serif;
-	height: 100%;
-	margin: 0px;
-	padding: 10px;
-	font-size: 13px;
 	color: #221E22;
+	font-family: Menlo, Helvetica, 'Inconsolata', sans-serif;
+	font-size: 13px;
+
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
-	overflow: hidden; /* per fixare il bordo sullo sfondo */
 }
 
 .wrapper {
@@ -37,12 +36,12 @@ body {
 .wrapper .active {
 	background-color: #ECA72C85;
 }
-
+/* 
 .a { grid-area: a; }
 
 .b { grid-area: b; }
 
-.c { grid-area: c; }
+.c { grid-area: c; } */
 
 .box {
 	background-color: #EE562285;
@@ -51,12 +50,12 @@ body {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	padding: 5px 0;
 }
 
 .box a {
 	width: 100%;
 	height: 100%;
+	padding: 5px 0;
 }
 
 .img1, .img2 {
@@ -65,7 +64,7 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 	
-	position: absolute;
+	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -73,17 +72,15 @@ body {
 	filter: blur(5px);
 
 	transform: scale(1.03); /* per fixare il bordo sullo sfondo */
+	opacity: 1;
 }
 
 .img1 {
 	z-index: -90;
-	opacity: 1;
 	transition: opacity 4s ease-in-out;
 }
-
 .img2 {
 	z-index: -100;
-	opacity: 1;
 }
 
 
@@ -103,4 +100,55 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 10px;
+}
+
+p {
+	margin: 1em 0;
+	padding: 0;
+}
+
+/* UI CONTROLS */
+
+input[type=text] {
+	outline: 0;
+	background: #F7F4EE;
+	
+	width: 100%;
+	min-width: 300px;
+	height: 45px;
+
+	border: 0;
+	/* margin: 0 0 15px; */
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+button {
+	text-transform: uppercase;
+	outline: 0;
+	background: #44355B;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+button:hover, button:active, button:focus {
+	background: #422174;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.row:not(:last-child) {
+	margin-bottom: 15px;
 }
