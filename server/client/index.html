@@ -15,13 +15,15 @@
 	<div class="img1" id="img1" background="./photos/w1@small.jpg"></div>
 	<div class="img2" id="img2" background="./photos/w2@small.jpg"></div>
 
-	<main id="app">
-		<div class="wrapper">
-			<div class="box a active"><a href="#"><div>Home</div></a></div>
+	<main id="app" class="column">
+		<div class="nav row">
+			<div class="nav-item active"><a href="#"><div>Home</div></a></div>
+
+			<div class="nav-item" v-if="username">
+				<a href="/addfilm"><div>Add New</div></a>
+			</div>
 			
-			<div v-if="username" class="box c"><a href="/addfilm"><div>Add New</div></a></div>
-			
-			<div class="box b">
+			<div class="nav-item">
 				<a href="/login">
 					<div v-if="!username">Login</div>
 					<div v-else>{{ username }}</div>

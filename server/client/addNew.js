@@ -16,12 +16,13 @@ const app = new Vue({
 	methods: {
 		async getAPIKeys() {
 			this.apikeys = (await axios.get('/api/apikey')).data;
-			console.log(this.apikeys);
 		},
 		async searchFilm() {
 			let res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${ this.apikeys.tmdb }&query=${ this.search.trim() }`);
 			this.tmdbResults = res.data.results;
-			console.log(this.tmdbResults);
+		},
+		async aggiungi_film(film) {
+			// TODO
 		},
 	}
 });

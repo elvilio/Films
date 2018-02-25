@@ -1,16 +1,14 @@
 /* login stuff */
-.login-page {
+/* .login-page {
 	padding: 100px 0 0 0;
-}
+} */
 
-.form {
-	position: relative;
-	z-index: 1;
-	background: #FFFFFF; /* cambiare questo al colore semitrasparente in modo da rendere tutto consistente? */
-	max-width: 360px;
-	padding: 30px;
-	text-align: center;
-	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+.login-form {
+	margin-top: 100px;
+	padding: 50px;
+	background: rgba(255, 255, 255, 0.5);
+	/* max-width: 360px; */
+	/* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
 }
 
 /* 
