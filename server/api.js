@@ -112,7 +112,7 @@ router.get('/user/:id', (req, res) => {
 		res.json(reducedUser);
 	}
 	else {
-		res.sendStatus(404);
+		res.json('user not found');
 	}
 
 });

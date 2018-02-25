@@ -7,17 +7,13 @@ const app = new Vue({
 	created() {
 		// request from server at /api/films
 		this.getJSONFilms();
+		
 		this.username = localStorage.getItem('maquindi-films-username');
 	},
 	methods: {
-		getJSONFilms() {
-			axios.get('/api/films')
-				.then(res => {
-					this.films = res.data;
-				})
-				.catch(err => {
-					throw err;	
-				});
+		async getJSONFilms() {
+			let res = await axios.get('/api/films');
+			this.films = res.data;
 		}
 	}
 })

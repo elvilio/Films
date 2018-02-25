@@ -6,8 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Login | Maquindi Films</title>
 
-	<!-- Fonts -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet"> -->
 	<!-- Custom Css -->
 	<link rel="stylesheet" href="./styles/main.css">
 	<link rel="stylesheet" href="./styles/login.css">
@@ -17,25 +15,39 @@
 	<div class="img1" id="img1" background="./photos/w1@small.jpg"></div>
 	<div class="img2" id="img2" background="./photos/w1@small.jpg"></div>
 	
-	<div class="wrapper">
-		<div class="box a"><a href="/"><div>Home</div></a></div>
-		<div class="box b active"><a href="#"><div>Login</div></a></div>
-		<div class="box c"><a href="/addfilm"><div>Add New</div></a></div>
-	</div>
+	<main id="app">
+		<div class="wrapper">
+			<div class="box a"><a href="/"><div>Home</div></a></div>
 
-	<div id="login" class="login-page">
-		<div class="form">
-			<div class="login-form">
-				<input type="text" placeholder="username" v-model="username"/>
-				<button @click="log_in">login</button>
+			<div v-if="username" class="box c"><a href="/addfilm"><div>Add New</div></a></div>
+			
+			<div class="box b active">
+				<a href="#">
+					<div v-if="!username">Login</div>
+					<div v-else>{{ username }}</div>
+				</a>
 			</div>
 		</div>
-	</div>
+		
+		<div class="login-page">
+			<div class="form">
+				<div class="login-form">
+					<input type="text" placeholder="username" v-if="!username" v-model="fieldUsername"/>
+					<button v-if="!username" @click="log_in">login</button>
+					<button v-else @click="log_out">logout</button>
+				</div>
+			</div>
+		</div>
+	</main>
 
-	<!-- VueJS -->
+	<!-- VueJS & Axios -->
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<!-- Custom JS -->
 	<script src="./login.js"></script>
 	<script src="./sfondo.js"></script>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 </body>
 </html>
