@@ -1,4 +1,4 @@
-
+/*
 main {
 	display: grid;
 	grid-template-rows: 25px 100px 1fr;
@@ -21,19 +21,22 @@ main > .container {
 	justify-self: center;
 	align-self: start;
 }
+*/
 
 .container {
 	background: rgba(255, 255, 255, 0.5);	
 	max-width: 800px;
 	padding: 50px;
+	margin-bottom: 100px;
+}
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.container > h1 {
+	margin: 1em 0;
+	padding: 0;
 }
 
 .search {
-	max-width: 400px;
+	
 }
 
 .results {
@@ -44,15 +47,30 @@ main > .container {
 
 .film {
 	display: grid;
-	grid-template-rows: 150px auto;
-	grid-template-columns: 80px auto;
+	grid-template-rows: 60px auto 45px;
+	grid-template-columns: 150px auto;
 	grid-template-areas: 
 		"img title"
-		"img overview";
+		"img overview"
+		"img button";
+
+	width: 100%;
 }
 
-.film img {
+.film:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.film .poster {
 	grid-area: img;
+	width: 100%;
+	height: 100%;
+	background: #000; /* trovare un colore migliore per questo bg */
+	display: flex;
+	align-items: center;
+}
+
+.poster img {
 	width: 100%;
 }
 
@@ -64,5 +82,11 @@ main > .container {
 
 .film p {
 	grid-area: overview;
+	padding: 0 20px;
+	text-align: justify;
 }
 
+.film button {
+	grid-area: button;
+	justify-self: center;
+}

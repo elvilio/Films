@@ -15,15 +15,15 @@
 	<div class="img1" id="img1" background="./photos/w1@small.jpg"></div>
 	<div class="img2" id="img2" background="./photos/w1@small.jpg"></div>
 	
-	<main id="app">
-		<div class="wrapper">
-			<div class="box a"><a href="/"><div>Home</div></a></div>
+	<main id="app" class="column">
+		<div class="nav row">
+			<div class="nav-item"><a href="/"><div>Home</div></a></div>
 
-			<div v-if="username" class="box c active">
+			<div class="nav-item active" v-if="username">
 				<a href="#"><div>Add New</div></a>
 			</div>
 			
-			<div class="box b">
+			<div class="nav-item">
 				<a href="/login">
 					<div v-if="!username">Login</div>
 					<div v-else>{{ username }}</div>
@@ -33,7 +33,7 @@
 
 		<h1>Add new film</h1>
 		
-		<div class="container">
+		<div class="container column">
 			<p>Cerca nuovi film da aggiungere</p>
 			
 			<div class="row search">
@@ -41,13 +41,16 @@
 				<button @click="searchFilm">Cerca</button>
 			</div>
 
-			<h2 v-if="tmdbResults.length > 0">Risultati</h2>
+			<h1 v-if="tmdbResults.length > 0">Risultati</h2>
 
 			<div class="results">
 				<div class="film" v-for="film in tmdbResults">
-					<img :src="'http://image.tmdb.org/t/p/w200' + film.poster_path" alt="">
-					<h2>{{film.title}}</h2>
-					<p>{{film.overview}}</p>
+					<div class="poster">
+						<img :src="film.poster_path ? 'http://image.tmdb.org/t/p/w200' + film.poster_path : 'https://via.placeholder.com/120x180'" alt="">
+					</div>
+					<h2>{{ film.title }}</h2>
+					<p>{{ film.overview }}</p>
+					<button @click="aggiungi_film(film.id)">aggiungi</button>
 				</div>
 			</div>
 
