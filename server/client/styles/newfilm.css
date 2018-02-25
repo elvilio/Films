@@ -1,7 +1,3 @@
-main > .wrapper {
-	grid-area: nav;
-}
-
 .container {
 	background: rgba(255, 255, 255, 0.5);	
 	max-width: 800px;
@@ -15,7 +11,7 @@ main > .wrapper {
 }
 
 .search {
-	grid-area: search;
+/*	grid-area: search;*/
 	justify-self: center;
 	align-self: start;
 }
