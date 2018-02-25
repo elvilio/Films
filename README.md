@@ -2,33 +2,21 @@
 
 ## All Api Routes
 
-### GET /users
+- GET /users
 
-ok
+- (AUTH) GET /user/:id
 
-### (AUTH) GET /user/:id
+- GET /films
 
-ok
+- (AUTH) POST /film/add
 
-### GET /films
+- (AUTH) POST /film/vote
 
-ok
+- (AUTH) POST /film/unvote
 
-#### (AUTH) POST /films/add
+- POST /login
 
-ok
-
-#### (AUTH) POST /films/vote
-
-ok
-
-### POST /login
-
-ehm...
-
-### GET /apikeys
-
-ok
+- GET /apikeys
 
 ## Vendor API End Points
 

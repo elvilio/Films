@@ -36,7 +36,7 @@ router.post('/film/add', (req, res) => {
 			id: filmID,
 			addedBy: userID,
 			addedOn: addedOn || moment().format('YYYY/MM/DD HH:mm'),
-			votedBy: [ ],
+			votedBy: { },
 		};
 
 		// Adding additional field if not external
@@ -75,8 +75,8 @@ router.post('/film/vote', (req, res) => {
 		let film = storeManager.store.films[filmID];
 		let user = storeManager.store.users[userID];
 		
-		film.votedBy.push(userID);
-		user.votedFilms.push(filmID);
+		film.votedBy[userID] = 1;
+		user.votedFilms[filmID] = 1;
 
 		storeManager.saveStore();
 
@@ -84,6 +84,28 @@ router.post('/film/vote', (req, res) => {
 	}
 
 });
+
+router.post('/film/unvote', (req, res) => {
+	let { filmID, userID } = req.body;
+
+	
+	// if one is not present return 404
+	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
+		res.sendStatus(404);
+	}
+	else {
+		let film = storeManager.store.films[filmID];
+		let user = storeManager.store.users[userID];
+		
+		delete film.votedBy[userID];
+		delete user.votedFilms[filmID];
+		
+		storeManager.saveStore();
+
+		res.sendStatus(200);
+	}
+
+})
 
 router.get('/users', (req, res) => {
 
