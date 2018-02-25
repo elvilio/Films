@@ -137,7 +137,6 @@ button {
 	padding: 15px;
 	color: #FFFFFF;
 	font-size: 14px;
-	-webkit-transition: all 0.3s ease;
 	/* -webkit-transition: all 0.3s ease; non mi sembrava dovesse servire */
 	transition: all 0.3s ease;
 	cursor: pointer;

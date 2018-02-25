@@ -49,13 +49,9 @@ p {
 
 .film {
 	display: grid;
-	grid-template-rows: 150px auto;
-	grid-template-columns: 80px auto;
 	grid-template-rows: 50px 100px auto;
 	grid-template-columns: 200px 10px auto;
 	grid-template-areas: 
-		"img title"
-		"img overview";
 		"img . title"
 		"img . overview"
 		"img . overview";
