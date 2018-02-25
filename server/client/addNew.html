@@ -45,9 +45,12 @@
 				<h2>Risultati</h2>
 				<div class="results">
 					<div class="film" v-for="film in tmdbResults">
-						<img :src="'http://image.tmdb.org/t/p/w200' + film.poster_path" alt="">
+						<div class="poster">
+							<img :src="film.poster_path ? 'http://image.tmdb.org/t/p/w200' + film.poster_path : 'https://via.placeholder.com/120x180'" alt="">
+						</div>
 						<h2>{{film.title}}</h2>
 						<p>{{film.overview}}</p>
+						<button @click="aggiungi_film(film.id)">aggiungi</button>
 					</div>
 				</div>
 			</div>
