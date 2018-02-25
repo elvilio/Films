@@ -23,7 +23,7 @@ async function change_image_2() {
 
 	$img1.style.opacity = 0.0;
 
-	await sleep(4000);
+	await sleep(4500);
 
 	setImage($img1, getNextImage());
 
@@ -31,7 +31,7 @@ async function change_image_2() {
 
 	$img1.style.opacity = 1.0;
 
-	await sleep(4000);
+	await sleep(4500);
 
 	change_image_2();
 }
