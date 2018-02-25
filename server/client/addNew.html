@@ -14,14 +14,25 @@
 	<div class="img1" id="img1" background="./photos/w1@small.jpg"></div>
 	<div class="img2" id="img2" background="./photos/w1@small.jpg"></div>
 	
-	<div class="wrapper">
-		<div class="box a"><a href="/"><div>Home</div></a></div>
-		<div class="box b"><a href="/login"><div>Login</div></a></div>
-		<div class="box c active"><a href="#"><div>Add New</div></a></div>
-	</div>
+	<main id="app">
+		<div class="wrapper">
+			<div class="box a"><a href="/"><div>Home</div></a></div>
 
-	<h1>Add new film</h1>
-	<h2>WIP</h2>
+			<div v-if="username" class="box c active">
+				<a href="#"><div>Add New</div></a>
+			</div>
+			
+			<div class="box b">
+				<a href="/login">
+					<div v-if="!username">Login</div>
+					<div v-else>{{ username }}</div>
+				</a>
+			</div>
+		</div>
+
+		<h1>Add new film</h1>
+		<h2>WIP</h2>
+	</main>
 
 	<!-- VueJS & Axios -->
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>

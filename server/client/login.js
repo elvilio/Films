@@ -13,12 +13,11 @@ const app = new Vue({
 
 	methods: {
 		async log_in (event) {
-			let username = this.username.trim().toLowerCase();
+			let username = this.fieldUsername.trim().toLowerCase();
 
 			if (username.length > 0 && username.match(/\w+/)) {
 				let res = await axios.get('/api/user/' + username);
-				console.log(res);
-
+				
 				if (res.data === 'user not found') {
 					console.log('User not found!');
 				}
