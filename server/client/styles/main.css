@@ -129,12 +129,16 @@ button {
 	text-transform: uppercase;
 	outline: 0;
 	background: #44355B;
+
 	width: 100%;
+	height: 45px;
+
 	border: 0;
 	padding: 15px;
 	color: #FFFFFF;
 	font-size: 14px;
 	-webkit-transition: all 0.3s ease;
+	/* -webkit-transition: all 0.3s ease; non mi sembrava dovesse servire */
 	transition: all 0.3s ease;
 	cursor: pointer;
 }
