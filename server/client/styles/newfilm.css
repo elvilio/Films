@@ -25,13 +25,12 @@
 .film {
 	display: grid;
 	width: 100%;
-	grid-template-rows: 50px 100px auto;
-	grid-template-columns: 200px 10px auto;
+	grid-template-rows: 50px auto 45px;
+	grid-template-columns: 200px auto;
 	grid-template-areas: 
-		"img . title"
-		"img . overview"
-		"img . overview"
-		"img . button";
+		"img title"
+		"img overview"
+		"img button";
 }
 
 .film:not(:last-child) {
@@ -63,7 +62,7 @@
 	text-align: justify;
 }
 
-.film button {
+.film button, .film .button {
 	grid-area: button;
 	justify-self: center;
 }

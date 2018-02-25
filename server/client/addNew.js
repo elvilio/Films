@@ -2,14 +2,14 @@ const app = new Vue({
 	
 	el: '#app',
 	data: {
-		films: [],
-		username: '',
+		films: {},
+		username: localStorage.getItem('maquindi-films-username'),
 		search: '',
 		tmdbResults: [], 
 	},
 
-	created() {
-		this.username = localStorage.getItem('maquindi-films-username');
+	async created() {
+		this.films = (await axios.get('/api/films')).data;
 		this.getAPIKeys();
 	},
 
@@ -19,10 +19,20 @@ const app = new Vue({
 		},
 		async searchFilm() {
 			let res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${ this.apikeys.tmdb }&query=${ this.search.trim() }`);
-			this.tmdbResults = res.data.results;
+			this.tmdbResults = res.data.results.map(
+				({ id, title, overview, poster_path }) => ({ id, title, overview, poster_path, added: this.films[id] })
+			);
 		},
 		async aggiungi_film(film) {
-			// TODO
+			try {
+				await axios.post('/api/film/add', {
+					filmID: film.id,
+					userID: this.username,
+				});
+				film.added = true;
+			} catch (e) {
+				console.log(e);
+			}
 		},
 	}
 });

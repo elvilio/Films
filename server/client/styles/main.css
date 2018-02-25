@@ -91,7 +91,6 @@ input[type=text] {
 	outline: 0;
 	background: #F7F4EE;
 	
-	width: 100%;
 	min-width: 300px;
 	height: 45px;
 
@@ -100,25 +99,36 @@ input[type=text] {
 	padding: 15px;
 	box-sizing: border-box;
 	font-size: 14px;
+	
+	font-family: Menlo, Helvetica, 'Inconsolata', sans-serif;
 }
 
-button {
+button, .button {
 	text-transform: uppercase;
 	outline: 0;
 	background: #44355B;
 
-	width: 100%;
+	display: block;
 	height: 45px;
+	width: unset;
 
 	border: 0;
-	padding: 15px;
+	padding: 15px 30px;
 	color: #FFFFFF;
 	font-size: 14px;
 	transition: all 0.3s ease;
 	cursor: pointer;
+
+	font-family: Menlo, Helvetica, 'Inconsolata', sans-serif;
 }
 
-button:hover, button:active, button:focus {
+.button.disabled, button.disabled {
+	background: #685488;
+	color: #b9a2de;
+	cursor: not-allowed;
+}
+
+button:hover {
 	background: #422174;
 }
 

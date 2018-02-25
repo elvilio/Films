@@ -41,7 +41,7 @@
 				<div class="film-list">
 					<div class="film-item sctl" v-for="film in films">
 						<div class="filmName">{{ film.name }} </div>
-						<div class="filmRating">{{ film.votedBy.length }} </div>
+						<div class="filmRating">{{ Object.keys(film.votedBy).length }} </div>
 					</div>
 				</div>
 			</div>

@@ -41,16 +41,17 @@ router.post('/film/add', (req, res) => {
 
 		// Adding additional field if not external
 		if (!external) {
-			axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?api_key=${ API_KEYS.imdb }`)
+			axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?api_key=${ API_KEYS.tmdb }`)
 				.then(req => {
 					// retrive name and image and save the store to disk
 					storeManager.store.films[filmID].name = req.data.title;
-					storeManager.store.films[filmID].image = req.data.poster_path;
+					storeManager.store.films[filmID].image = req.data.poster_path ? req.data.poster_path : 'https://via.placeholder.com/200x350';
 					storeManager.saveStore();
 					res.sendStatus(200);
 				})
 				.catch(err => {
-					console.log('Error during request for "' + filmID + '" provided by user ' + storeManager.store.users[userID]);
+					console.log('Error during request for "' + filmID + '" provided by user ' + userID);
+					console.log(err);
 					res.sendStatus(500);
 				});
 		}

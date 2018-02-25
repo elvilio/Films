@@ -39,7 +39,7 @@
 			<p>Cerca nuovi film da aggiungere</p>
 			
 			<div class="row search">
-				<input type="text" v-model="search">
+				<input type="text" v-model="search" @keyup.enter="searchFilm">
 				<button @click="searchFilm">Cerca</button>
 			</div>
 
@@ -52,7 +52,8 @@
 						</div>
 						<h2>{{film.title}}</h2>
 						<p>{{film.overview}}</p>
-						<button @click="aggiungi_film(film.id)">aggiungi</button>
+						<button v-if="!film.added" @click="aggiungi_film(film)">aggiungi</button>
+						<div v-else class="button disabled">aggiunto</div>
 					</div>
 				</div>
 			</div>
