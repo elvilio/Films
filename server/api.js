@@ -41,10 +41,10 @@ router.post('/film/add', (req, res) => {
 
 		// Adding additional field if not external
 		if (!external) {
-			axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?api_key=${ API_KEYS.tmdb }`)
+			axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?language=it-IT&api_key=${ API_KEYS.tmdb }`)
 				.then(req => {
 					// retrive name and image and save the store to disk
-					storeManager.store.films[filmID].name = req.data.title;
+					storeManager.store.films[filmID].title = req.data.title;
 					storeManager.store.films[filmID].image = req.data.poster_path ? req.data.poster_path : 'https://via.placeholder.com/200x350';
 					storeManager.saveStore();
 					res.sendStatus(200);
@@ -57,7 +57,7 @@ router.post('/film/add', (req, res) => {
 		}
 		else {
 			// adds the name passed by the user and saves the store to disk
-			storeManager.store.films[filmID].name = name;
+			storeManager.store.films[filmID].title = title;
 			storeManager.saveStore();
 		}
 

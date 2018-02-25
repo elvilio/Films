@@ -1,66 +1,66 @@
-Good time
-Phantom threat
-2001 space odyssey
-Dream land
-Shrek
-Saw
-Scary movie 1/2/3/4
-Scream
-Swiss man army
-Carnage
-Mad Max - fury road
-This must be the place
-The ghost writer
-The killing of a sacred dear
-Aveik
-Clockwork orange
-Inception
-Pulp fiction
-Embrace of the serpent
-The look of silence
-Rams
-Vita da vampiro
-The survivalist
+x Good time
+? Phantom threat
+x 2001 space odyssey
++ Dream land
+- Shrek
+- Saw
+- Scary movie 1/2/3/4
+x Scream
+x Swiss man army
+x Carnage
+x Mad Max - fury road
+x This must be the place
+x The ghost writer
+x The killing of a sacred dear
+? Aveik
+x Clockwork orange
+x Inception
+x Pulp fiction
+x Embrace of the serpent
+x The look of silence
+x Rams
+? Vita da vampiro
++ The survivalist
 Seasons
 Cartel land
-Hot shots 1/2
++ Hot shots 1/2
 Top secret
-V per vendetta
-La migliore offerta
-Kung fury
-Cub piccole prede
-The black room
-The host
-Parentesi tonde
-Catch me if you can
-Kingsman 1/2
-Il ragazzo invisibile
-Benvenuti a ZombieLand
-The act of killing
-Memento
-Prisoners
-La grande scommessa
-Jeune and Julie
-Logan
-Machete/Machete kills
-Grindhouse - a prova di morte
-Kill bill 1/2
-Il grande Lebowski
-The big fish
-The fall (2006)
-Enemy (2013)
-It follows
-The Breakfast Club
-Sotto la sabbia
-La Collina 40 o 60
+x V per vendetta
+x La migliore offerta
+x Kung fury
+x Cub piccole prede
+x The black room
+x The host
+x Parentesi tonde
+x Catch me if you can
+x Kingsman 1/2
+x Il ragazzo invisibile 1/2
+x Benvenuti a ZombieLand
+x The act of killing
+x Memento
+x Prisoners
+x La grande scommessa
+? Jeune and Julie
+x Logan
+x Machete/Machete kills
+x Grindhouse - a prova di morte
+x Kill bill 1/2
+x Il grande Lebowski
++ The big fish
+x The fall (2006)
+x Enemy (2013)
+x It follows
+x The Breakfast Club
++ Sotto la sabbia
+? La Collina 40 o 60
 Paura e delirio a Las Vegas
-Trainspotting 1/2
+x Trainspotting 1/2
 Mr nobody
 Le follie dell'imperatore
 Reservoir dogs
 Scott Pilgrim vs the world
 Birdman
-Watchmen
+x Watchmen
 Old boy
 Amici miei (atto I e II)
 Scemo e piu' scemo
@@ -69,13 +69,13 @@ Robin Hood - un uomo in calzamaglia
 A Knight's tale
 La La Land
 Shawshank redemption
-The hateful eight
+x The hateful eight
 Communism - a love story
 Bowling a Columbine
-American psycho
+x American psycho
 Gangs of New York
 Grimsby
-Super 8
+x Super 8
 The Man From Earth
 Coraline
 

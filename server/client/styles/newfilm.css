@@ -50,10 +50,11 @@
 	width: 100%;
 }
 
-.film h2 {
+.film h3 {
 	grid-area: title;
-	justify-self: center;
+	justify-self: start;
 	align-self: center;
+	padding: 0 20px;
 }
 
 .film p {

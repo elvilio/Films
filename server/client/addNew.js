@@ -18,9 +18,9 @@ const app = new Vue({
 			this.apikeys = (await axios.get('/api/apikey')).data;
 		},
 		async searchFilm() {
-			let res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${ this.apikeys.tmdb }&query=${ this.search.trim() }`);
+			let res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${ this.apikeys.tmdb }&language=it-IT&query=${ this.search.trim() }`);
 			this.tmdbResults = res.data.results.map(
-				({ id, title, overview, poster_path }) => ({ id, title, overview, poster_path, added: this.films[id] })
+				({ id, original_title, title, overview, poster_path, release_date }) => ({ id, title, original_title, overview, poster_path, release_date, added: this.films[id] })
 			);
 		},
 		async aggiungi_film(film) {

@@ -40,7 +40,7 @@
 - [x] login effettivo
 - [x] dalla pagina newFilm fare il layout effettivo delle cose e poter aggiungere film
 - [x] logout (?)
-- [ ] in /addfilm aggiungere il codice per aggiungere i film quando si preme il bottone
+- [x] in /addfilm aggiungere il codice per aggiungere i film quando si preme il bottone
 - [ ] nella home aggiungere il modo di votare i film se l'utente è loggato
 - [ ] aggiungere tutti i film in films.txt
 	- [ ] scrivere uno script o qlcs del genere per fare ciò
