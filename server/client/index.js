@@ -15,5 +15,10 @@ const app = new Vue({
 			let res = await axios.get('/api/films');
 			this.films = res.data;
 		}
+	},
+	computed: {
+		sortedFilms () {
+			return Object.values(this.films).sort((a, b) => a.title.localeCompare(b.title));
+		}
 	}
 })

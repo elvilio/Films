@@ -9,7 +9,7 @@ const app = new Vue({
 	},
 
 	async created() {
-		this.films = (await axios.get('/api/films')).data;
+		this.getFilms();
 		this.getAPIKeys();
 	},
 
@@ -30,9 +30,13 @@ const app = new Vue({
 					userID: this.username,
 				});
 				film.added = true;
+				this.getFilms();
 			} catch (e) {
 				console.log(e);
 			}
 		},
+		async getFilms() {
+			this.films = (await axios.get('/api/films')).data;
+		}
 	}
 });
