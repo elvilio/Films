@@ -396,9 +396,7 @@
 			"id": "291270",
 			"addedBy": "elvilio",
 			"addedOn": "2018/02/23 17:41",
-			"votedBy": {
-				"aziis98": 1
-			},
+			"votedBy": {},
 			"title": "Anomalisa",
 			"image": "/5DpDEEb6UJUiSaXyNegYlCqsZdd.jpg"
 		},
@@ -419,7 +417,7 @@
 			"image": "/p11Ftd4VposrAzthkhF53ifYZRl.jpg"
 		},
 		"329865": {
-			"id": "329865",
+			"id": 329865,
 			"title": "Arrival",
 			"image": "/gdIbnTBa4uulaeTkeej8egxi6vG.jpg",
 			"addedBy": "aziis98",
@@ -503,9 +501,7 @@
 		"aziis98": {
 			"id": "aziis98",
 			"name": "Antonio",
-			"votedFilms": {
-				"291270": 1
-			}
+			"votedFilms": {}
 		},
 		"elvilio": {
 			"id": "elvilio",
