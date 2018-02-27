@@ -18,7 +18,8 @@ const app = new Vue({
 	},
 	computed: {
 		sortedFilms () {
-			return Object.values(this.films).sort((a, b) => a.title.localeCompare(b.title));
+			let pippo = this.films
+			return Object.values(pippo).sort((a, b) => a.title.localeCompare(b.title));
 		}
 	}
 })

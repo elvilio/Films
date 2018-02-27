@@ -1,4 +1,3 @@
-
 const R = require('ramda');
 const fs = require('fs');
 const moment = require('moment');
@@ -37,6 +36,7 @@ router.post('/film/add', (req, res) => {
 			addedBy: userID,
 			addedOn: addedOn || moment().format('YYYY/MM/DD HH:mm'),
 			votedBy: { },
+			seen: "False",
 		};
 
 		// Adding additional field if not external
