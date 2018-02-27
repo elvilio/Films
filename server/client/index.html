@@ -33,22 +33,21 @@
 				</a>
 			</div>
 		</div>
-
-		<h1 class="scatola uno">Films</h1>
 		
-		<!-- <div class="cont">
-			
-			<div class="scatola film">
-				<div class="film-list">
-					<div class="film-item sctl" v-for="film in films">
-						<div class="filmName">{{ film.title }} </div>
-						<div class="filmRating">{{ Object.keys(film.votedBy).length }} </div>
-					</div>
+		<div class="column">
+			<h1>Films</h1>
+		</div>
+
+		<div class="film-list column" v-if="this.seen">
+			<div class="film" v-for="film in sortedFilmsSeen">
+				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
+				<div class="title" :title="film.overview">
+					<h3>{{film.title}}</h3>
 				</div>
 			</div>
-		</div> -->
+		</div>
 
-		<div class="film-list column">
+		<div class="film-list column" v-else>
 			<div class="film" v-for="film in sortedFilms">
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
 				<div class="title" :title="film.overview">
