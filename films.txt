@@ -1,5 +1,5 @@
 x Good time
-? Phantom threat
+x Phantom thread
 x 2001 space odyssey
 + Dream land
 - Shrek
@@ -19,10 +19,10 @@ x Pulp fiction
 x Embrace of the serpent
 x The look of silence
 x Rams
-? Vita da vampiro
+x Vita da vampiro
 + The survivalist
-Seasons
-Cartel land
+x Seasons
+x Cartel land
 + Hot shots 1/2
 Top secret
 x V per vendetta
@@ -40,7 +40,7 @@ x The act of killing
 x Memento
 x Prisoners
 x La grande scommessa
-? Jeune and Julie
+x Jeune and Julie
 x Logan
 x Machete/Machete kills
 x Grindhouse - a prova di morte
@@ -55,7 +55,7 @@ x The Breakfast Club
 ? La Collina 40 o 60
 Paura e delirio a Las Vegas
 x Trainspotting 1/2
-Mr nobody
+x Mr nobody
 Le follie dell'imperatore
 Reservoir dogs
 Scott Pilgrim vs the world
@@ -67,7 +67,7 @@ x Scemo e piu' scemo
 x Tre uomini e una pecora
 Robin Hood - un uomo in calzamaglia
 A Knight's tale
-La La Land
+x La La Land
 Shawshank redemption
 x The hateful eight
 Communism - a love story
