@@ -63,7 +63,8 @@ typings/
 # dotenv environment variables file
 .env
 
-*.store.json
+# Database Store File
+# *.store.json
 
 # End of https://www.gitignore.io/api/web,node
 
