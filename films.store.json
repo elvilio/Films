@@ -8,7 +8,8 @@
 			"title": "Kill Bill: Vol. 1",
 			"image": "/97fNAi62HawGjWru7PvVmF7RAbU.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"62": {
 			"id": 62,
@@ -18,7 +19,8 @@
 			"title": "2001: A Space Odyssey",
 			"image": "/90T7b2LIrL07ndYQBmSm09yqVEH.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"77": {
 			"id": 77,
@@ -28,7 +30,8 @@
 			"title": "Memento",
 			"image": "/fQMSaP88cf1nz4qwuNEEFtazuDM.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"115": {
 			"id": 115,
@@ -38,7 +41,8 @@
 			"title": "The Big Lebowski",
 			"image": "/qiE3ovg9TPylHReZjizQ40LsKZV.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"176": {
 			"id": 176,
@@ -48,7 +52,8 @@
 			"title": "Saw - L'enigmista",
 			"image": "/aXzoBX4KE0iiBgVQBfQi2A6tKzZ.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"185": {
 			"id": 185,
@@ -58,7 +63,8 @@
 			"title": "A Clockwork Orange",
 			"image": "/kgAi87gyx6b4oGJYSC36tVkJyJu.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"278": {
 			"id": 278,
@@ -68,7 +74,8 @@
 			"title": "Le ali della libertà",
 			"image": "/tWzOxgdkYyuIICOG3kZLN4YHzt6.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"393": {
 			"id": 393,
@@ -78,7 +85,8 @@
 			"title": "Kill Bill: Vol. 2",
 			"image": "/au9lFA5a2ZnBKCzPbZQf00r7J64.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"489": {
 			"id": 489,
@@ -88,7 +96,8 @@
 			"title": "Will Hunting - Genio ribelle",
 			"image": "/9FQkAf88jKCxUMfpgybkCCYOIZf.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"500": {
 			"id": 500,
@@ -98,7 +107,8 @@
 			"title": "Le iene",
 			"image": "/gAHb1t0r8G0L6TFMoETMuW2OP9L.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"587": {
 			"id": 587,
@@ -108,7 +118,8 @@
 			"title": "Big Fish - Le storie di una vita incredibile",
 			"image": "/uF3DglkO1Vv1c0OKNd8ZBBfxyqj.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"603": {
 			"id": 603,
@@ -118,7 +129,8 @@
 			"title": "The Matrix",
 			"image": "/gynBNzwyaHKtXqlEKKLioNkjKgN.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"604": {
 			"id": 604,
@@ -128,7 +140,8 @@
 			"title": "The Matrix Reloaded",
 			"image": "/ezIurBz2fdUc68d98Fp9dRf5ihv.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"627": {
 			"id": 627,
@@ -138,7 +151,8 @@
 			"title": "Trainspotting",
 			"image": "/p1O3eFsdb0GEIYu87xlwV7P4jM1.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"640": {
 			"id": 640,
@@ -148,7 +162,8 @@
 			"title": "Catch Me If You Can",
 			"image": "/MywWCQGJNUr5kivAQ7eseCG7rm.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"641": {
 			"id": 641,
@@ -158,7 +173,8 @@
 			"title": "Requiem for a dream",
 			"image": "/muym4jTjdLx7E6as09d1wlC3sOB.jpg",
 			"seen": true,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"670": {
 			"id": 670,
@@ -168,7 +184,8 @@
 			"title": "Oldboy",
 			"image": "/bVdR47HBAXP1qIxDuNjmCbfiSfL.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"680": {
 			"id": 680,
@@ -178,7 +195,8 @@
 			"title": "Pulp Fiction",
 			"image": "/dM2w364MScsjFf8pfMbaWUcWrR.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"752": {
 			"id": 752,
@@ -188,7 +206,8 @@
 			"title": "V for Vendetta",
 			"image": "/8rI9pNiTmugkEbI249evLygl9TC.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"808": {
 			"id": 808,
@@ -198,7 +217,8 @@
 			"title": "Shrek",
 			"image": "/n78K1bTOrRBWOlOHRKv6vUnQnpF.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"816": {
 			"id": 816,
@@ -208,7 +228,8 @@
 			"title": "Austin Powers - Il controspione",
 			"image": "/3X50JqmXIVcuxRTc6hZ4g825tAi.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"1359": {
 			"id": 1359,
@@ -218,7 +239,8 @@
 			"title": "American Psycho",
 			"image": "/qXsylPM4Lr5397R3eHrfqHhTUNc.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"1430": {
 			"id": 1430,
@@ -228,7 +250,8 @@
 			"title": "Bowling a Columbine",
 			"image": "/7iH6d52Nc8Visgc92rSDbJYrtLt.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"1878": {
 			"id": 1878,
@@ -238,7 +261,8 @@
 			"title": "Paura e delirio a Las Vegas",
 			"image": "/vw7JT5yJRaOVurz6DwHgvAe3pj0.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"1991": {
 			"id": 1991,
@@ -248,7 +272,8 @@
 			"title": "Death Proof",
 			"image": "/nyQBcpxqS4im2akQlWG9Y1oeM2V.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"2108": {
 			"id": 2108,
@@ -258,7 +283,8 @@
 			"title": "The Breakfast Club",
 			"image": "/4ZejrrCpfoypR5lHoT3pq6yVldW.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"3131": {
 			"id": 3131,
@@ -268,7 +294,8 @@
 			"title": "Gangs of New York",
 			"image": "/4P0JwT2FmSVVpD3AznKkCJRaeAp.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"4232": {
 			"id": 4232,
@@ -278,7 +305,8 @@
 			"title": "Scream",
 			"image": "/ewi7gYW22t8T3piRvrXO73GlzuL.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"4973": {
 			"id": 4973,
@@ -288,7 +316,8 @@
 			"title": "Sotto la sabbia",
 			"image": "/tGrxPMcVmfokAtDsrLdTOpQh4DG.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"8005": {
 			"id": 8005,
@@ -298,7 +327,8 @@
 			"title": "Robin Hood - Un uomo in calzamaglia",
 			"image": "/y15v14qPMUcCV0hRBdofoDaWdWy.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"8467": {
 			"id": 8467,
@@ -308,7 +338,8 @@
 			"title": "Scemo & più scemo",
 			"image": "/uoDzzw3T9dBgnAnvihAwRuQ0MEU.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"8764": {
 			"id": 8764,
@@ -318,7 +349,8 @@
 			"title": "Top Secret!",
 			"image": "/2ArC4IAAGXf3hTVJCzQfE0G5Vbf.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"9476": {
 			"id": 9476,
@@ -328,7 +360,8 @@
 			"title": "Il destino di un cavaliere",
 			"image": "/5wqTcsFUtYXXJL577M1VKk1mVD9.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"10313": {
 			"id": 10313,
@@ -338,7 +371,8 @@
 			"title": "The Men Who Stare at Goats",
 			"image": "/dCr1NYTxj7jJi2OlreTzCH7xJcM.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"11439": {
 			"id": 11439,
@@ -348,7 +382,8 @@
 			"title": "The Ghost Writer",
 			"image": "/p4HtT6IHPAVg8usYdyv8gZN8Qbm.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"11688": {
 			"id": 11688,
@@ -358,7 +393,8 @@
 			"title": "Le follie dell'imperatore",
 			"image": "/os7WqPzywq5HvXTICPU63Yd9lLh.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"11770": {
 			"id": 11770,
@@ -368,7 +404,8 @@
 			"title": "Shaolin Soccer",
 			"image": "/6axpFFQC0lSK57V636s0qAKOzjR.jpg",
 			"seen": true,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"13183": {
 			"id": 13183,
@@ -378,7 +415,8 @@
 			"title": "Watchmen",
 			"image": "/1QqwJBv5a6ddgzaT6cLytJioyrJ.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"13363": {
 			"id": 13363,
@@ -388,7 +426,8 @@
 			"title": "L'Uomo Che Venne Dalla Terra",
 			"image": "/gzY4lLWvbahdfdzOjrEDp9UC9we.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"14784": {
 			"id": 14784,
@@ -398,7 +437,8 @@
 			"title": "The Fall",
 			"image": "/gUex3Twn97Jp8F27Op1r7OnMTFt.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"14836": {
 			"id": 14836,
@@ -408,7 +448,8 @@
 			"title": "Coraline e la porta magica",
 			"image": "/7PwNxvXRzn6CGBWeLi91KOTCFQv.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"19908": {
 			"id": 19908,
@@ -418,7 +459,8 @@
 			"title": "Zombieland",
 			"image": "/vUzzDpVrab1BOG3ogxhRGfLN94d.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"22538": {
 			"id": 22538,
@@ -428,7 +470,8 @@
 			"title": "Scott Pilgrim vs. the World",
 			"image": "/ru6FYwXA3SvAuqoHNJi20bEfDfC.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"23631": {
 			"id": 23631,
@@ -438,7 +481,8 @@
 			"title": "Machete",
 			"image": "/3RCX4EzTrpO6wNz536EQPhYM2Fk.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"27205": {
 			"id": 27205,
@@ -448,7 +492,8 @@
 			"title": "Inception",
 			"image": "/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"31011": {
 			"id": 31011,
@@ -458,7 +503,8 @@
 			"title": "Mr. Nobody",
 			"image": "/jxd2XSsnUHHUbo50nzVnVnHRPVJ.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"37686": {
 			"id": 37686,
@@ -468,7 +514,8 @@
 			"title": "Super 8",
 			"image": "/1JAKnHjENVz1adurNjtsWZnVQGY.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"53487": {
 			"id": 53487,
@@ -478,7 +525,8 @@
 			"title": "This Must Be the Place",
 			"image": "/rNTZMp96BcKIxgF3OIUbtByJtsQ.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"64974": {
 			"id": 64974,
@@ -488,7 +536,8 @@
 			"title": "Parentesi tonde",
 			"image": "/4UVZT4v3ybOV7Ow2JVP9afJQkpp.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"72113": {
 			"id": 72113,
@@ -498,7 +547,8 @@
 			"title": "Carnage",
 			"image": "/1nhY2l0SffJ5nK8FaeiRaMblN3d.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"72710": {
 			"id": 72710,
@@ -508,7 +558,8 @@
 			"title": "The Host",
 			"image": "/jnPOLAPQLhqMeDLV2BsQfrd6R11.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"76341": {
 			"id": 76341,
@@ -518,7 +569,8 @@
 			"title": "Mad Max: Fury Road",
 			"image": "/kqjL17yufvn9OVLyXYpvtyrFfak.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"83542": {
 			"id": 83542,
@@ -528,7 +580,8 @@
 			"title": "Cloud Atlas",
 			"image": "/8VNiyIp67ZxhpNgdrwACW0jgvP2.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"85435": {
 			"id": 85435,
@@ -538,7 +591,8 @@
 			"title": "Tre uomini e una pecora",
 			"image": "/lFmEaKh7QDggDaJG3CMFruKZRrS.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"106747": {
 			"id": 106747,
@@ -548,7 +602,8 @@
 			"title": "Machete Kills",
 			"image": "/ltblMRM8clWKsjC2qQITuRN40Yr.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"123678": {
 			"id": 123678,
@@ -558,7 +613,8 @@
 			"title": "The Act of Killing",
 			"image": "/6ng86moS1tBdofRVMooOMCfW4TJ.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"146233": {
 			"id": 146233,
@@ -568,7 +624,8 @@
 			"title": "Prisoners",
 			"image": "/yAhqW57pwMAsCgmZpM5zSIVQVTh.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"152742": {
 			"id": 152742,
@@ -578,7 +635,8 @@
 			"title": "The Best Offer",
 			"image": "/bXk6T8npfh2Ly24VMWSeZLsTLhC.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"157834": {
 			"id": 157834,
@@ -588,7 +646,8 @@
 			"title": "The Zero Theorem - Tutto è vanità",
 			"image": "/x2vCZIqGTMs7RfRl6JnEDc1PrX9.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"180863": {
 			"id": 180863,
@@ -598,7 +657,8 @@
 			"title": "T2 Trainspotting",
 			"image": "/fbHXfr2N4pI2j7i9RLYiddjotBl.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"181886": {
 			"id": 181886,
@@ -608,7 +668,8 @@
 			"title": "Enemy",
 			"image": "/aQkyFHzNzZoMhxZ7c0IaK8BljED.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"184314": {
 			"id": 184314,
@@ -618,7 +679,8 @@
 			"title": "Giovane e bella",
 			"image": "/rFQytNtpDPXS9sFWVLz1Tvs72aH.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"194662": {
 			"id": 194662,
@@ -628,7 +690,8 @@
 			"title": "Birdman o (L'imprevedibile virtù dell'ignoranza)",
 			"image": "/rBy192ylHrFimJjCIT7VFkHrG4z.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"207703": {
 			"id": 207703,
@@ -638,7 +701,8 @@
 			"title": "Kingsman: The Secret Service",
 			"image": "/8x7ej0LnHdKUqilNNJXYOeyB6L9.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"246741": {
 			"id": 246741,
@@ -648,7 +712,8 @@
 			"title": "What We Do in the Shadows",
 			"image": "/4bqqrtzY9vVQeEcqyqWfTJWmpD9.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"251516": {
 			"id": 251516,
@@ -658,7 +723,8 @@
 			"title": "Kung Fury",
 			"image": "/oJWzpGCLIj3uYa0ux19T2WwzTOf.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"263115": {
 			"id": 263115,
@@ -668,7 +734,8 @@
 			"title": "Logan",
 			"image": "/gGBu0hKw9BGddG8RkRAMX7B6NDB.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"267193": {
 			"id": 267193,
@@ -678,7 +745,8 @@
 			"title": "Grimsby - Attenti a quell'altro",
 			"image": "/6AKkjgs0Y4TRDgSea7VZRDidJUy.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"267480": {
 			"id": 267480,
@@ -688,7 +756,8 @@
 			"title": "The Look of Silence",
 			"image": "/u1G9PZlHzqBNvdSmjFPQLMVIHV3.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"270303": {
 			"id": 270303,
@@ -698,7 +767,8 @@
 			"title": "It Follows",
 			"image": "/4MrwJZr0R9LbyOgZqwLNmtzzxbu.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"273248": {
 			"id": 273248,
@@ -708,7 +778,8 @@
 			"title": "The Hateful Eight",
 			"image": "/fqe8JxDNO8B8QfOGTdjh6sPCdSC.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"284270": {
 			"id": 284270,
@@ -718,7 +789,8 @@
 			"title": "Cub",
 			"image": "/a7eR08qiQ2ydfjY2TZdtRD1dcIW.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"285923": {
 			"id": 285923,
@@ -728,7 +800,8 @@
 			"title": "Grindhouse",
 			"image": "/oATTOsfalnnFObVNUWiP9MieLIm.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"291270": {
 			"id": "291270",
@@ -738,7 +811,8 @@
 			"title": "Anomalisa",
 			"image": "/5DpDEEb6UJUiSaXyNegYlCqsZdd.jpg",
 			"seen": true,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"301365": {
 			"id": 301365,
@@ -748,7 +822,8 @@
 			"title": "The Neon Demon",
 			"image": "/pUnGrpW7o0VqMWgokjAEwy4L4qr.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"303542": {
 			"id": 303542,
@@ -758,7 +833,8 @@
 			"title": "The Invisible Boy",
 			"image": "/yBAwbnlt4vC3fQYUSFy2gKvRoIa.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"303867": {
 			"id": 303867,
@@ -768,7 +844,8 @@
 			"title": "World of Tomorrow",
 			"image": "/km1a4CEQz2jn01POnHZdKVdr1f7.jpg",
 			"seen": true,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"317952": {
 			"id": 317952,
@@ -778,7 +855,8 @@
 			"title": "Cartel Land",
 			"image": "/3DGaP0ZC7Fd5K8mx4NiZHf5hWrK.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"318846": {
 			"id": 318846,
@@ -788,7 +866,8 @@
 			"title": "The Big Short",
 			"image": "/p11Ftd4VposrAzthkhF53ifYZRl.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"325348": {
 			"id": 325348,
@@ -798,7 +877,8 @@
 			"title": "Hardcore!",
 			"image": "/fDfglalfZmI5MJnql9PfRUw33Vm.jpg",
 			"seen": true,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"329004": {
 			"id": 329004,
@@ -808,7 +888,8 @@
 			"title": "The Survivalist",
 			"image": "/hd491WgKPxeQus2LnvFbYmyUFmt.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"329865": {
 			"id": 329865,
@@ -818,7 +899,8 @@
 			"title": "Arrival",
 			"image": "/gdIbnTBa4uulaeTkeej8egxi6vG.jpg",
 			"seen": true,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"336222": {
 			"id": 336222,
@@ -828,7 +910,8 @@
 			"title": "Rams",
 			"image": "/raOBs0LDaMix0g8sGFtYxwYx6JQ.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"336808": {
 			"id": 336808,
@@ -838,7 +921,8 @@
 			"title": "Embrace of the Serpent",
 			"image": "/mbi9i2QLiCaUDp5Oykgn7CvbnGN.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"343668": {
 			"id": 343668,
@@ -848,7 +932,8 @@
 			"title": "Kingsman: The Golden Circle",
 			"image": "/34xBL6BXNYFqtHO9zhcgoakS4aP.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"347031": {
 			"id": 347031,
@@ -858,7 +943,8 @@
 			"title": "Swiss Army Man",
 			"image": "/9BdJz7b4WdJul0KVu42YFEgqzyp.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"352342": {
 			"id": 352342,
@@ -868,7 +954,8 @@
 			"title": "Les Saisons",
 			"image": "/nN5OTG3BmHgbLjG6ngBB0NY6z4X.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"359940": {
 			"id": 359940,
@@ -878,7 +965,8 @@
 			"title": "Tre manifesti a Ebbing, Missouri",
 			"image": "/4I8dK9gSa8Efy5kcatrAr1AkZiL.jpg",
 			"seen": true,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"381284": {
 			"id": 381284,
@@ -888,7 +976,8 @@
 			"title": "Il diritto di contare",
 			"image": "/d6JTN9J9cAwCLDS37FsXTXbl1OQ.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"399057": {
 			"id": 399057,
@@ -898,7 +987,8 @@
 			"title": "The Killing of a Sacred Deer",
 			"image": "/e4DGlsc9g0h5AyoyvvAuIRnofN7.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"400617": {
 			"id": 400617,
@@ -908,7 +998,8 @@
 			"title": "Il Filo Nascosto",
 			"image": "/yxkmY3zaNUiUnpb9sQnYm2OCrqh.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"425931": {
 			"id": 425931,
@@ -918,7 +1009,8 @@
 			"title": "The Black Room",
 			"image": "/uHZDs43AxPhitL2Xrw7mncuyS4q.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"429200": {
 			"id": 429200,
@@ -928,7 +1020,8 @@
 			"title": "Good Time",
 			"image": "/cz0egudCsfsTzwUAL03A5UzoHGT.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		},
 		"433150": {
 			"id": 433150,
@@ -938,7 +1031,8 @@
 			"title": "Il ragazzo invisibile: Seconda generazione",
 			"image": "/c4CXtdVSCHJlPyRjPdP85ATNrWV.jpg",
 			"seen": false,
-			"votingOpen": false
+			"votingOpen": false,
+			"nextUp": false
 		}
 	},
 	"users": {

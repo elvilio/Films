@@ -27,6 +27,9 @@ const app = new Vue({
 		},
 		sortedFilmsToVote () {
 			return this.sortedFilms.filter(film => film.votingOpen);
+		},
+		sortedFilmsNextUp () {
+			return this.sortedFilmsNotSeen.filter(film => film.nextUp);
 		}
 	}
 });

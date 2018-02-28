@@ -33,11 +33,15 @@
 				</a>
 			</div>
 		</div>
-		
-		<div class="column">
-			<h1>Film da votare</h1>
-		</div>
 
+		<div class="column" v-if="nextUp">
+			<div class="film winner" v-for="film in sortedFilmsNextUp">
+				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
+			</div>
+		</div>
+		
+
+		<h1>Film da votare</h1>
 		<div class="film-list column">
 			<div class="film" v-for="film in sortedFilmsToVote">
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
