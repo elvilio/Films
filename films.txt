@@ -4,7 +4,7 @@ x 2001 space odyssey
 + Dream land
 x Shrek
 x Saw
-- Scary movie 1/2/3/4			serie
+- Scary movie 1/2/3/4
 x Scream
 x Swiss man army
 x Carnage
@@ -12,7 +12,7 @@ x Mad Max - fury road
 x This must be the place
 x The ghost writer
 x The killing of a sacred deer
-? Aveik (bho)
+? Aveik
 x Clockwork orange
 x Inception
 x Pulp fiction
@@ -23,7 +23,7 @@ x Vita da vampiro
 x The survivalist
 x Seasons
 x Cartel land
-+ Hot shots 1/2				serie
++ Hot shots 1/2
 x Top secret
 x V per vendetta
 x La migliore offerta
@@ -52,7 +52,7 @@ x Enemy (2013)
 x It follows
 x The Breakfast Club
 x Sotto la sabbia
-? La Collina 40 o 60 (bho)
+? La Collina 40 o 60
 x Paura e delirio a Las Vegas
 x Trainspotting 1/2
 x Mr nobody
@@ -62,7 +62,7 @@ x Scott Pilgrim vs the world
 x Birdman
 x Watchmen
 x Old boy
-Amici miei (atto I e II)		serie
+Amici miei (atto I e II)
 x Scemo e piu' scemo
 x Tre uomini e una pecora
 x Robin Hood - un uomo in calzamaglia
