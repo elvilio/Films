@@ -41,9 +41,10 @@ router.post('/', (req, res) => {
 	let handle = handlers[req.body.action];
 
 	if (handle) {
-		handle(req.body.data);
+		res.json(handle(req.body.data));
 	}
 	else {
+		res.sendStatus(404);
 		throw 'Handle for provided action "' + req.body.action + '" not defined!';
 	}
 });

@@ -38,7 +38,7 @@
 			<h1>Films</h1>
 		</div>
 
-		<div class="film-list column" v-if="this.seen">
+		<div class="film-list column">
 			<div class="film" v-for="film in sortedFilmsSeen">
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
 				<div class="title" :title="film.overview">
@@ -47,7 +47,9 @@
 			</div>
 		</div>
 
-		<div class="film-list column" v-else>
+		<div style="height: 50px;"></div>
+
+		<div class="film-list column">
 			<div class="film" v-for="film in sortedFilms">
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
 				<div class="title" :title="film.overview">
