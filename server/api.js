@@ -14,12 +14,39 @@ const API_KEYS = {
 	tmdb: fs.readFileSync(__dirname + '/tmdb.apikey', 'utf8'),
 }
 
-router.get('/films', (req, res) => {
+const ACTIONS = require('./client/actions.js');
+const handlers = {
+	[ACTIONS.FILMS]: (data) => {
+		return storeManager.store.films;
+	},
+	[ACTIONS.USERS]: (data) => {
+		return storeManager.store.users;
+	},
+	[ACTIONS.ADD_FILM]: ({ filmID, userID, external, ...options }) => {
+		if (storeManager.store.films[filmID]) {
+			return { error: 'film already present' };
+		}
+		else {
 
-	let films = storeManager.store.films;
-	
-	res.json(films);
+			storeManager.store.films[filmID] = {
+				filmID,
+				addedBy: userID,
+				addedOn: moment().format('YYYY/MM/DD HH:mm'),
+				votedBy: [ ]
+			}
+		}
+	}
+}
 
+router.post('/', (req, res) => {
+	let handle = handlers[req.body.action];
+
+	if (handle) {
+		handle(req.body.data);
+	}
+	else {
+		throw 'Handle for provided action "' + req.body.action + '" not defined!';
+	}
 });
 
 router.post('/film/add', (req, res) => {
