@@ -88,9 +88,9 @@ router.post('/', (req, res) => {
 	let handler = handlers[req.body.action];
 
 	if (handler) {
-		let res = handler(req.body.data);
-		console.log('[' + req.body.action + ']', res);
-		res.json(res);
+		let result = handler(req.body.data);
+		console.log('[' + req.body.action + ']');
+		res.json(result);
 	}
 	else {
 		res.sendStatus(500);
