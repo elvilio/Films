@@ -25,5 +25,8 @@ const app = new Vue({
 		sortedFilmsNotSeen () {
 			return this.sortedFilms.filter(film => !film.seen);
 		},
+		sortedFilmsToVote () {
+			return this.sortedFilms.filter(film => film.votingOpen);
+		}
 	}
 });

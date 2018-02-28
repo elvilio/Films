@@ -35,28 +35,37 @@
 		</div>
 		
 		<div class="column">
-			<h1>Films</h1>
+			<h1>Film da votare</h1>
 		</div>
 
 		<div class="film-list column">
-			<div class="film" v-for="film in sortedFilmsSeen">
-				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
-				<div class="title" :title="film.overview">
-					<h3>{{film.title}}</h3>
-				</div>
-			</div>
-		</div>
-
-		<div style="height: 50px;"></div>
-
-		<div class="film-list column">
-			<div class="film" v-for="film in sortedFilmsNotSeen">
+			<div class="film" v-for="film in sortedFilmsToVote">
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
 				<div class="title" :title="film.overview">
 					<h3>{{film.title}}</h3>
 				</div>
 				<div class="voting">
 					<button>Vota?</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="film-list column">
+			<h2>Film in lista</h2>
+			<div class="film" v-for="film in sortedFilmsNotSeen">
+				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
+				<div class="title" :title="film.overview">
+					<h3>{{film.title}}</h3>
+				</div>
+			</div>
+
+			<div style="height: 50px; width: calc(100% + 100px); background-color: #FFFFFF20"></div>
+			<h2>Film già visti</h2>
+
+			<div class="film" v-for="film in sortedFilmsSeen">
+				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
+				<div class="title" :title="film.overview">
+					<h3>{{film.title}}</h3>
 				</div>
 			</div>
 		</div>
