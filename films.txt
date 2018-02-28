@@ -1,9 +1,9 @@
 x Good time
-? Phantom threat
+x Phantom thread
 x 2001 space odyssey
 + Dream land
-- Shrek
-- Saw
+x Shrek
+x Saw
 - Scary movie 1/2/3/4
 x Scream
 x Swiss man army
@@ -11,7 +11,7 @@ x Carnage
 x Mad Max - fury road
 x This must be the place
 x The ghost writer
-x The killing of a sacred dear
+x The killing of a sacred deer
 ? Aveik
 x Clockwork orange
 x Inception
@@ -19,12 +19,12 @@ x Pulp fiction
 x Embrace of the serpent
 x The look of silence
 x Rams
-? Vita da vampiro
-+ The survivalist
-Seasons
-Cartel land
+x Vita da vampiro
+x The survivalist
+x Seasons
+x Cartel land
 + Hot shots 1/2
-Top secret
+x Top secret
 x V per vendetta
 x La migliore offerta
 x Kung fury
@@ -40,51 +40,53 @@ x The act of killing
 x Memento
 x Prisoners
 x La grande scommessa
-? Jeune and Julie
+x Jeune and Julie
 x Logan
 x Machete/Machete kills
 x Grindhouse - a prova di morte
 x Kill bill 1/2
 x Il grande Lebowski
-+ The big fish
+x Big fish
 x The fall (2006)
 x Enemy (2013)
 x It follows
 x The Breakfast Club
-+ Sotto la sabbia
+x Sotto la sabbia
 ? La Collina 40 o 60
-Paura e delirio a Las Vegas
+x Paura e delirio a Las Vegas
 x Trainspotting 1/2
-Mr nobody
-Le follie dell'imperatore
-Reservoir dogs
-Scott Pilgrim vs the world
-Birdman
+x Mr nobody
+x Le follie dell'imperatore
+x Reservoir dogs
+x Scott Pilgrim vs the world
+x Birdman
 x Watchmen
-Old boy
+x Old boy
 Amici miei (atto I e II)
 x Scemo e piu' scemo
 x Tre uomini e una pecora
-Robin Hood - un uomo in calzamaglia
-A Knight's tale
-La La Land
-Shawshank redemption
+x Robin Hood - un uomo in calzamaglia
+x A Knight's tale
+x La La Land
+x Shawshank redemption
 x The hateful eight
-Communism - a love story
-Bowling a Columbine
+? Communism - a love story (è un libro)
+x Bowling a Columbine ---------
 x American psycho
-Gangs of New York
-Grimsby
+x Gangs of New York
+x Grimsby
 x Super 8
-The Man From Earth
-Coraline
-The Neon Demon
+x The Man From Earth
+x Coraline
+x The Neon Demon
 
 
-Samsara
-Anomalisa
-Hardcore Henry
-Shaolin Soccer
-World of Tomorrow
-Requiem for a dream
-Three billboards outside Ebbing
+x Samsara
+x Anomalisa
+x Hardcore Henry
+x Shaolin Soccer
+x World of Tomorrow
+x Requiem for a dream
+x Three billboards outside Ebbing
+x Arrival
+
