@@ -11,7 +11,7 @@ const storeManager = require('./store.js');
 
 const API_KEYS = {
 	tmdb: fs.readFileSync(__dirname + '/tmdb.apikey', 'utf8'),
-};
+}
 
 const ACTIONS = require('./client/actions.js');
 const handlers = {
