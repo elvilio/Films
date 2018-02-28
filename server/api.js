@@ -15,33 +15,68 @@ const API_KEYS = {
 
 const ACTIONS = require('./client/actions.js');
 const handlers = {
-	[ACTIONS.FILMS]: (data) => {
+	[ACTIONS.GET_FILMS]: (data) => {
 		return storeManager.store.films;
 	},
-	[ACTIONS.USERS]: (data) => {
+	[ACTIONS.GET_USERS]: (data) => {
 		return storeManager.store.users;
 	},
 	[ACTIONS.ADD_FILM]: ({ filmID, userID, external, ...options }) => {
 		if (storeManager.store.films[filmID]) {
 			return { error: 'film already present' };
 		}
+		else if (!storeManager.store.users[userID]) {
+			return { error: 'invalid user' };
+		}
 		else {
+			if (Object.keys(options).length > 10) {
+				throw 'Forse "' + userID + '" sta tentanto di hackerare qualcosa...'
+				return { error: 'internal error' };
+			}
 
 			storeManager.store.films[filmID] = {
 				filmID,
 				addedBy: userID,
 				addedOn: moment().format('YYYY/MM/DD HH:mm'),
-				votedBy: [ ]
+				votedBy: [ ],
+				...options,
 			}
+
+			if (!external) {
+				axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?language=it-IT&api_key=${ API_KEYS.tmdb }`)
+					.then(req => {
+						// retrive name and image and save the store to disk
+						storeManager.store.films[filmID].title = req.data.title;
+						storeManager.store.films[filmID].image = req.data.poster_path ? req.data.poster_path : 'https://via.placeholder.com/200x350';
+						storeManager.saveStore();
+						res.sendStatus(200);
+					})
+					.catch(err => {
+						console.log('Error during request for "' + filmID + '" provided by user ' + userID);
+						console.log(err);
+						res.sendStatus(500);
+					});
+			}
+			else {
+				// adds the name passed by the user and saves the store to disk
+				storeManager.saveStore();
+			}
+
+			return { success: 'film added' }
 		}
+	},
+	[ACTIONS.GET_APIKEYS]: (data) => {
+		return API_KEYS;
 	}
 }
 
 router.post('/', (req, res) => {
-	let handle = handlers[req.body.action];
+	let handler = handlers[req.body.action];
 
-	if (handle) {
-		res.json(handle(req.body.data));
+	if (handler) {
+		let res = handler(req.body.data);
+		console.log('[' + req.body.action + ']', res);
+		res.json(res);
 	}
 	else {
 		res.sendStatus(404);
@@ -166,10 +201,6 @@ router.get('/user/:id', (req, res) => {
 		res.json('user not found');
 	}
 
-});
-
-router.get('/apikey', (req, res) => {
-	res.json(API_KEYS);
 });
 
 module.exports = router;

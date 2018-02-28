@@ -1,8 +1,9 @@
 
 const ACTIONS = {
-	FILMS: 'FILMS',
-	USERS: 'USERS',
+	GET_FILMS: 'FILMS',
+	GET_USERS: 'USERS',
 	ADD_FILM: 'ADD_FILM',
+	GET_APIKEYS: 'GET_APIKEYS',
 }
 
 try {

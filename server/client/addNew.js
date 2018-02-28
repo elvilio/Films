@@ -15,7 +15,8 @@ const app = new Vue({
 
 	methods: {
 		async getAPIKeys() {
-			this.apikeys = (await axios.get('/api/apikey')).data;
+			let res = await axios.post('/api', { action: ACTIONS.GET_APIKEYS });
+			this.apikeys = res.data;
 		},
 		async searchFilm() {
 			let res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${ this.apikeys.tmdb }&language=it-IT&query=${ this.search.trim() }`);
@@ -36,7 +37,7 @@ const app = new Vue({
 			}
 		},
 		async getFilms() {
-			this.films = (await axios.get('/api/films')).data;
+			this.films = (await axios.post('/api', { action: ACTIONS.GET_FILMS })).data;
 		}
 	}
 });
