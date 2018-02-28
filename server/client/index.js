@@ -11,7 +11,7 @@ const app = new Vue({
 	},
 	methods: {
 		async getJSONFilms() {
-			let res = await axios.post('/api', { action: ACTIONS.FILMS });
+			let res = await axios.post('/api', { action: ACTIONS.GET_FILMS });
 			this.films = res.data;
 		},
 	},
