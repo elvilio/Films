@@ -50,7 +50,7 @@
 		<div style="height: 50px;"></div>
 
 		<div class="film-list column">
-			<div class="film" v-for="film in sortedFilms">
+			<div class="film" v-for="film in sortedFilmsNotSeen">
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
 				<div class="title" :title="film.overview">
 					<h3>{{film.title}}</h3>

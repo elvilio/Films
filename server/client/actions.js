@@ -5,6 +5,12 @@ const ACTIONS = {
 	ADD_FILM: 'ADD_FILM',
 }
 
-if (module) {
+try {
+	if (window) {
+		console.log('[Device] Found Browser!');
+	}
+}
+catch (e) {
+	console.log('[Device] Found NodeJS!');
 	module.exports = ACTIONS;
 }
