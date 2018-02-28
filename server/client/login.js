@@ -2,7 +2,6 @@ const app = new Vue({
 	
 	el: '#app',
 	data: {
-		films: [],
 		username: '',
 		fieldUsername: '',
 	},
@@ -12,13 +11,14 @@ const app = new Vue({
 	},
 
 	methods: {
-		async log_in (event) {
+		async loginUser() {
 			let username = this.fieldUsername.trim().toLowerCase();
 
 			if (username.length > 0 && username.match(/\w+/)) {
-				let res = await axios.get('/api/user/' + username);
+				let res = await axios.get('/api', { action: ACTIONS.GET_USER, userID: username });
+				let user = res.data;
 				
-				if (res.data === 'user not found') {
+				if (user.error) {
 					console.log('User not found!');
 				}
 				else {
@@ -28,7 +28,7 @@ const app = new Vue({
 				}
 			}
 		},
-		async log_out(e) {
+		async logoutUser() {
 			this.username = ''; 
 			localStorage.setItem('maquindi-films-username', '');
 		},

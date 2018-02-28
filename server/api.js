@@ -67,7 +67,21 @@ const handlers = {
 	},
 	[ACTIONS.GET_APIKEYS]: (data) => {
 		return API_KEYS;
-	}
+	},
+	[ACTIONS.GET_USER]: ({ userID, auth }) => {
+		let user = storeManager.store.users[userID];
+		
+		if (auth) {
+			return user;
+		}
+		else if (user) {
+			let reducedUser = R.pick(['id', 'name'], user);
+			return reducedUser;
+		}
+		else {
+			return { error: 'user not found' };
+		}
+	},
 }
 
 router.post('/', (req, res) => {
@@ -79,11 +93,12 @@ router.post('/', (req, res) => {
 		res.json(res);
 	}
 	else {
-		res.sendStatus(404);
-		throw 'Handle for provided action "' + req.body.action + '" not defined!';
+		res.sendStatus(500);
+		throw 'No handler for "' + req.body.action + '"';
 	}
 });
 
+/*
 router.post('/film/add', (req, res) => {
 
 	let { filmID, userID, addedOn, external, name } = req.body;
@@ -127,6 +142,7 @@ router.post('/film/add', (req, res) => {
 	}
 
 });
+*/
 
 router.post('/film/vote', (req, res) => {
 	let { filmID, userID } = req.body;
@@ -171,6 +187,7 @@ router.post('/film/unvote', (req, res) => {
 
 })
 
+/*
 router.get('/users', (req, res) => {
 
 	let users = storeManager.store.users;
@@ -182,7 +199,9 @@ router.get('/users', (req, res) => {
 	res.json(reducedUsers);
 
 });
+*/
 
+/*
 router.get('/user/:id', (req, res) => {
 
 	let authUserID = req.query.auth;
@@ -202,5 +221,6 @@ router.get('/user/:id', (req, res) => {
 	}
 
 });
+*/
 
 module.exports = router;

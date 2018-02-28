@@ -37,10 +37,10 @@
 		<div class="login-form column">
 			<div class="row" v-if="!username">
 				<input type="text" placeholder="Username" v-model="fieldUsername"/>
-				<button @click="log_in">login</button>
+				<button @click="loginUser">login</button>
 			</div>
 			<div class="row" v-else>
-				<button @click="log_out">logout</button>
+				<button @click="logoutUser">logout</button>
 			</div>
 		</div>
 		<!-- </div> -->
