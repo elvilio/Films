@@ -34,10 +34,13 @@ Un dizionario di chiavi-valori è indicato
 		
 		addedBy: Id User
 		addedOn: String
+		
 		seen: Boolean
 		nextToWatch: Int
 		votingOpen: Boolean
 		nextUp: Boolean
+
+		votedBy: { Id User : Boolean = true }
 
 		films: [Film]
 	}
@@ -48,9 +51,12 @@ Un dizionario di chiavi-valori è indicato
 
 		addedBy: Id User
 		addedOn: String
+		
 		seen: Boolean
 		votingOpen: Boolean
 		nextUp: Boolean
+		
+		votedBy: { Id User : Boolean = true }
 		
 		movieId: Id Film
 		title: String

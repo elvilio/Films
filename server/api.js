@@ -95,13 +95,21 @@ const handlers = {
 	[ACTIONS.CHOOSE_RANDOM_SET]: () => {
 
 		_.forEach(storeManager.store.films, (film) => {
+			// Reset all films for new poll
 			film.votingOpen = false;
 		});
-		
-		_.sampleSize(storeManager.store.films, 4).forEach(film => {
+
+		let filmList = _.values(storeManager.store.films);
+		let unseenFilms = _.filter(filmList, film => !film.seen);
+		let random4films = _.sampleSize(unseenFilms, 4);
+
+		random4films.forEach(film => { 
 			film.votingOpen = true;
+			film.votedBy = [];
 		});
 
+		storeManager.saveStore();
+		
 	}
 }
 
