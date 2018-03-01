@@ -1,4 +1,6 @@
+
 const R = require('ramda');
+const _ = require('lodash');
 const fs = require('fs');
 const moment = require('moment');
 
@@ -15,12 +17,15 @@ const API_KEYS = {
 
 const ACTIONS = require('./client/actions.js');
 const handlers = {
-	[ACTIONS.GET_FILMS]: (data) => {
+	
+	[ACTIONS.GET_FILMS]: () => {
 		return storeManager.store.films;
 	},
-	[ACTIONS.GET_USERS]: (data) => {
+	
+	[ACTIONS.GET_USERS]: () => {
 		return storeManager.store.users;
 	},
+	
 	[ACTIONS.ADD_FILM]: ({ filmID, userID, external, ...options }) => {
 		if (storeManager.store.films[filmID]) {
 			return { error: 'film already present' };
@@ -65,9 +70,11 @@ const handlers = {
 			return { success: 'film added' }
 		}
 	},
-	[ACTIONS.GET_APIKEYS]: (data) => {
+	
+	[ACTIONS.GET_APIKEYS]: () => {
 		return API_KEYS;
 	},
+	
 	[ACTIONS.GET_USER]: ({ userID, auth }) => {
 		let user = storeManager.store.users[userID];
 		
@@ -84,6 +91,18 @@ const handlers = {
 			return { error: 'user not found' };
 		}
 	},
+
+	[ACTIONS.CHOOSE_RANDOM_SET]: () => {
+
+		_.forEach(storeManager.store.films, (film) => {
+			film.votingOpen = false;
+		});
+		
+		_.sampleSize(storeManager.store.films, 4).forEach(film => {
+			film.votingOpen = true;
+		});
+
+	}
 }
 
 router.post('/', (req, res) => {
@@ -98,6 +117,13 @@ router.post('/', (req, res) => {
 		res.sendStatus(500);
 		throw 'No handler for "' + req.body.action + '"';
 	}
+});
+
+router.get('/random-films', (req, res) => {
+	handlers[ACTIONS.CHOOSE_RANDOM_SET]();
+	res.json({
+		success: 'Selected 4 random films for the voting'
+	});
 });
 
 /*
