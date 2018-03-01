@@ -15,7 +15,7 @@ const app = new Vue({
 			let username = this.fieldUsername.trim().toLowerCase();
 
 			if (username.length > 0 && username.match(/\w+/)) {
-				let res = await axios.get('/api', { action: ACTIONS.GET_USER, userID: username });
+				let res = await axios.post('/api', { action: ACTIONS.GET_USER, userID: username });
 				let user = res.data;
 				
 				if (user.error) {

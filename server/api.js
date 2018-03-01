@@ -71,12 +71,14 @@ const handlers = {
 	[ACTIONS.GET_USER]: ({ userID, auth }) => {
 		let user = storeManager.store.users[userID];
 		
-		if (auth) {
-			return user;
-		}
-		else if (user) {
-			let reducedUser = R.pick(['id', 'name'], user);
-			return reducedUser;
+		if (user) {
+			if (auth) {
+				return user;
+			}
+			else {
+				let reducedUser = R.pick(['id', 'name'], user);
+				return reducedUser;
+			}
 		}
 		else {
 			return { error: 'user not found' };
@@ -88,7 +90,7 @@ router.post('/', (req, res) => {
 	let handler = handlers[req.body.action];
 
 	if (handler) {
-		let result = handler(req.body.data);
+		let result = handler(req.body);
 		console.log('[' + req.body.action + ']');
 		res.json(result);
 	}
