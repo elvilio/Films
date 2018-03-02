@@ -30,6 +30,20 @@ const app = new Vue({
 		},
 		sortedFilmsNextUp () {
 			return this.sortedFilmsNotSeen.filter(film => film.nextUp);
-		}
+		},
+		async votafilm(film) {
+			try {
+				; /* to do */
+			} catch (e) {
+				console.log(e);
+			}
+		},
+		async unvotafilm(film) {
+			try {
+				; /* to do */
+			} catch (e) {
+				console.log(e);
+			}
+		},
 	}
 });

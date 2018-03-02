@@ -10,4 +10,4 @@
 
 ## Domande:
 
-- Serve veramente il parametro `votedFilms` degli utenti? (Non viene mai usato dal client quindi si potrebbe togliere)
+- Serve veramente il parametro `votedFilms` degli utenti? (Non viene mai usato dal client quindi si potrebbe togliere) -----> **_Io direi di no ma di fare un log sul server che ti dica chi ha votato cosa e quando che in caso andasse giù per qualsiasi motivo o si corrompesse il file abbiamo un backup_**

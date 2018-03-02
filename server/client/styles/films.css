@@ -46,3 +46,9 @@
 	background-color: #08BB2E30;
 	color: #08BB2E;
 }
+
+.divider {
+	height: 50px;
+	width: calc(100% + 100px);
+	background-color: #FFFFFF20;
+}

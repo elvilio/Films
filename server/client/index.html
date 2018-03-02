@@ -19,7 +19,7 @@
 	<div class="img2" id="img2" background="./photos/w2@small.jpg"></div>
 
 	<main id="app" class="column">
-		<div class="nav row">
+		<div class="nav row"> <!-- menu -->
 			<div class="nav-item active"><a href="#"><div>Home</div></a></div>
 
 			<div class="nav-item" v-if="username">
@@ -34,7 +34,7 @@
 			</div>
 		</div>
 
-		<div class="column">
+		<div class="column"> <!-- film vincitore della votazione -->
 			<div class="film winner" v-for="film in sortedFilmsNextUp">
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
 			</div>
@@ -42,31 +42,32 @@
 		
 
 		<h1>Film da votare</h1>
-		<div class="film-list column">
+		<div class="film-list column"> <!-- film che si possono votare -->
 			<div class="film" v-for="film in sortedFilmsToVote">
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
 				<div class="title" :title="film.overview">
 					<h3>{{film.title}}</h3>
 				</div>
-				<div class="voting">
-					<button>Vota?</button>
+				<div class="voting" v-if="username">
+					<button v-if="" @click="votafilm(film)">Vota?</button>
+					<button v-else @click="unvotafilm(film)"></button>
 				</div>
 			</div>
 		</div>
 
 		<div class="film-list column">
 			<h2>Film in lista</h2>
-			<div class="film" v-for="film in sortedFilmsNotSeen">
+			<div class="film" v-for="film in sortedFilmsNotSeen"> <!-- film che sono in lista -->
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
 				<div class="title" :title="film.overview">
 					<h3>{{film.title}}</h3>
 				</div>
 			</div>
 
-			<div style="height: 50px; width: calc(100% + 100px); background-color: #FFFFFF20"></div>
+			<div class="divider"></div>
 			<h2>Film già visti</h2>
 
-			<div class="film" v-for="film in sortedFilmsSeen">
+			<div class="film" v-for="film in sortedFilmsSeen">  <!-- film che sono già stati visti -->
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
 				<div class="title" :title="film.overview">
 					<h3>{{film.title}}</h3>
