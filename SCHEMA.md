@@ -76,4 +76,5 @@ Un dizionario di chiavi-valori è indicato
 		users: Map User
 		
 		watchedFilms: [Id Film]
+		votableFilms: [Id Film]
 	}

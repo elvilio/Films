@@ -52,7 +52,8 @@ const handlers = {
 					.then(req => {
 						// retrive name and image and save the store to disk
 						storeManager.store.films[filmID].title = req.data.title;
-						storeManager.store.films[filmID].image = req.data.poster_path ? req.data.poster_path : 'https://via.placeholder.com/200x350';
+						<sto></sto>reManager.store.films[filmID].image = 
+							req.data.poster_path ? req.data.poster_path : 'https://via.placeholder.com/200x350';
 						storeManager.saveStore();
 						res.sendStatus(200);
 					})
@@ -94,9 +95,12 @@ const handlers = {
 
 	[ACTIONS.CHOOSE_RANDOM_SET]: () => {
 
+		storeManager.store.votableFilms = [];
+
 		_.forEach(storeManager.store.films, (film) => {
 			// Reset all films for new poll
 			film.votingOpen = false;
+			film.nextUp = false;
 		});
 
 		let filmList = _.values(storeManager.store.films);
@@ -106,11 +110,31 @@ const handlers = {
 		random4films.forEach(film => { 
 			film.votingOpen = true;
 			film.votedBy = [];
+
+			storeManager.store.votableFilms.push(film.id);
 		});
 
 		storeManager.saveStore();
 		
-	}
+	},
+
+	[ACTIONS.CLOSE_POLL]: () => {
+		if (!storeManager.store.votableFilms.length) {
+			return { error: 'no poll open' };
+		}
+
+		let filmIDVotePairs = storeManager.store.votableFilms.map(filmID => ({ 
+			filmID, 
+			vote: storeManager.store.films[filmID].votedBy.length,
+		}));
+
+		let theRandomFilm = _.maxBy(_.shuffle(filmIDVotePairs), it => it.vote);
+
+		storeManager.store.films[theRandomFilm.filmID].nextUp = true;
+
+		
+		
+	},
 }
 
 router.post('/', (req, res) => {
