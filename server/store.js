@@ -27,7 +27,7 @@ else {
 		},
 		users: {
 			/* [Id User: User] */
-		}
+		},
 	}
 
 	saveStore();

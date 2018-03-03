@@ -35,14 +35,14 @@
 		</div>
 
 		<div class="column"> <!-- film vincitore della votazione -->
-			<div class="film winner" v-for="film in sortedFilmsNextUp">
-				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
+			<div class="film winner" v-if="nextUp !== null">
+				<img :src="'http://image.tmdb.org/t/p/w200' + films[nextUp].image" alt="">
 			</div>
 		</div>
 		
 
-		<h1>Film da votare</h1>
-		<div class="film-list column"> <!-- film che si possono votare -->
+		<h1 v-if="sortedFilmsToVote.length > 0">Film da votare</h1>
+		<div class="film-list column" v-if="sortedFilmsToVote.length > 0"> <!-- film che si possono votare -->
 			<div class="film" v-for="film in sortedFilmsToVote">
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="">
 				<div class="title" :title="film.overview">

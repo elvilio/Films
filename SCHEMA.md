@@ -22,12 +22,52 @@ Un dizionario di chiavi-valori è indicato
 
 	{ TipoChiave : TipoValore }
 
+Tutto il testo dopo il carattere # è da considerarsi un commento
+
+	type Metro = Double # Alias per indicare i metri
 
 ## Struttura del database
 
 	type Id T = String
 	type Map T = { Id T : T }
 
+	type Film = {
+		id: Id Item
+		type: String = 'film'
+
+		addedBy: Id User
+		addedOn: String
+		
+		# Magari passare ad una sola variabile tipo "state"?
+		seen: Boolean
+		votingOpen: Boolean
+		nextUp: Boolean
+		
+		votedBy: [ Id User ]
+		
+		movieId: Id Film
+		title: String
+		image: String
+	}
+
+	type User = {
+		id: Id User
+		name: String
+	}
+
+	type Root = {
+		items: Map Film
+		users: Map User
+		
+		watchedFilms: [Id Film] # Forse?
+		votableFilms: [Id Film]
+		nextUp: Id Film
+	}
+
+## Future
+
+Eventuali cambiamenti da aggiungere in futuro
+	
 	type Saga = {
 		id: Id Item
 		type: String = 'saga'
@@ -45,36 +85,4 @@ Un dizionario di chiavi-valori è indicato
 		films: [Film]
 	}
 
-	type Film = {
-		id: Id Item
-		type: String = 'film'
-
-		addedBy: Id User
-		addedOn: String
-		
-		seen: Boolean
-		votingOpen: Boolean
-		nextUp: Boolean
-		
-		votedBy: { Id User : Boolean = true }
-		
-		movieId: Id Film
-		title: String
-		image: String
-	}
-
 	type Item = Film | Saga
-
-	type User = {
-		id: Id User
-		name: String
-		votedFilms: [Id Film]
-	}
-
-	type Root = {
-		items: Map Item
-		users: Map User
-		
-		watchedFilms: [Id Film]
-		votableFilms: [Id Film]
-	}

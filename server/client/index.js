@@ -1,11 +1,13 @@
 const app = new Vue({
 	el: '#app',
 	data: {
-		films: [],
+		films: {},
 		username: '',
+		nextUp: null,
 	},
 	created() {
 		this.getJSONFilms();
+		this.getNextUp();
 		
 		this.username = localStorage.getItem('maquindi-films-username');
 	},
@@ -13,6 +15,10 @@ const app = new Vue({
 		async getJSONFilms() {
 			let res = await axios.post('/api', { action: ACTIONS.GET_FILMS });
 			this.films = res.data;
+		},
+		async getNextUp() {
+			let res = await axios.post('/api', { action: ACTIONS.GET_NEXTUP });
+			this.nextUp = res.data.nextUp;
 		},
 	},
 	computed: {
@@ -27,9 +33,6 @@ const app = new Vue({
 		},
 		sortedFilmsToVote () {
 			return this.sortedFilms.filter(film => film.votingOpen);
-		},
-		sortedFilmsNextUp () {
-			return this.sortedFilmsNotSeen.filter(film => film.nextUp);
 		},
 		async votafilm(film) {
 			try {

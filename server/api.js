@@ -52,7 +52,7 @@ const handlers = {
 					.then(req => {
 						// retrive name and image and save the store to disk
 						storeManager.store.films[filmID].title = req.data.title;
-						<sto></sto>reManager.store.films[filmID].image = 
+						storeManager.store.films[filmID].image = 
 							req.data.poster_path ? req.data.poster_path : 'https://via.placeholder.com/200x350';
 						storeManager.saveStore();
 						res.sendStatus(200);
@@ -96,6 +96,7 @@ const handlers = {
 	[ACTIONS.CHOOSE_RANDOM_SET]: () => {
 
 		storeManager.store.votableFilms = [];
+		storeManager.store.nextUp = null;
 
 		_.forEach(storeManager.store.films, (film) => {
 			// Reset all films for new poll
@@ -119,6 +120,7 @@ const handlers = {
 	},
 
 	[ACTIONS.CLOSE_POLL]: () => {
+		
 		if (!storeManager.store.votableFilms.length) {
 			return { error: 'no poll open' };
 		}
@@ -131,10 +133,36 @@ const handlers = {
 		let theRandomFilm = _.maxBy(_.shuffle(filmIDVotePairs), it => it.vote);
 
 		storeManager.store.films[theRandomFilm.filmID].nextUp = true;
+		storeManager.store.nextUp = theRandomFilm.filmID;
 
-		
+		storeManager.store.votableFilms.map(filmID => {
+			let film = storeManager.store.films[filmID];
+			
+			if (filmID !== theRandomFilm.filmID) {
+				film.votedBy = [];
+			}
+			
+			film.votingOpen = false;
+		});
+
+		storeManager.saveStore();
+
+		// TODO: Fixare il fatto che questa cosa potrebbe crashare malamente
+		setTimeout(() => {
+			// Dopo 10 minuti rimuove il nextUp e lo aggiunge alla lista dei film visti
+			storeManager.store.films[theRandomFilm.filmID].nextUp = false;
+			storeManager.store.films[theRandomFilm.filmID].seen = true;
+			storeManager.store.nextUp = null;
+
+			storeManager.saveStore();
+
+		}, 1000 * 60 * 30 /* = 10 minuti */);
 		
 	},
+
+	[ACTIONS.GET_NEXTUP]: () => {
+		return { nextUp: storeManager.store.nextUp || null };
+	}
 }
 
 router.post('/', (req, res) => {
@@ -155,6 +183,13 @@ router.get('/random-films', (req, res) => {
 	handlers[ACTIONS.CHOOSE_RANDOM_SET]();
 	res.json({
 		success: 'Selected 4 random films for the voting'
+	});
+});
+
+router.get('/close-poll', (req, res) => {
+	handlers[ACTIONS.CLOSE_POLL]();
+	res.json({
+		success: 'closed the poll'
 	});
 });
 
@@ -204,83 +239,47 @@ router.post('/film/add', (req, res) => {
 });
 */
 
-router.post('/film/vote', (req, res) => {
-	let { filmID, userID } = req.body;
+// router.post('/film/vote', (req, res) => {
+// 	let { filmID, userID } = req.body;
 
-	// if one is not present return 404
-	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
-		res.sendStatus(404);
-	}
-	else {
-		let film = storeManager.store.films[filmID];
-		let user = storeManager.store.users[userID];
+// 	// if one is not present return 404
+// 	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
+// 		res.sendStatus(404);
+// 	}
+// 	else {
+// 		let film = storeManager.store.films[filmID];
+// 		let user = storeManager.store.users[userID];
 		
-		film.votedBy[userID] = 1;
-		user.votedFilms[filmID] = 1;
+// 		film.votedBy[userID] = 1;
+// 		user.votedFilms[filmID] = 1;
 
-		storeManager.saveStore();
+// 		storeManager.saveStore();
 
-		res.sendStatus(200);
-	}
+// 		res.sendStatus(200);
+// 	}
 
-});
+// });
 
-router.post('/film/unvote', (req, res) => {
-	let { filmID, userID } = req.body;
+// router.post('/film/unvote', (req, res) => {
+// 	let { filmID, userID } = req.body;
 
 	
-	// if one is not present return 404
-	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
-		res.sendStatus(404);
-	}
-	else {
-		let film = storeManager.store.films[filmID];
-		let user = storeManager.store.users[userID];
+// 	// if one is not present return 404
+// 	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
+// 		res.sendStatus(404);
+// 	}
+// 	else {
+// 		let film = storeManager.store.films[filmID];
+// 		let user = storeManager.store.users[userID];
 		
-		delete film.votedBy[userID];
-		delete user.votedFilms[filmID];
+// 		delete film.votedBy[userID];
+// 		delete user.votedFilms[filmID];
 		
-		storeManager.saveStore();
+// 		storeManager.saveStore();
 
-		res.sendStatus(200);
-	}
+// 		res.sendStatus(200);
+// 	}
 
-})
-
-/*
-router.get('/users', (req, res) => {
-
-	let users = storeManager.store.users;
-	let reducedUsers = R.pipe(
-		R.values,
-		R.map(it => R.pick(['id', 'name'], it))
-	)(users);
-
-	res.json(reducedUsers);
-
-});
-*/
-
-/*
-router.get('/user/:id', (req, res) => {
-
-	let authUserID = req.query.auth;
-
-	let userID = req.params.id;
-	let user = storeManager.store.users[userID];
-	
-	if (authUserID === userID) {
-		res.json(user);
-	}
-	else if (user) {
-		let reducedUser = R.pick(['id', 'name'], user);
-		res.json(reducedUser);
-	}
-	else {
-		res.json('user not found');
-	}
-
-});
-*/
+// })
 
 module.exports = router;
