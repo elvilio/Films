@@ -16,6 +16,6 @@
 
 ## Domande/Proposte:
 
-- [x] Serve veramente il parametro `votedFilms` degli utenti? (Non viene mai usato dal client quindi si potrebbe togliere) -----> **_Io direi di no ma di fare un log sul server che ti dica chi ha votato cosa e quando che in caso andasse giù per qualsiasi motivo o si corrompesse il file abbiamo un backup_**
+- [x] Serve veramente il parametro `votedFilms` degli utenti? (Non viene mai usato dal client quindi si potrebbe togliere) ---> **_Io direi di no ma di fare un log sul server che ti dica chi ha votato cosa e quando che in caso andasse giù per qualsiasi motivo o si corrompesse il file abbiamo un backup_**
 
-- Forse sarebbe meglio avere delle liste a parte parallele a films e users per l'id del film "nextUp" e "votableFilms".
+- Forse sarebbe meglio avere delle liste a parte parallele a films e users per l'id del film "nextUp" e "votableFilms". ---> **_Concordo_** 

@@ -1038,43 +1038,53 @@
 	"users": {
 		"aziis98": {
 			"id": "aziis98",
-			"name": "Antonio"
+			"name": "Antonio",
+			"Admin": true
 		},
 		"elvilio": {
 			"id": "elvilio",
-			"name": "Elvis"
+			"name": "Elvis",
+			"Admin": true
 		},
 		"eleonora": {
 			"id": "eleonora",
-			"name": "Eleonora"
+			"name": "Eleonora",
+			"Admin": false
 		},
 		"chiara": {
 			"id": "chiara",
-			"name": "Chiara"
+			"name": "Chiara",
+			"Admin": false
 		},
 		"isabella": {
 			"id": "isabella",
-			"name": "Isabella"
+			"name": "Isabella",
+			"Admin": false
 		},
 		"samu": {
 			"id": "samu",
-			"name": "Samu"
+			"name": "Samu",
+			"Admin": false
 		},
 		"anna": {
 			"id": "anna",
-			"name": "Anna"
+			"name": "Anna",
+			"Admin": false
 		},
 		"arianna": {
 			"id": "arianna",
-			"name": "Arianna"
+			"name": "Arianna",
+			"Admin": false
 		},
 		"filippa": {
 			"id": "filippa",
-			"name": "Filippa"
+			"name": "Filippa",
+			"Admin": false
 		},
 		"federica": {
 			"id": "federica",
-			"name": "Federica"
+			"name": "Federica",
+			"Admin": false
 		}
 	},
 	"nextUp": 284270,

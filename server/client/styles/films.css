@@ -47,6 +47,10 @@
 	color: #08BB2E;
 }
 
+.winner h1 {
+	text-align: center;
+}
+
 .divider {
 	height: 50px;
 	width: calc(100% + 100px);

@@ -93,6 +93,11 @@ const handlers = {
 		}
 	},
 
+	[ACTIONS.ISADMIN]: ({ userID, auth }) => {
+		let user = storeManager.store.users[userID];
+		return user.Admin;
+	},
+
 	[ACTIONS.CHOOSE_RANDOM_SET]: () => {
 
 		storeManager.store.votableFilms = [];
@@ -163,6 +168,7 @@ const handlers = {
 	[ACTIONS.GET_NEXTUP]: () => {
 		return { nextUp: storeManager.store.nextUp || null };
 	}
+
 }
 
 router.post('/', (req, res) => {
@@ -237,49 +243,49 @@ router.post('/film/add', (req, res) => {
 	}
 
 });
-*/
 
-// router.post('/film/vote', (req, res) => {
-// 	let { filmID, userID } = req.body;
+router.post('/film/vote', (req, res) => {
+	let { filmID, userID } = req.body;
 
-// 	// if one is not present return 404
-// 	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
-// 		res.sendStatus(404);
-// 	}
-// 	else {
-// 		let film = storeManager.store.films[filmID];
-// 		let user = storeManager.store.users[userID];
+	// if one is not present return 404
+	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
+		res.sendStatus(404);
+	}
+	else {
+		let film = storeManager.store.films[filmID];
+		let user = storeManager.store.users[userID];
 		
-// 		film.votedBy[userID] = 1;
-// 		user.votedFilms[filmID] = 1;
+		film.votedBy[userID] = 1;
+		user.votedFilms[filmID] = 1;
 
-// 		storeManager.saveStore();
+		storeManager.saveStore();
 
-// 		res.sendStatus(200);
-// 	}
+		res.sendStatus(200);
+	}
 
-// });
+});
 
-// router.post('/film/unvote', (req, res) => {
-// 	let { filmID, userID } = req.body;
+router.post('/film/unvote', (req, res) => {
+	let { filmID, userID } = req.body;
 
 	
-// 	// if one is not present return 404
-// 	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
-// 		res.sendStatus(404);
-// 	}
-// 	else {
-// 		let film = storeManager.store.films[filmID];
-// 		let user = storeManager.store.users[userID];
+	// if one is not present return 404
+	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
+		res.sendStatus(404);
+	}
+	else {
+		let film = storeManager.store.films[filmID];
+		let user = storeManager.store.users[userID];
 		
-// 		delete film.votedBy[userID];
-// 		delete user.votedFilms[filmID];
+		delete film.votedBy[userID];
+		delete user.votedFilms[filmID];
 		
-// 		storeManager.saveStore();
+		storeManager.saveStore();
 
-// 		res.sendStatus(200);
-// 	}
+		res.sendStatus(200);
+	}
 
-// })
+})
+*/
 
 module.exports = router;

@@ -48,7 +48,7 @@
 				<div class="results">
 					<div class="film" v-for="film in tmdbResults">
 						<div class="poster">
-							<img :src="film.poster_path ? 'http://image.tmdb.org/t/p/w200' + film.poster_path : 'https://via.placeholder.com/120x180'" alt="">
+							<img :src="film.poster_path ? 'http://image.tmdb.org/t/p/w200' + film.poster_path : 'https://via.placeholder.com/120x180'" alt="" title="Poster">
 						</div>
 						<h3>
 							{{ film.original_title }}

@@ -20,6 +20,10 @@ const app = new Vue({
 			let res = await axios.post('/api', { action: ACTIONS.GET_NEXTUP });
 			this.nextUp = res.data.nextUp;
 		},
+		async isAdmin() {
+			let res = await axios.post('/api', { action: ACTIONS.ISADMIN, userID: this.username });
+			return res.data;
+		},
 	},
 	computed: {
 		sortedFilms () {
@@ -48,5 +52,11 @@ const app = new Vue({
 				console.log(e);
 			}
 		},
+		isADM () {
+			let res = this.isAdmin().then(function(ret){
+				console.log(ret);
+				return ret;
+			});
+		}
 	}
 });

@@ -39,6 +39,7 @@ Tutto il testo dopo il carattere # è da considerarsi un commento
 		addedOn: String
 		
 		# Magari passare ad una sola variabile tipo "state"?
+		# ---> direi anche di si ma bisogna controllare ovunque si siano fatti controlli
 		seen: Boolean
 		votingOpen: Boolean
 		nextUp: Boolean

@@ -42,5 +42,5 @@
 - [x] logout (?)
 - [x] in /addfilm aggiungere il codice per aggiungere i film quando si preme il bottone
 - [ ] nella home aggiungere il modo di votare i film se l'utente è loggato
-- [ ] aggiungere tutti i film in films.txt
+- [x] aggiungere tutti i film in films.txt
 	- [ ] scrivere uno script o qlcs del genere per fare ciò
