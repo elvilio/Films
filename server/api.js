@@ -154,14 +154,15 @@ const handlers = {
 		// TODO: Fixare il fatto che questa cosa potrebbe crashare malamente
 		setTimeout(() => {
 			// Dopo 10 minuti rimuove il nextUp e lo aggiunge alla lista dei film visti
+			// Aggiunge poi 4 nuovi film da votare
 			storeManager.store.films[theRandomFilm.filmID].nextUp = false;
 			storeManager.store.films[theRandomFilm.filmID].seen = true;
 			storeManager.store.nextUp = null;
 
-			storeManager.saveStore();
+			handlers[ACTIONS.CHOOSE_RANDOM_SET]();
 
+			storeManager.saveStore();
 		}, 1000 * 60 * 30 /* = 10 minuti */);
-		
 	},
 
 	[ACTIONS.GET_NEXTUP]: () => {
@@ -184,6 +185,8 @@ router.post('/', (req, res) => {
 	}
 });
 
+
+// Non credo servano più questi
 router.get('/random-films', (req, res) => {
 	handlers[ACTIONS.CHOOSE_RANDOM_SET]();
 	res.json({

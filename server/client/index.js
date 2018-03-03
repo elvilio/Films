@@ -24,9 +24,21 @@ const app = new Vue({
 			this.nextUp = res.data.nextUp;
 		},
 		async isAdmin() {
-			let res = await axios.post('/api', { action: ACTIONS.ISADMIN, userID: this.username });
-			console.log(res.data);
-			this.isadm = res.data;
+			if(this.username != '') {
+				let res = await axios.post('/api', { action: ACTIONS.ISADMIN, userID: this.username });
+				this.isadm = res.data;
+			}
+			else {
+				this.isadm = false;
+			}
+		},
+		async newPoll(){
+			await axios.post('/api', { action: ACTIONS.CHOOSE_RANDOM_SET });
+			location.replace('/');
+		},
+		async closePoll() {
+			await axios.post('/api', { action: ACTIONS.CLOSE_POLL });
+			location.replace('/');
 		},
 	},
 	computed: {
