@@ -4,12 +4,15 @@ const app = new Vue({
 		films: {},
 		username: '',
 		nextUp: null,
+		isadm: false,
 	},
 	created() {
 		this.getJSONFilms();
 		this.getNextUp();
 		
 		this.username = localStorage.getItem('maquindi-films-username');
+
+		this.isAdmin();
 	},
 	methods: {
 		async getJSONFilms() {
@@ -22,7 +25,8 @@ const app = new Vue({
 		},
 		async isAdmin() {
 			let res = await axios.post('/api', { action: ACTIONS.ISADMIN, userID: this.username });
-			return res.data;
+			console.log(res.data);
+			this.isadm = res.data;
 		},
 	},
 	computed: {
@@ -52,11 +56,5 @@ const app = new Vue({
 				console.log(e);
 			}
 		},
-		isADM () {
-			let res = this.isAdmin().then(function(ret){
-				console.log(ret);
-				return ret;
-			});
-		}
 	}
 });

@@ -12,7 +12,7 @@ const ACTIONS = {
 	GET_USER: 'GET_USER',
 	
 	GET_APIKEYS: 'GET_APIKEYS',
-
+	ISADMIN: 'ISADMIN',
 }
 
 try {

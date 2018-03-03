@@ -1,4 +1,3 @@
-
 const R = require('ramda');
 const _ = require('lodash');
 const fs = require('fs');
@@ -239,9 +238,7 @@ router.post('/film/add', (req, res) => {
 			storeManager.store.films[filmID].title = title;
 			storeManager.saveStore();
 		}
-
 	}
-
 });
 
 router.post('/film/vote', (req, res) => {
@@ -262,7 +259,6 @@ router.post('/film/vote', (req, res) => {
 
 		res.sendStatus(200);
 	}
-
 });
 
 router.post('/film/unvote', (req, res) => {
@@ -284,7 +280,6 @@ router.post('/film/unvote', (req, res) => {
 
 		res.sendStatus(200);
 	}
-
 })
 */
 

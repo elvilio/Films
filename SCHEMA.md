@@ -54,6 +54,7 @@ Tutto il testo dopo il carattere # è da considerarsi un commento
 	type User = {
 		id: Id User
 		name: String
+		Admin: bool
 	}
 
 	type Root = {
