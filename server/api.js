@@ -120,7 +120,6 @@ const handlers = {
 		});
 
 		storeManager.saveStore();
-		
 	},
 
 	[ACTIONS.CLOSE_POLL]: () => {
@@ -149,6 +148,8 @@ const handlers = {
 			film.votingOpen = false;
 		});
 
+		storeManager.store.votableFilms = []; //meglio fare così che se no se la chiami più volte ottieni risultati diversi (se sceglie a random)
+
 		storeManager.saveStore();
 
 		// TODO: Fixare il fatto che questa cosa potrebbe crashare malamente
@@ -167,8 +168,41 @@ const handlers = {
 
 	[ACTIONS.GET_NEXTUP]: () => {
 		return { nextUp: storeManager.store.nextUp || null };
-	}
+	},
 
+	[ACTIONS.VOTEFILM]: ({filmID, userID}) => {
+		if (!storeManager.store.votableFilms.length) {
+			return { error: 'no poll open' };
+		}
+		else if (!storeManager.store.users[userID]) {
+			return { error: 'invalid user' };
+		}
+		else if(storeManager.store.films[filmID].votedBy.indexOf(userID) >= 0){
+			return { error: 'already voted' };
+		}
+		else {
+			storeManager.store.films[filmID].votedBy.push(userID);
+			storeManager.saveStore();
+		}
+	},
+	[ACTIONS.UNVOTEFILM]: (filmID, userID) => {
+		if (!storeManager.store.votableFilms.length) {
+			return { error: 'no poll open' };
+		}
+		else if (!storeManager.store.users[userID]) {
+			return { error: 'invalid user' };
+		}
+		else {
+			var index = storeManager.store.films[filmID].votedBy.indexOf(userID);
+			if (index >= 0){
+				storeManager.store.films[filmID].votedBy = storeManager.store.films[filmID].votedBy.splice(index, 1);
+				storeManager.saveStore();
+			}
+			else {
+				return { error: 'already unvoted' };
+			}
+		}
+	},
 }
 
 router.post('/', (req, res) => {

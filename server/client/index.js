@@ -9,7 +9,7 @@ const app = new Vue({
 	created() {
 		this.getJSONFilms();
 		this.getNextUp();
-		
+
 		this.username = localStorage.getItem('maquindi-films-username');
 
 		this.isAdmin();
@@ -34,11 +34,26 @@ const app = new Vue({
 		},
 		async newPoll(){
 			await axios.post('/api', { action: ACTIONS.CHOOSE_RANDOM_SET });
-			location.replace('/');
+			location.replace('/'); // bisognerebbe fare un update ma non so come
 		},
 		async closePoll() {
 			await axios.post('/api', { action: ACTIONS.CLOSE_POLL });
-			location.replace('/');
+			location.replace('/'); // perchè solo alcuni div devono cambiare non tutti
+			// e non voglio mettere l'intera lista dei 4 film nel data in modo da chiamare un watch
+		},
+		async votafilm(film) {
+			await axios.post('/api', {
+				action: ACTIONS.VOTEFILM,
+				filmID: film.id,
+				userID: this.username
+			});
+		},
+		async unvotafilm(film) {
+			await axios.post('/api', {
+				action: ACTIONS.UNVOTEFILM,
+				filmID: film.id,
+				userID: this.username
+			});
 		},
 	},
 	computed: {
@@ -53,20 +68,6 @@ const app = new Vue({
 		},
 		sortedFilmsToVote () {
 			return this.sortedFilms.filter(film => film.votingOpen);
-		},
-		async votafilm(film) {
-			try {
-				; /* to do */
-			} catch (e) {
-				console.log(e);
-			}
-		},
-		async unvotafilm(film) {
-			try {
-				; /* to do */
-			} catch (e) {
-				console.log(e);
-			}
 		},
 	}
 });

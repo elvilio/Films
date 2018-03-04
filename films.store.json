@@ -4,7 +4,9 @@
 			"id": 24,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:31",
-			"votedBy": {},
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "Kill Bill: Vol. 1",
 			"image": "/97fNAi62HawGjWru7PvVmF7RAbU.jpg",
 			"seen": false,
@@ -37,7 +39,9 @@
 			"id": 115,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:31",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "The Big Lebowski",
 			"image": "/qiE3ovg9TPylHReZjizQ40LsKZV.jpg",
 			"seen": false,
@@ -48,7 +52,7 @@
 			"id": 176,
 			"addedBy": "elvilio",
 			"addedOn": "2018/02/27 17:11",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Saw - L'enigmista",
 			"image": "/aXzoBX4KE0iiBgVQBfQi2A6tKzZ.jpg",
 			"seen": false,
@@ -74,7 +78,7 @@
 			"title": "Le ali della libertà",
 			"image": "/tWzOxgdkYyuIICOG3kZLN4YHzt6.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"393": {
@@ -250,7 +254,7 @@
 			"title": "Bowling a Columbine",
 			"image": "/7iH6d52Nc8Visgc92rSDbJYrtLt.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"1878": {
@@ -316,7 +320,7 @@
 			"title": "Sotto la sabbia",
 			"image": "/tGrxPMcVmfokAtDsrLdTOpQh4DG.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"8005": {
@@ -334,7 +338,7 @@
 			"id": 8467,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/26 15:51",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Scemo & più scemo",
 			"image": "/uoDzzw3T9dBgnAnvihAwRuQ0MEU.jpg",
 			"seen": false,
@@ -367,7 +371,7 @@
 			"id": 10313,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:42",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "The Men Who Stare at Goats",
 			"image": "/dCr1NYTxj7jJi2OlreTzCH7xJcM.jpg",
 			"seen": false,
@@ -411,7 +415,7 @@
 			"id": 13183,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:39",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Watchmen",
 			"image": "/1QqwJBv5a6ddgzaT6cLytJioyrJ.jpg",
 			"seen": false,
@@ -437,14 +441,16 @@
 			"title": "The Fall",
 			"image": "/gUex3Twn97Jp8F27Op1r7OnMTFt.jpg",
 			"seen": false,
-			"votingOpen": false,
+			"votingOpen": true,
 			"nextUp": false
 		},
 		"14836": {
 			"id": 14836,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/26 11:12",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "Coraline e la porta magica",
 			"image": "/7PwNxvXRzn6CGBWeLi91KOTCFQv.jpg",
 			"seen": false,
@@ -477,7 +483,7 @@
 			"id": 23631,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:30",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Machete",
 			"image": "/3RCX4EzTrpO6wNz536EQPhYM2Fk.jpg",
 			"seen": false,
@@ -488,7 +494,9 @@
 			"id": 27205,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:15",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "Inception",
 			"image": "/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg",
 			"seen": false,
@@ -510,7 +518,7 @@
 			"id": 37686,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:40",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Super 8",
 			"image": "/1JAKnHjENVz1adurNjtsWZnVQGY.jpg",
 			"seen": false,
@@ -521,7 +529,7 @@
 			"id": 53487,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:14",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "This Must Be the Place",
 			"image": "/rNTZMp96BcKIxgF3OIUbtByJtsQ.jpg",
 			"seen": false,
@@ -565,7 +573,9 @@
 			"id": 76341,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 22:51",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "Mad Max: Fury Road",
 			"image": "/kqjL17yufvn9OVLyXYpvtyrFfak.jpg",
 			"seen": false,
@@ -598,7 +608,7 @@
 			"id": 106747,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:30",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Machete Kills",
 			"image": "/ltblMRM8clWKsjC2qQITuRN40Yr.jpg",
 			"seen": false,
@@ -609,7 +619,7 @@
 			"id": 123678,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:26",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "The Act of Killing",
 			"image": "/6ng86moS1tBdofRVMooOMCfW4TJ.jpg",
 			"seen": false,
@@ -620,7 +630,7 @@
 			"id": 146233,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:29",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Prisoners",
 			"image": "/yAhqW57pwMAsCgmZpM5zSIVQVTh.jpg",
 			"seen": false,
@@ -800,7 +810,7 @@
 			"title": "Grindhouse",
 			"image": "/oATTOsfalnnFObVNUWiP9MieLIm.jpg",
 			"seen": false,
-			"votingOpen": false,
+			"votingOpen": true,
 			"nextUp": false
 		},
 		"291270": {
@@ -906,7 +916,7 @@
 			"id": 336222,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:16",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Rams",
 			"image": "/raOBs0LDaMix0g8sGFtYxwYx6JQ.jpg",
 			"seen": false,
@@ -987,7 +997,7 @@
 			"title": "The Killing of a Sacred Deer",
 			"image": "/e4DGlsc9g0h5AyoyvvAuIRnofN7.jpg",
 			"seen": false,
-			"votingOpen": false,
+			"votingOpen": true,
 			"nextUp": false
 		},
 		"400617": {
@@ -1016,7 +1026,7 @@
 			"id": 429200,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:12",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Good Time",
 			"image": "/cz0egudCsfsTzwUAL03A5UzoHGT.jpg",
 			"seen": false,
@@ -1089,9 +1099,9 @@
 	},
 	"nextUp": null,
 	"votableFilms": [
-		278,
-		1430,
+		399057,
+		14784,
 		180863,
-		4973
+		285923
 	]
 }
