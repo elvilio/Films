@@ -132,7 +132,7 @@
 			],
 			"title": "The Matrix",
 			"image": "/gynBNzwyaHKtXqlEKKLioNkjKgN.jpg",
-			"seen": true,
+			"seen": false,
 			"votingOpen": false,
 			"nextUp": false
 		},
@@ -145,7 +145,7 @@
 			],
 			"title": "The Matrix Reloaded",
 			"image": "/ezIurBz2fdUc68d98Fp9dRf5ihv.jpg",
-			"seen": true,
+			"seen": false,
 			"votingOpen": false,
 			"nextUp": false
 		},
@@ -375,7 +375,7 @@
 			],
 			"title": "Il destino di un cavaliere",
 			"image": "/5wqTcsFUtYXXJL577M1VKk1mVD9.jpg",
-			"seen": true,
+			"seen": false,
 			"votingOpen": false,
 			"nextUp": false
 		},
@@ -502,7 +502,7 @@
 			],
 			"title": "Machete",
 			"image": "/3RCX4EzTrpO6wNz536EQPhYM2Fk.jpg",
-			"seen": true,
+			"seen": false,
 			"votingOpen": false,
 			"nextUp": false
 		},
@@ -738,7 +738,7 @@
 			],
 			"title": "Kingsman: The Secret Service",
 			"image": "/8x7ej0LnHdKUqilNNJXYOeyB6L9.jpg",
-			"seen": true,
+			"seen": false,
 			"votingOpen": false,
 			"nextUp": false
 		},
@@ -751,7 +751,7 @@
 			],
 			"title": "What We Do in the Shadows",
 			"image": "/4bqqrtzY9vVQeEcqyqWfTJWmpD9.jpg",
-			"seen": true,
+			"seen": false,
 			"votingOpen": false,
 			"nextUp": false
 		},
