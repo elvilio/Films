@@ -67,7 +67,7 @@
 					</div>
 				</div>
 				<div class="voting" v-if="username">
-					<button v-if="film.votedBy.indexOf(username)" @click="votafilm(film)">Vota?</button>
+					<button v-if="!switchVoting[film.id]" @click="votafilm(film)">Vota?</button>
 					<button v-else @click="unvotafilm(film)">Unvota?</button>
 				</div>
 			</div>

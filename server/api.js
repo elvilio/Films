@@ -185,6 +185,7 @@ const handlers = {
 			storeManager.saveStore();
 		}
 	},
+
 	[ACTIONS.UNVOTEFILM]: ({filmID, userID}) => {
 		if (!storeManager.store.votableFilms.length) {
 			return { error: 'no poll open' };
@@ -198,10 +199,29 @@ const handlers = {
 		else {
 			var rObj = storeManager.store.films[filmID];
 			rObj.votedBy = rObj.votedBy.filter(item => item !== userID);
-
 			storeManager.saveStore();
 		}
 	},
+
+	[ACTIONS.GETFILMVOTED]: ({userID}) => {
+		if (!storeManager.store.users[userID]) {
+			return { error: 'invalid user' };
+		}
+		else {
+			var InObj = Object.values(storeManager.store.films).filter(film => film.votingOpen);
+			var RetObj = {};
+			InObj.map(function (film){
+				var bool = film.votedBy.indexOf(userID);
+				if (bool >= 0){
+					RetObj[film.id] = true;
+				}
+				else {
+					RetObj[film.id] = false;
+				}
+			})
+			return RetObj;
+		}
+	}
 }
 
 router.post('/', (req, res) => {

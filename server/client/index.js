@@ -5,6 +5,7 @@ const app = new Vue({
 		username: '',
 		nextUp: null,
 		isadm: false,
+		switchVoting: [],
 	},
 	created() {
 		this.getJSONFilms();
@@ -13,6 +14,7 @@ const app = new Vue({
 		this.username = localStorage.getItem('maquindi-films-username');
 
 		this.isAdmin();
+		this.getFilmVoted();
 	},
 	methods: {
 		async getJSONFilms() {
@@ -22,6 +24,10 @@ const app = new Vue({
 		async getNextUp() {
 			let res = await axios.post('/api', { action: ACTIONS.GET_NEXTUP });
 			this.nextUp = res.data.nextUp;
+		},
+		async getFilmVoted() {
+			let res = await axios.post('/api', { action: ACTIONS.GETFILMVOTED, userID: this.username });
+			this.switchVoting = Object.values(res)[0];
 		},
 		async isAdmin() {
 			if(this.username != '') {
@@ -49,6 +55,7 @@ const app = new Vue({
 			});
 			var element = document.getElementById(film.id);
 			element.innerHTML = parseInt(element.innerHTML) + 1;
+			this.getFilmVoted();
 		},
 		async unvotafilm(film) {
 			await axios.post('/api', {
@@ -58,6 +65,7 @@ const app = new Vue({
 			});
 			var element = document.getElementById(film.id);
 			element.innerHTML = parseInt(element.innerHTML) - 1;
+			this.getFilmVoted();
 		},
 		numberOfVotes(film) {
 			return film.votedBy.length.toString();
