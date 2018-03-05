@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>New Film | Maquindi Films</title>
+
+	<link rel="icon" type="image/png" href="/photos/Icon/Icon-32x.png">
+
+	<!-- Custom Css -->
+	<link rel="stylesheet" href="./styles/main.css">
+	<link rel="stylesheet" href="./styles/newfilm.css">
+	
+</head>
+<body>
+	<div class="img1" id="img1" background="./photos/w1@small.jpg"></div>
+	<div class="img2" id="img2" background="./photos/w1@small.jpg"></div>
+	
+	<main id="app" class="column">
+		<div class="nav row">
+			<div class="nav-item"><a href="/"><div>Home</div></a></div>
+
+			<div class="nav-item active" v-if="username">
+				<a href="#"><div>Add New</div></a>
+			</div>
+			
+			<div class="nav-item">
+				<a href="/login">
+					<div v-if="!username">Login</div>
+					<div v-else>{{ username }}</div>
+				</a>
+			</div>
+		</div>
+
+		<h1>Add new film</h1>
+		
+		<div class="container column">
+			<p>Cerca nuovi film da aggiungere</p>
+			
+			<div class="row search">
+				<input type="text" v-model="search" @keyup.enter="searchFilm">
+				<button @click="searchFilm">Cerca</button>
+			</div>
+
+			<div v-if="tmdbResults.length > 0">
+				<h2>Risultati</h2>
+				<div class="results">
+					<div class="film" v-for="film in tmdbResults">
+						<div class="poster">
+							<img :src="film.poster_path ? 'http://image.tmdb.org/t/p/w200' + film.poster_path : 'https://via.placeholder.com/120x180'" alt="" title="Poster">
+						</div>
+						<h3>
+							{{ film.original_title }}
+							<span v-if="film.original_title !== film.title"> | {{ film.title }}</span>
+							({{film.release_date.split('-')[0]}})
+						</h3>
+						<p>{{ film.overview }}</p>
+						<button v-if="!film.added" @click="aggiungi_film(film)">aggiungi</button>
+						<div v-else class="button disabled">aggiunto</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- VueJS & Axios -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<!-- Actions -->
+	<script src="./actions.js"></script>
+	<!-- Custom JS -->
+	<script src="./addNew.js"></script>
+	<script src="./sfondo.js"></script>
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</body>
+</html>

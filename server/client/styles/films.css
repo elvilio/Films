@@ -1,0 +1,77 @@
+.film-list {
+	background-color: #FFFFFF88;
+	padding: 50px;
+	margin-bottom: 50px;
+}
+
+.film {
+	display: grid;
+	grid-template-rows: 100px;
+	grid-template-columns: 100px auto 150px;
+	grid-template-areas:
+		"img title voting";
+	width: 100%;
+	height: 100px;
+
+	margin-bottom: 10px;
+}
+
+.film img {
+	grid-area: img;
+	height: 100%;
+}
+
+.film .title {
+	grid-area: title;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	width: 100%;
+	height: 100%;
+}
+
+.film .voting {
+	grid-area: voting;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.winner {
+	background-color: #08BB2E30;
+	color: #08BB2E;
+}
+
+.winner h1 {
+	text-align: center;
+}
+
+.divider {
+	height: 50px;
+	width: calc(100% + 100px);
+	background-color: #FFFFFF20;
+}
+
+.votableFilms {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: auto 20px auto;
+	grid-template-areas:
+		"lft . rght";
+	align-items: center;
+}
+
+.left {
+	grid-area: lft;
+}
+
+.right {
+	grid-area: rght;
+	justify-self: right;
+}
