@@ -10,6 +10,7 @@ const router = express.Router();
 
 const storeManager = require('./store.js');
 
+// Dipendenze cicliche a parte per ora è ok
 const logger = require('./index.js');
 
 const API_KEYS = {
@@ -61,12 +62,10 @@ const handlers = {
 						storeManager.store.films[filmID].image = 
 							req.data.poster_path ? req.data.poster_path : 'https://via.placeholder.com/200x350';
 						storeManager.saveStore();
-						res.sendStatus(200);
 					})
 					.catch(err => {
 						logger.warn('Error during request for "' + filmID + '" provided by user ' + userID);
 						logger.warn(err);
-						res.sendStatus(500);
 					});
 			}
 			else {
@@ -75,7 +74,7 @@ const handlers = {
 			}
 
 			logger.silly('[ADD_FILM] Film added (' + filmID + ')');
-			return { success: 'film added' }
+			return { success: 'film added' };
 		}
 	},
 	
@@ -233,6 +232,8 @@ const handlers = {
 			return { error: 'invalid user' };
 		}
 		else {
+			// (?) Ma questo non è proprio:
+			// 	storeManager.store.votableFilms.map(filmID => storeManager.store.films[filmID])
 			var InObj = Object.values(storeManager.store.films).filter(film => film.votingOpen);
 			var RetObj = {};
 			InObj.map(function (film){
@@ -250,12 +251,17 @@ const handlers = {
 	}
 }
 
+
+
+
+
+
 router.post('/', (req, res) => {
 	let handler = handlers[req.body.action];
 
 	if (handler) {
 		let result = handler(req.body);
-		/*logger.info('[' + req.body.action + ']');*/
+		logger.info('[' + req.body.action + ']');
 		res.json(result);
 	}
 	else {
@@ -266,20 +272,23 @@ router.post('/', (req, res) => {
 });
 
 
-// Non credo servano più questi
-router.get('/random-films', (req, res) => {
-	handlers[ACTIONS.CHOOSE_RANDOM_SET]();
-	res.json({
-		success: 'Selected 4 random films for the voting'
-	});
-});
 
-router.get('/close-poll', (req, res) => {
-	handlers[ACTIONS.CLOSE_POLL]();
-	res.json({
-		success: 'closed the poll'
-	});
-});
+
+
+// Non credo servano più questi
+// router.get('/random-films', (req, res) => {
+// 	handlers[ACTIONS.CHOOSE_RANDOM_SET]();
+// 	res.json({
+// 		success: 'Selected 4 random films for the voting'
+// 	});
+// });
+
+// router.get('/close-poll', (req, res) => {
+// 	handlers[ACTIONS.CLOSE_POLL]();
+// 	res.json({
+// 		success: 'closed the poll'
+// 	});
+// });
 
 /*
 router.post('/film/add', (req, res) => {
