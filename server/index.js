@@ -1,7 +1,42 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+
+const winston = require('winston');
+const fs = require('fs');
+const env = process.env.NODE_ENV || 'development';
+const logDir = 'log';
+
+
 const app = express();
+
+/* Logging */
+/* Create the log directory if it does not exist */
+if (!fs.existsSync(logDir)) {
+	fs.mkdirSync(logDir);
+}
+
+const tsFormat = () => (new Date()).toLocaleTimeString();
+
+const logger = new (winston.Logger)({
+	transports: [
+		new (winston.transports.Console)({
+			timestamp: tsFormat,
+			colorize: true,
+			level: 'debug'
+		}),
+		new (require('winston-daily-rotate-file'))({
+			filename: `${logDir}/-results.log`,
+			timestamp: tsFormat,
+			datePattern: 'yyyy-MM-dd',
+			prepend: true,
+			level: env === 'development' ? 'silly' : 'debug'
+		})
+	]
+});
+
+module.exports = logger;
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -23,12 +58,12 @@ app.get('/addfilm', (req, res) => {
 
 app.use(express.static(__dirname + '/client'));
 
-// API Things
 
+/* API Things */
 const apiRoute = require('./api.js');
 
 app.use('/api', apiRoute);
 
 app.listen(8080, function () {
-	console.log('Example app listening on port 8080!');
+	logger.info('Example app listening on port 8080!');
 });

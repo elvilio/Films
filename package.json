@@ -18,6 +18,7 @@
     "lodash": "^4.17.5",
     "moment": "^2.20.1",
     "ramda": "^0.25.0",
-    "winston": "^2.4.0"
+    "winston": "^2.4.0",
+    "winston-daily-rotate-file": "^1.7.2"
   }
 }

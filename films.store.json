@@ -43,7 +43,7 @@
 			"title": "The Big Lebowski",
 			"image": "/qiE3ovg9TPylHReZjizQ40LsKZV.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"176": {
@@ -140,13 +140,11 @@
 			"id": 604,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 22:56",
-			"votedBy": [
-				"elvilio"
-			],
+			"votedBy": [],
 			"title": "The Matrix Reloaded",
 			"image": "/ezIurBz2fdUc68d98Fp9dRf5ihv.jpg",
 			"seen": false,
-			"votingOpen": false,
+			"votingOpen": true,
 			"nextUp": false
 		},
 		"627": {
@@ -595,7 +593,7 @@
 			"title": "Mad Max: Fury Road",
 			"image": "/kqjL17yufvn9OVLyXYpvtyrFfak.jpg",
 			"seen": false,
-			"votingOpen": false,
+			"votingOpen": true,
 			"nextUp": false
 		},
 		"83542": {
@@ -733,13 +731,11 @@
 			"id": 207703,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:26",
-			"votedBy": [
-				"elvilio"
-			],
+			"votedBy": [],
 			"title": "Kingsman: The Secret Service",
 			"image": "/8x7ej0LnHdKUqilNNJXYOeyB6L9.jpg",
 			"seen": false,
-			"votingOpen": false,
+			"votingOpen": true,
 			"nextUp": false
 		},
 		"246741": {
@@ -807,7 +803,7 @@
 			"title": "It Follows",
 			"image": "/4MrwJZr0R9LbyOgZqwLNmtzzxbu.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"273248": {
@@ -891,11 +887,13 @@
 			"id": 317952,
 			"addedBy": "elvilio",
 			"addedOn": "2018/02/27 14:44",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "Cartel Land",
 			"image": "/3DGaP0ZC7Fd5K8mx4NiZHf5hWrK.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"318846": {
@@ -1139,9 +1137,9 @@
 	},
 	"nextUp": null,
 	"votableFilms": [
-		115,
 		4232,
-		317952,
-		270303
+		207703,
+		604,
+		76341
 	]
 }

@@ -10,6 +10,8 @@ const router = express.Router();
 
 const storeManager = require('./store.js');
 
+const logger = require('./index.js');
+
 const API_KEYS = {
 	tmdb: fs.readFileSync(__dirname + '/tmdb.apikey', 'utf8'),
 }
@@ -18,23 +20,28 @@ const ACTIONS = require('./client/actions.js');
 const handlers = {
 	
 	[ACTIONS.GET_FILMS]: () => {
+		logger.silly('[GET_FILMS] Got films from store');
 		return storeManager.store.films;
 	},
 	
 	[ACTIONS.GET_USERS]: () => {
+		logger.silly('[GET_USERS] Got users from store');
 		return storeManager.store.users;
 	},
 	
 	[ACTIONS.ADD_FILM]: ({ filmID, userID, external, ...options }) => {
 		if (storeManager.store.films[filmID]) {
+			logger.silly('[ADD_FILM] err: film already present');
 			return { error: 'film already present' };
 		}
 		else if (!storeManager.store.users[userID]) {
+			logger.silly('[ADD_FILM] err: invalid user');
 			return { error: 'invalid user' };
 		}
 		else {
 			if (Object.keys(options).length > 10) {
 				throw 'Forse "' + userID + '" sta tentanto di hackerare qualcosa...'
+				logger.silly('[ADD_FILM] err: Forse "' + userID + '" sta tentanto di hackerare qualcosa...');
 				return { error: 'internal error' };
 			}
 
@@ -57,8 +64,8 @@ const handlers = {
 						res.sendStatus(200);
 					})
 					.catch(err => {
-						console.log('Error during request for "' + filmID + '" provided by user ' + userID);
-						console.log(err);
+						logger.warn('Error during request for "' + filmID + '" provided by user ' + userID);
+						logger.warn(err);
 						res.sendStatus(500);
 					});
 			}
@@ -67,11 +74,13 @@ const handlers = {
 				storeManager.saveStore();
 			}
 
+			logger.silly('[ADD_FILM] Film added (' + filmID + ')');
 			return { success: 'film added' }
 		}
 	},
 	
 	[ACTIONS.GET_APIKEYS]: () => {
+		logger.silly('[GET_APIKEYS] Got ApiKey');
 		return API_KEYS;
 	},
 	
@@ -88,12 +97,14 @@ const handlers = {
 			}
 		}
 		else {
+			logger.silly('[GET_USER] err: user not found');
 			return { error: 'user not found' };
 		}
 	},
 
 	[ACTIONS.ISADMIN]: ({ userID, auth }) => {
 		let user = storeManager.store.users[userID];
+		logger.silly('[ISADMIN] Checked for admin');
 		return user.Admin;
 	},
 
@@ -120,11 +131,13 @@ const handlers = {
 		});
 
 		storeManager.saveStore();
+		logger.info('[CHOOSE_RANDOM_SET] Chose 4 films');
 	},
 
 	[ACTIONS.CLOSE_POLL]: () => {
 		
 		if (!storeManager.store.votableFilms.length) {
+			logger.info('[CLOSE_POLL] err: no poll open');
 			return { error: 'no poll open' };
 		}
 
@@ -152,6 +165,8 @@ const handlers = {
 
 		storeManager.saveStore();
 
+		logger.info('[CLOSE_POLL] Closed poll');
+
 		// TODO: Fixare il fatto che questa cosa potrebbe crashare malamente
 		setTimeout(() => {
 			// Dopo 10 minuti rimuove il nextUp e lo aggiunge alla lista dei film visti
@@ -168,43 +183,53 @@ const handlers = {
 
 	[ACTIONS.GET_NEXTUP]: () => {
 		return { nextUp: storeManager.store.nextUp || null };
+		logger.silly('[GET_NEXTUP] Got next film');
 	},
 
-	[ACTIONS.VOTEFILM]: ({filmID, userID}) => {
+	[ACTIONS.VOTEFILM]: ({ filmID, userID }) => {
 		if (!storeManager.store.votableFilms.length) {
+			logger.silly('[VOTEFILM] err: no poll open');
 			return { error: 'no poll open' };
 		}
 		else if (!storeManager.store.users[userID]) {
+			logger.silly('[VOTEFILM] err: invalid user');
 			return { error: 'invalid user' };
 		}
 		else if(storeManager.store.films[filmID].votedBy.indexOf(userID) >= 0){
+			logger.silly('[VOTEFILM] err: already voted');
 			return { error: 'already voted' };
 		}
 		else {
 			storeManager.store.films[filmID].votedBy.push(userID);
 			storeManager.saveStore();
+			logger.info('[VOTEFILM] Voted film (' + filmID + ') from ' + userID);
 		}
 	},
 
-	[ACTIONS.UNVOTEFILM]: ({filmID, userID}) => {
+	[ACTIONS.UNVOTEFILM]: ({ filmID, userID }) => {
 		if (!storeManager.store.votableFilms.length) {
+			logger.silly('[UNVOTEFILM] err: no poll open');
 			return { error: 'no poll open' };
 		}
 		else if (!storeManager.store.users[userID]) {
+			logger.silly('[UNVOTEFILM] err: invalid user');
 			return { error: 'invalid user' };
 		}
 		else if(storeManager.store.films[filmID].votedBy.indexOf(userID) < 0){
+			logger.silly('[UNVOTEFILM] err: already unvoted');
 			return { error: 'already unvoted' };
 		}
 		else {
 			var rObj = storeManager.store.films[filmID];
 			rObj.votedBy = rObj.votedBy.filter(item => item !== userID);
 			storeManager.saveStore();
+			logger.info('[UNVOTEFILM] Unvoted film(' + filmID + ') from ' + userID);
 		}
 	},
 
-	[ACTIONS.GETFILMVOTED]: ({userID}) => {
+	[ACTIONS.GETFILMVOTED]: ({ userID }) => {
 		if (!storeManager.store.users[userID]) {
+			logger.silly('[GETFILMVOTED] err: invalid user');
 			return { error: 'invalid user' };
 		}
 		else {
@@ -219,6 +244,7 @@ const handlers = {
 					RetObj[film.id] = false;
 				}
 			})
+			logger.silly('[GETFILMVOTED] Got list of voted films');
 			return RetObj;
 		}
 	}
@@ -229,11 +255,12 @@ router.post('/', (req, res) => {
 
 	if (handler) {
 		let result = handler(req.body);
-		console.log('[' + req.body.action + ']');
+		/*logger.info('[' + req.body.action + ']');*/
 		res.json(result);
 	}
 	else {
 		res.sendStatus(500);
+		logger.warn('No handler for "' + req.body.action + '"');
 		throw 'No handler for "' + req.body.action + '"';
 	}
 });

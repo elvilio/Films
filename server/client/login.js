@@ -23,7 +23,7 @@ const app = new Vue({
 				}
 				else {
 					localStorage.setItem('maquindi-films-username', username);
-					console.log('Logged in as "%s"', username);
+					/* console.log('Logged in as "%s"', username); */
 					location.replace('/');
 				}
 			}
