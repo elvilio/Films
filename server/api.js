@@ -104,7 +104,7 @@ const handlers = {
 	[ACTIONS.ISADMIN]: ({ userID, auth }) => {
 		let user = storeManager.store.users[userID];
 		logger.silly('[ISADMIN] Checked for admin');
-		return user.Admin;
+		return user && user.Admin;
 	},
 
 	[ACTIONS.CHOOSE_RANDOM_SET]: () => {
