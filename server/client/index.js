@@ -55,6 +55,9 @@ const app = new Vue({
 				userID: this.username
 			});
 		},
+		numberOfVotes(film) {
+			return film.votedBy.length.toString();
+		}
 	},
 	computed: {
 		sortedFilms () {

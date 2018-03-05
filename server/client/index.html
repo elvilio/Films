@@ -61,7 +61,10 @@
 			<div class="film" v-for="film in sortedFilmsToVote">
 				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
 				<div class="title" :title="film.overview">
-					<h3>{{film.title}}</h3>
+					<div class="votableFilms">
+						<h3 class="left">{{film.title}}</h3>
+						<h3 class="right">{{numberOfVotes(film)}}</h3>
+					</div>
 				</div>
 				<div class="voting" v-if="username">
 					<button v-if="" @click="votafilm(film)">Vota?</button> <!-- e qui non so come andare avanti -->

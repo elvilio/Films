@@ -4,9 +4,7 @@
 			"id": 24,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:31",
-			"votedBy": [
-				"elvilio"
-			],
+			"votedBy": [],
 			"title": "Kill Bill: Vol. 1",
 			"image": "/97fNAi62HawGjWru7PvVmF7RAbU.jpg",
 			"seen": false,
@@ -17,7 +15,9 @@
 			"id": 62,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:13",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "2001: A Space Odyssey",
 			"image": "/90T7b2LIrL07ndYQBmSm09yqVEH.jpg",
 			"seen": false,
@@ -118,7 +118,7 @@
 			"id": 587,
 			"addedBy": "elvilio",
 			"addedOn": "2018/02/27 17:12",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Big Fish - Le storie di una vita incredibile",
 			"image": "/uF3DglkO1Vv1c0OKNd8ZBBfxyqj.jpg",
 			"seen": false,
@@ -129,10 +129,12 @@
 			"id": 603,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 22:49",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "The Matrix",
 			"image": "/gynBNzwyaHKtXqlEKKLioNkjKgN.jpg",
-			"seen": false,
+			"seen": true,
 			"votingOpen": false,
 			"nextUp": false
 		},
@@ -140,10 +142,12 @@
 			"id": 604,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 22:56",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "The Matrix Reloaded",
 			"image": "/ezIurBz2fdUc68d98Fp9dRf5ihv.jpg",
-			"seen": false,
+			"seen": true,
 			"votingOpen": false,
 			"nextUp": false
 		},
@@ -206,7 +210,7 @@
 			"id": 752,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:18",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "V for Vendetta",
 			"image": "/8rI9pNiTmugkEbI249evLygl9TC.jpg",
 			"seen": false,
@@ -243,7 +247,7 @@
 			"title": "American Psycho",
 			"image": "/qXsylPM4Lr5397R3eHrfqHhTUNc.jpg",
 			"seen": false,
-			"votingOpen": false,
+			"votingOpen": true,
 			"nextUp": false
 		},
 		"1430": {
@@ -320,14 +324,16 @@
 			"title": "Sotto la sabbia",
 			"image": "/tGrxPMcVmfokAtDsrLdTOpQh4DG.jpg",
 			"seen": false,
-			"votingOpen": false,
+			"votingOpen": true,
 			"nextUp": false
 		},
 		"8005": {
 			"id": 8005,
 			"addedBy": "elvilio",
 			"addedOn": "2018/02/27 16:48",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "Robin Hood - Un uomo in calzamaglia",
 			"image": "/y15v14qPMUcCV0hRBdofoDaWdWy.jpg",
 			"seen": false,
@@ -360,7 +366,9 @@
 			"id": 9476,
 			"addedBy": "elvilio",
 			"addedOn": "2018/02/27 16:48",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "Il destino di un cavaliere",
 			"image": "/5wqTcsFUtYXXJL577M1VKk1mVD9.jpg",
 			"seen": false,
@@ -382,7 +390,7 @@
 			"id": 11439,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:14",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "The Ghost Writer",
 			"image": "/p4HtT6IHPAVg8usYdyv8gZN8Qbm.jpg",
 			"seen": false,
@@ -441,7 +449,7 @@
 			"title": "The Fall",
 			"image": "/gUex3Twn97Jp8F27Op1r7OnMTFt.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"14836": {
@@ -483,10 +491,12 @@
 			"id": 23631,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:30",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "Machete",
 			"image": "/3RCX4EzTrpO6wNz536EQPhYM2Fk.jpg",
-			"seen": false,
+			"seen": true,
 			"votingOpen": false,
 			"nextUp": false
 		},
@@ -544,7 +554,7 @@
 			"title": "Parentesi tonde",
 			"image": "/4UVZT4v3ybOV7Ow2JVP9afJQkpp.jpg",
 			"seen": false,
-			"votingOpen": false,
+			"votingOpen": true,
 			"nextUp": false
 		},
 		"72113": {
@@ -573,9 +583,7 @@
 			"id": 76341,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 22:51",
-			"votedBy": [
-				"elvilio"
-			],
+			"votedBy": [],
 			"title": "Mad Max: Fury Road",
 			"image": "/kqjL17yufvn9OVLyXYpvtyrFfak.jpg",
 			"seen": false,
@@ -667,7 +675,7 @@
 			"title": "T2 Trainspotting",
 			"image": "/fbHXfr2N4pI2j7i9RLYiddjotBl.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"181886": {
@@ -707,7 +715,9 @@
 			"id": 207703,
 			"addedBy": "aziis98",
 			"addedOn": "2018/02/25 23:26",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "Kingsman: The Secret Service",
 			"image": "/8x7ej0LnHdKUqilNNJXYOeyB6L9.jpg",
 			"seen": false,
@@ -718,10 +728,12 @@
 			"id": 246741,
 			"addedBy": "elvilio",
 			"addedOn": "2018/02/27 14:43",
-			"votedBy": [],
+			"votedBy": [
+				"elvilio"
+			],
 			"title": "What We Do in the Shadows",
 			"image": "/4bqqrtzY9vVQeEcqyqWfTJWmpD9.jpg",
-			"seen": false,
+			"seen": true,
 			"votingOpen": false,
 			"nextUp": false
 		},
@@ -777,7 +789,7 @@
 			"title": "It Follows",
 			"image": "/4MrwJZr0R9LbyOgZqwLNmtzzxbu.jpg",
 			"seen": false,
-			"votingOpen": false,
+			"votingOpen": true,
 			"nextUp": false
 		},
 		"273248": {
@@ -810,7 +822,7 @@
 			"title": "Grindhouse",
 			"image": "/oATTOsfalnnFObVNUWiP9MieLIm.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"291270": {
@@ -997,14 +1009,14 @@
 			"title": "The Killing of a Sacred Deer",
 			"image": "/e4DGlsc9g0h5AyoyvvAuIRnofN7.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"400617": {
 			"id": 400617,
 			"addedBy": "elvilio",
 			"addedOn": "2018/02/27 14:42",
-			"votedBy": {},
+			"votedBy": [],
 			"title": "Il Filo Nascosto",
 			"image": "/yxkmY3zaNUiUnpb9sQnYm2OCrqh.jpg",
 			"seen": false,
@@ -1099,9 +1111,9 @@
 	},
 	"nextUp": null,
 	"votableFilms": [
-		399057,
-		14784,
-		180863,
-		285923
+		64974,
+		1359,
+		270303,
+		4973
 	]
 }
