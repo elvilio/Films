@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="icon" type="image/png" href="/photos/Icon/Icon-32x.png">
+
+	<title>Home | Maquindi Film</title>
+	
+	<!-- Custom Css -->
+	<link rel="stylesheet" href="./styles/main.css">
+	<link rel="stylesheet" href="./styles/films.css">
+</head>
+
+<body>
+	<div class="img1" id="img1" background="./photos/w1@small.jpg"></div>
+	<div class="img2" id="img2" background="./photos/w2@small.jpg"></div>
+
+	<main id="app" class="column">
+		<div class="nav row"> <!-- menu -->
+			<div class="nav-item active"><a href="#"><div>Home</div></a></div>
+
+			<div class="nav-item" v-if="username">
+				<a href="/addfilm"><div>Add New</div></a>
+			</div>
+			
+			<div class="nav-item">
+				<a href="/login">
+					<div v-if="!username">Login</div>
+					<div v-else>{{ username }}</div>
+				</a>
+			</div>
+		</div>
+
+		<!-- per admin e basta:
+		1) stoppare la sessione di voto
+		2) ripescare 4 film da votare (in teoria da non utilizzare mai) -->
+
+		<div class="row" v-if="isadm">
+			<button @click="closePoll">Close Poll</button>
+			<button @click="newPoll">New Poll</button>
+		</div>
+
+		<div class="column"  v-if="nextUp !== null"> <!-- film vincitore della votazione -->
+			<div class="film-list winner">
+				<h1>Vincitore:</h1>
+				<div class="film">
+					<img :src="'http://image.tmdb.org/t/p/w200' + films[nextUp].image" alt="" title="Poster">
+					<div class="title" :title="films[nextUp].overview">
+						<h3>{{films[nextUp].title}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<h1 v-if="sortedFilmsToVote.length > 0">Film da votare</h1>
+		<div class="film-list column" v-if="sortedFilmsToVote.length > 0"> <!-- film che si possono votare -->
+			<div class="film" v-for="film in sortedFilmsToVote">
+				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
+				<div class="title" :title="film.overview">
+					<div class="votableFilms">
+						<h3 class="left">{{film.title}}</h3>
+						<h3 :id="film.id" class="right">{{numberOfVotes(film)}}</h3>
+					</div>
+				</div>
+				<div class="voting" v-if="username">
+					<button v-if="!switchVoting[film.id]" @click="votafilm(film)">Vota?</button>
+					<button v-else @click="unvotafilm(film)">Unvota?</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="film-list column">
+			<h2>Film in lista</h2>
+			<div class="film" v-for="film in sortedFilmsNotSeen"> <!-- film che sono in lista -->
+				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
+				<div class="title" :title="film.overview">
+					<h3>{{film.title}}</h3>
+				</div>
+			</div>
+
+			<div class="divider"></div>
+
+			<h2>Film già visti</h2>
+			<div class="film" v-for="film in sortedFilmsSeen">  <!-- film che sono già stati visti -->
+				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
+				<div class="title" :title="film.overview">
+					<h3>{{film.title}}</h3>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+	<!-- VueJS & Axios -->
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<!-- Actions -->
+	<script src="./actions.js"></script>
+	<!-- Custom JS -->
+	<script src="./index.js"></script>
+	<script src="./sfondo.js"></script>
+	
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</body>
+</html>

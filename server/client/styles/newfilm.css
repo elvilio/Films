@@ -1,0 +1,69 @@
+.container {
+	background: rgba(255, 255, 255, 0.5);	
+	max-width: 800px;
+	padding: 50px;
+	margin-bottom: 100px;
+}
+
+.container > h1 {
+	margin: 1em 0;
+	padding: 0;
+}
+
+.search {
+/*	grid-area: search;*/
+	justify-self: center;
+	align-self: start;
+}
+
+.results {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.film {
+	display: grid;
+	width: 100%;
+	grid-template-rows: 50px 205px 45px;
+	grid-template-columns: 200px auto;
+	grid-template-areas: 
+		"img title"
+		"img overview"
+		"img button";
+}
+
+.film:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.film .poster {
+	grid-area: img;
+	width: 100%;
+	height: 100%;
+	background: #000; /* trovare un colore migliore per questo bg */
+	display: flex;
+	align-items: center;
+}
+
+.poster img {
+	width: 100%;
+}
+
+.film h3 {
+	grid-area: title;
+	justify-self: start;
+	align-self: center;
+	padding: 0 20px;
+}
+
+.film p {
+	grid-area: overview;
+	padding: 0 20px;
+	text-align: justify;
+}
+
+.film button, .film .button {
+	grid-area: button;
+	justify-self: center;
+}
