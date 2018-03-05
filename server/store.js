@@ -6,14 +6,14 @@ let store = {}
 function loadStore(cb) {
 	let data = fs.readFileSync('./films.store.json', 'utf8');
 	store = JSON.parse(data);
-	logger.debug('[Log] Loaded the store from file');
+	logger.silly('[Log] Loaded the store from file');
 }
 
 function saveStore() {
 	fs.writeFile('./films.store.json', JSON.stringify(store, null, '\t'), (err) => {
 		if (err) throw err;
 	})
-	logger.debug('[Log] Saved the store to file');
+	logger.silly('[Log] Saved the store to file');
 }
 
 

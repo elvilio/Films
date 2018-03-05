@@ -1,4 +1,3 @@
-
 const ACTIONS = {
 	
 	CHOOSE_RANDOM_SET: 'CHOOSE_RANDOM_SET',

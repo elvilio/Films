@@ -1,23 +1,10 @@
 {
 	"films": {
-		"24": {
-			"id": 24,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:31",
-			"votedBy": [],
-			"title": "Kill Bill: Vol. 1",
-			"image": "/97fNAi62HawGjWru7PvVmF7RAbU.jpg",
-			"seen": false,
-			"votingOpen": false,
-			"nextUp": false
-		},
 		"62": {
 			"id": 62,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:13",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "2001: A Space Odyssey",
 			"image": "/90T7b2LIrL07ndYQBmSm09yqVEH.jpg",
 			"seen": false,
@@ -26,8 +13,8 @@
 		},
 		"77": {
 			"id": 77,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:27",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Memento",
 			"image": "/fQMSaP88cf1nz4qwuNEEFtazuDM.jpg",
@@ -37,8 +24,8 @@
 		},
 		"115": {
 			"id": 115,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:31",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Big Lebowski",
 			"image": "/qiE3ovg9TPylHReZjizQ40LsKZV.jpg",
@@ -48,8 +35,8 @@
 		},
 		"176": {
 			"id": 176,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 17:11",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Saw - L'enigmista",
 			"image": "/aXzoBX4KE0iiBgVQBfQi2A6tKzZ.jpg",
@@ -59,8 +46,8 @@
 		},
 		"185": {
 			"id": 185,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:15",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "A Clockwork Orange",
 			"image": "/kgAi87gyx6b4oGJYSC36tVkJyJu.jpg",
@@ -70,8 +57,8 @@
 		},
 		"278": {
 			"id": 278,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:49",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Le ali della libertà",
 			"image": "/tWzOxgdkYyuIICOG3kZLN4YHzt6.jpg",
@@ -79,21 +66,10 @@
 			"votingOpen": false,
 			"nextUp": false
 		},
-		"393": {
-			"id": 393,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:31",
-			"votedBy": [],
-			"title": "Kill Bill: Vol. 2",
-			"image": "/au9lFA5a2ZnBKCzPbZQf00r7J64.jpg",
-			"seen": false,
-			"votingOpen": false,
-			"nextUp": false
-		},
 		"489": {
 			"id": 489,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/26 15:13",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Will Hunting - Genio ribelle",
 			"image": "/9FQkAf88jKCxUMfpgybkCCYOIZf.jpg",
@@ -103,8 +79,8 @@
 		},
 		"500": {
 			"id": 500,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:47",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Le iene",
 			"image": "/gAHb1t0r8G0L6TFMoETMuW2OP9L.jpg",
@@ -114,8 +90,8 @@
 		},
 		"587": {
 			"id": 587,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 17:12",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Big Fish - Le storie di una vita incredibile",
 			"image": "/uF3DglkO1Vv1c0OKNd8ZBBfxyqj.jpg",
@@ -123,47 +99,10 @@
 			"votingOpen": false,
 			"nextUp": false
 		},
-		"603": {
-			"id": 603,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 22:49",
-			"votedBy": [
-				"elvilio"
-			],
-			"title": "The Matrix",
-			"image": "/gynBNzwyaHKtXqlEKKLioNkjKgN.jpg",
-			"seen": false,
-			"votingOpen": false,
-			"nextUp": false
-		},
-		"604": {
-			"id": 604,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 22:56",
-			"votedBy": [],
-			"title": "The Matrix Reloaded",
-			"image": "/ezIurBz2fdUc68d98Fp9dRf5ihv.jpg",
-			"seen": false,
-			"votingOpen": true,
-			"nextUp": false
-		},
-		"627": {
-			"id": 627,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:38",
-			"votedBy": [
-				"elvilio"
-			],
-			"title": "Trainspotting",
-			"image": "/p1O3eFsdb0GEIYu87xlwV7P4jM1.jpg",
-			"seen": false,
-			"votingOpen": false,
-			"nextUp": false
-		},
 		"640": {
 			"id": 640,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:25",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Catch Me If You Can",
 			"image": "/MywWCQGJNUr5kivAQ7eseCG7rm.jpg",
@@ -173,9 +112,9 @@
 		},
 		"641": {
 			"id": 641,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:53",
-			"votedBy": {},
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Requiem for a dream",
 			"image": "/muym4jTjdLx7E6as09d1wlC3sOB.jpg",
 			"seen": true,
@@ -184,11 +123,9 @@
 		},
 		"670": {
 			"id": 670,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:47",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Oldboy",
 			"image": "/bVdR47HBAXP1qIxDuNjmCbfiSfL.jpg",
 			"seen": false,
@@ -197,8 +134,8 @@
 		},
 		"680": {
 			"id": 680,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:15",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Pulp Fiction",
 			"image": "/dM2w364MScsjFf8pfMbaWUcWrR.jpg",
@@ -208,8 +145,8 @@
 		},
 		"752": {
 			"id": 752,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:18",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "V for Vendetta",
 			"image": "/8rI9pNiTmugkEbI249evLygl9TC.jpg",
@@ -219,8 +156,8 @@
 		},
 		"808": {
 			"id": 808,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:55",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Shrek",
 			"image": "/n78K1bTOrRBWOlOHRKv6vUnQnpF.jpg",
@@ -230,8 +167,8 @@
 		},
 		"816": {
 			"id": 816,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:45",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Austin Powers - Il controspione",
 			"image": "/3X50JqmXIVcuxRTc6hZ4g825tAi.jpg",
@@ -241,8 +178,8 @@
 		},
 		"1359": {
 			"id": 1359,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:40",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "American Psycho",
 			"image": "/qXsylPM4Lr5397R3eHrfqHhTUNc.jpg",
@@ -252,8 +189,8 @@
 		},
 		"1430": {
 			"id": 1430,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:51",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Bowling a Columbine",
 			"image": "/7iH6d52Nc8Visgc92rSDbJYrtLt.jpg",
@@ -263,8 +200,8 @@
 		},
 		"1878": {
 			"id": 1878,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:46",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Paura e delirio a Las Vegas",
 			"image": "/vw7JT5yJRaOVurz6DwHgvAe3pj0.jpg",
@@ -274,8 +211,8 @@
 		},
 		"1991": {
 			"id": 1991,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:31",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Death Proof",
 			"image": "/nyQBcpxqS4im2akQlWG9Y1oeM2V.jpg",
@@ -285,8 +222,8 @@
 		},
 		"2108": {
 			"id": 2108,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:37",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Breakfast Club",
 			"image": "/4ZejrrCpfoypR5lHoT3pq6yVldW.jpg",
@@ -296,8 +233,8 @@
 		},
 		"3131": {
 			"id": 3131,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:51",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Gangs of New York",
 			"image": "/4P0JwT2FmSVVpD3AznKkCJRaeAp.jpg",
@@ -307,22 +244,20 @@
 		},
 		"4232": {
 			"id": 4232,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:13",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Scream",
 			"image": "/ewi7gYW22t8T3piRvrXO73GlzuL.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"4973": {
 			"id": 4973,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 17:14",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Sotto la sabbia",
 			"image": "/tGrxPMcVmfokAtDsrLdTOpQh4DG.jpg",
 			"seen": false,
@@ -331,11 +266,9 @@
 		},
 		"8005": {
 			"id": 8005,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:48",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Robin Hood - Un uomo in calzamaglia",
 			"image": "/y15v14qPMUcCV0hRBdofoDaWdWy.jpg",
 			"seen": false,
@@ -344,8 +277,8 @@
 		},
 		"8467": {
 			"id": 8467,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/26 15:51",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Scemo & più scemo",
 			"image": "/uoDzzw3T9dBgnAnvihAwRuQ0MEU.jpg",
@@ -355,8 +288,8 @@
 		},
 		"8764": {
 			"id": 8764,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:44",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Top Secret!",
 			"image": "/2ArC4IAAGXf3hTVJCzQfE0G5Vbf.jpg",
@@ -366,11 +299,9 @@
 		},
 		"9476": {
 			"id": 9476,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:48",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Il destino di un cavaliere",
 			"image": "/5wqTcsFUtYXXJL577M1VKk1mVD9.jpg",
 			"seen": false,
@@ -379,8 +310,8 @@
 		},
 		"10313": {
 			"id": 10313,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:42",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Men Who Stare at Goats",
 			"image": "/dCr1NYTxj7jJi2OlreTzCH7xJcM.jpg",
@@ -390,8 +321,8 @@
 		},
 		"11439": {
 			"id": 11439,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:14",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Ghost Writer",
 			"image": "/p4HtT6IHPAVg8usYdyv8gZN8Qbm.jpg",
@@ -401,8 +332,8 @@
 		},
 		"11688": {
 			"id": 11688,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:46",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Le follie dell'imperatore",
 			"image": "/os7WqPzywq5HvXTICPU63Yd9lLh.jpg",
@@ -412,9 +343,9 @@
 		},
 		"11770": {
 			"id": 11770,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:53",
-			"votedBy": {},
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Shaolin Soccer",
 			"image": "/6axpFFQC0lSK57V636s0qAKOzjR.jpg",
 			"seen": true,
@@ -423,8 +354,8 @@
 		},
 		"13183": {
 			"id": 13183,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:39",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Watchmen",
 			"image": "/1QqwJBv5a6ddgzaT6cLytJioyrJ.jpg",
@@ -434,11 +365,9 @@
 		},
 		"13363": {
 			"id": 13363,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:52",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "L'Uomo Che Venne Dalla Terra",
 			"image": "/gzY4lLWvbahdfdzOjrEDp9UC9we.jpg",
 			"seen": false,
@@ -447,8 +376,8 @@
 		},
 		"14784": {
 			"id": 14784,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:37",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Fall",
 			"image": "/gUex3Twn97Jp8F27Op1r7OnMTFt.jpg",
@@ -458,11 +387,9 @@
 		},
 		"14836": {
 			"id": 14836,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/26 11:12",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Coraline e la porta magica",
 			"image": "/7PwNxvXRzn6CGBWeLi91KOTCFQv.jpg",
 			"seen": false,
@@ -471,8 +398,8 @@
 		},
 		"19908": {
 			"id": 19908,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:26",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Zombieland",
 			"image": "/vUzzDpVrab1BOG3ogxhRGfLN94d.jpg",
@@ -482,8 +409,8 @@
 		},
 		"22538": {
 			"id": 22538,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:47",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Scott Pilgrim vs. the World",
 			"image": "/ru6FYwXA3SvAuqoHNJi20bEfDfC.jpg",
@@ -493,11 +420,9 @@
 		},
 		"23631": {
 			"id": 23631,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:30",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Machete",
 			"image": "/3RCX4EzTrpO6wNz536EQPhYM2Fk.jpg",
 			"seen": false,
@@ -506,11 +431,9 @@
 		},
 		"27205": {
 			"id": 27205,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:15",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Inception",
 			"image": "/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg",
 			"seen": false,
@@ -519,9 +442,9 @@
 		},
 		"31011": {
 			"id": 31011,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 14:44",
-			"votedBy": {},
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Mr. Nobody",
 			"image": "/jxd2XSsnUHHUbo50nzVnVnHRPVJ.jpg",
 			"seen": false,
@@ -530,11 +453,9 @@
 		},
 		"37686": {
 			"id": 37686,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:40",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Super 8",
 			"image": "/1JAKnHjENVz1adurNjtsWZnVQGY.jpg",
 			"seen": false,
@@ -543,8 +464,8 @@
 		},
 		"53487": {
 			"id": 53487,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:14",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "This Must Be the Place",
 			"image": "/rNTZMp96BcKIxgF3OIUbtByJtsQ.jpg",
@@ -554,8 +475,8 @@
 		},
 		"64974": {
 			"id": 64974,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:25",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Parentesi tonde",
 			"image": "/4UVZT4v3ybOV7Ow2JVP9afJQkpp.jpg",
@@ -565,8 +486,8 @@
 		},
 		"72113": {
 			"id": 72113,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:14",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Carnage",
 			"image": "/1nhY2l0SffJ5nK8FaeiRaMblN3d.jpg",
@@ -576,8 +497,8 @@
 		},
 		"72710": {
 			"id": 72710,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:25",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Host",
 			"image": "/jnPOLAPQLhqMeDLV2BsQfrd6R11.jpg",
@@ -587,22 +508,20 @@
 		},
 		"76341": {
 			"id": 76341,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 22:51",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Mad Max: Fury Road",
 			"image": "/kqjL17yufvn9OVLyXYpvtyrFfak.jpg",
 			"seen": false,
-			"votingOpen": true,
+			"votingOpen": false,
 			"nextUp": false
 		},
 		"83542": {
 			"id": 83542,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:06",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Cloud Atlas",
 			"image": "/8VNiyIp67ZxhpNgdrwACW0jgvP2.jpg",
 			"seen": false,
@@ -611,8 +530,8 @@
 		},
 		"85435": {
 			"id": 85435,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/26 15:50",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Tre uomini e una pecora",
 			"image": "/lFmEaKh7QDggDaJG3CMFruKZRrS.jpg",
@@ -622,11 +541,9 @@
 		},
 		"106747": {
 			"id": 106747,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:30",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Machete Kills",
 			"image": "/ltblMRM8clWKsjC2qQITuRN40Yr.jpg",
 			"seen": false,
@@ -635,8 +552,8 @@
 		},
 		"123678": {
 			"id": 123678,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:26",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Act of Killing",
 			"image": "/6ng86moS1tBdofRVMooOMCfW4TJ.jpg",
@@ -646,8 +563,8 @@
 		},
 		"146233": {
 			"id": 146233,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:29",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Prisoners",
 			"image": "/yAhqW57pwMAsCgmZpM5zSIVQVTh.jpg",
@@ -657,8 +574,8 @@
 		},
 		"152742": {
 			"id": 152742,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:18",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Best Offer",
 			"image": "/bXk6T8npfh2Ly24VMWSeZLsTLhC.jpg",
@@ -668,8 +585,8 @@
 		},
 		"157834": {
 			"id": 157834,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/26 14:31",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Zero Theorem - Tutto è vanità",
 			"image": "/x2vCZIqGTMs7RfRl6JnEDc1PrX9.jpg",
@@ -677,26 +594,11 @@
 			"votingOpen": false,
 			"nextUp": false
 		},
-		"180863": {
-			"id": 180863,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:38",
-			"votedBy": [
-				"elvilio"
-			],
-			"title": "T2 Trainspotting",
-			"image": "/fbHXfr2N4pI2j7i9RLYiddjotBl.jpg",
-			"seen": false,
-			"votingOpen": false,
-			"nextUp": false
-		},
 		"181886": {
 			"id": 181886,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:37",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Enemy",
 			"image": "/aQkyFHzNzZoMhxZ7c0IaK8BljED.jpg",
 			"seen": false,
@@ -705,11 +607,9 @@
 		},
 		"184314": {
 			"id": 184314,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 14:41",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Giovane e bella",
 			"image": "/rFQytNtpDPXS9sFWVLz1Tvs72aH.jpg",
 			"seen": false,
@@ -718,8 +618,8 @@
 		},
 		"194662": {
 			"id": 194662,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:47",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Birdman o (L'imprevedibile virtù dell'ignoranza)",
 			"image": "/rBy192ylHrFimJjCIT7VFkHrG4z.jpg",
@@ -727,24 +627,11 @@
 			"votingOpen": false,
 			"nextUp": false
 		},
-		"207703": {
-			"id": 207703,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:26",
-			"votedBy": [],
-			"title": "Kingsman: The Secret Service",
-			"image": "/8x7ej0LnHdKUqilNNJXYOeyB6L9.jpg",
-			"seen": false,
-			"votingOpen": true,
-			"nextUp": false
-		},
 		"246741": {
 			"id": 246741,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 14:43",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "What We Do in the Shadows",
 			"image": "/4bqqrtzY9vVQeEcqyqWfTJWmpD9.jpg",
 			"seen": false,
@@ -753,8 +640,8 @@
 		},
 		"251516": {
 			"id": 251516,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:19",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Kung Fury",
 			"image": "/oJWzpGCLIj3uYa0ux19T2WwzTOf.jpg",
@@ -764,8 +651,8 @@
 		},
 		"263115": {
 			"id": 263115,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:29",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Logan",
 			"image": "/gGBu0hKw9BGddG8RkRAMX7B6NDB.jpg",
@@ -775,8 +662,8 @@
 		},
 		"267193": {
 			"id": 267193,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:51",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Grimsby - Attenti a quell'altro",
 			"image": "/6AKkjgs0Y4TRDgSea7VZRDidJUy.jpg",
@@ -786,8 +673,8 @@
 		},
 		"267480": {
 			"id": 267480,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:16",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Look of Silence",
 			"image": "/u1G9PZlHzqBNvdSmjFPQLMVIHV3.jpg",
@@ -797,8 +684,8 @@
 		},
 		"270303": {
 			"id": 270303,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:37",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "It Follows",
 			"image": "/4MrwJZr0R9LbyOgZqwLNmtzzxbu.jpg",
@@ -808,9 +695,9 @@
 		},
 		"273248": {
 			"id": 273248,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:39",
-			"votedBy": {},
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "The Hateful Eight",
 			"image": "/fqe8JxDNO8B8QfOGTdjh6sPCdSC.jpg",
 			"seen": false,
@@ -819,8 +706,8 @@
 		},
 		"284270": {
 			"id": 284270,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:19",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Cub",
 			"image": "/a7eR08qiQ2ydfjY2TZdtRD1dcIW.jpg",
@@ -830,8 +717,8 @@
 		},
 		"285923": {
 			"id": 285923,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:30",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Grindhouse",
 			"image": "/oATTOsfalnnFObVNUWiP9MieLIm.jpg",
@@ -841,9 +728,9 @@
 		},
 		"291270": {
 			"id": "291270",
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/23 17:41",
-			"votedBy": {},
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Anomalisa",
 			"image": "/5DpDEEb6UJUiSaXyNegYlCqsZdd.jpg",
 			"seen": true,
@@ -852,8 +739,8 @@
 		},
 		"301365": {
 			"id": 301365,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:52",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Neon Demon",
 			"image": "/pUnGrpW7o0VqMWgokjAEwy4L4qr.jpg",
@@ -863,8 +750,8 @@
 		},
 		"303542": {
 			"id": 303542,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:26",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Invisible Boy",
 			"image": "/yBAwbnlt4vC3fQYUSFy2gKvRoIa.jpg",
@@ -874,9 +761,9 @@
 		},
 		"303867": {
 			"id": 303867,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:53",
-			"votedBy": {},
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "World of Tomorrow",
 			"image": "/km1a4CEQz2jn01POnHZdKVdr1f7.jpg",
 			"seen": true,
@@ -885,11 +772,9 @@
 		},
 		"317952": {
 			"id": 317952,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 14:44",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Cartel Land",
 			"image": "/3DGaP0ZC7Fd5K8mx4NiZHf5hWrK.jpg",
 			"seen": false,
@@ -898,8 +783,8 @@
 		},
 		"318846": {
 			"id": 318846,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:29",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Big Short",
 			"image": "/p11Ftd4VposrAzthkhF53ifYZRl.jpg",
@@ -909,9 +794,9 @@
 		},
 		"325348": {
 			"id": 325348,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:52",
-			"votedBy": {},
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Hardcore!",
 			"image": "/fDfglalfZmI5MJnql9PfRUw33Vm.jpg",
 			"seen": true,
@@ -920,11 +805,9 @@
 		},
 		"329004": {
 			"id": 329004,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:54",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "The Survivalist",
 			"image": "/hd491WgKPxeQus2LnvFbYmyUFmt.jpg",
 			"seen": false,
@@ -933,9 +816,9 @@
 		},
 		"329865": {
 			"id": 329865,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/20 18:31",
-			"votedBy": {},
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Arrival",
 			"image": "/gdIbnTBa4uulaeTkeej8egxi6vG.jpg",
 			"seen": true,
@@ -944,8 +827,8 @@
 		},
 		"336222": {
 			"id": 336222,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:16",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Rams",
 			"image": "/raOBs0LDaMix0g8sGFtYxwYx6JQ.jpg",
@@ -955,8 +838,8 @@
 		},
 		"336808": {
 			"id": 336808,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:16",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Embrace of the Serpent",
 			"image": "/mbi9i2QLiCaUDp5Oykgn7CvbnGN.jpg",
@@ -964,24 +847,11 @@
 			"votingOpen": false,
 			"nextUp": false
 		},
-		"343668": {
-			"id": 343668,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:26",
-			"votedBy": [],
-			"title": "Kingsman: The Golden Circle",
-			"image": "/34xBL6BXNYFqtHO9zhcgoakS4aP.jpg",
-			"seen": false,
-			"votingOpen": false,
-			"nextUp": false
-		},
 		"347031": {
 			"id": 347031,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:14",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Swiss Army Man",
 			"image": "/9BdJz7b4WdJul0KVu42YFEgqzyp.jpg",
 			"seen": false,
@@ -990,11 +860,9 @@
 		},
 		"352342": {
 			"id": 352342,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 14:43",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Les Saisons",
 			"image": "/nN5OTG3BmHgbLjG6ngBB0NY6z4X.jpg",
 			"seen": false,
@@ -1003,9 +871,9 @@
 		},
 		"359940": {
 			"id": 359940,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 16:54",
-			"votedBy": {},
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Tre manifesti a Ebbing, Missouri",
 			"image": "/4I8dK9gSa8Efy5kcatrAr1AkZiL.jpg",
 			"seen": true,
@@ -1014,8 +882,8 @@
 		},
 		"381284": {
 			"id": 381284,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/26 15:15",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Il diritto di contare",
 			"image": "/d6JTN9J9cAwCLDS37FsXTXbl1OQ.jpg",
@@ -1025,8 +893,8 @@
 		},
 		"399057": {
 			"id": 399057,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:15",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "The Killing of a Sacred Deer",
 			"image": "/e4DGlsc9g0h5AyoyvvAuIRnofN7.jpg",
@@ -1036,11 +904,9 @@
 		},
 		"400617": {
 			"id": 400617,
-			"addedBy": "elvilio",
-			"addedOn": "2018/02/27 14:42",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "Il Filo Nascosto",
 			"image": "/yxkmY3zaNUiUnpb9sQnYm2OCrqh.jpg",
 			"seen": false,
@@ -1049,11 +915,9 @@
 		},
 		"425931": {
 			"id": 425931,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:24",
-			"votedBy": [
-				"elvilio"
-			],
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
+			"votedBy": [],
 			"title": "The Black Room",
 			"image": "/uHZDs43AxPhitL2Xrw7mncuyS4q.jpg",
 			"seen": false,
@@ -1062,8 +926,8 @@
 		},
 		"429200": {
 			"id": 429200,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:12",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Good Time",
 			"image": "/cz0egudCsfsTzwUAL03A5UzoHGT.jpg",
@@ -1073,8 +937,8 @@
 		},
 		"433150": {
 			"id": 433150,
-			"addedBy": "aziis98",
-			"addedOn": "2018/02/25 23:26",
+			"addedBy": "everyone",
+			"addedOn": "2018/03/06 00:00",
 			"votedBy": [],
 			"title": "Il ragazzo invisibile: Seconda generazione",
 			"image": "/c4CXtdVSCHJlPyRjPdP85ATNrWV.jpg",
@@ -1089,8 +953,8 @@
 			"name": "Antonio",
 			"Admin": true
 		},
-		"elvilio": {
-			"id": "elvilio",
+		"elvis": {
+			"id": "elvis",
 			"name": "Elvis",
 			"Admin": true
 		},
@@ -1136,10 +1000,5 @@
 		}
 	},
 	"nextUp": null,
-	"votableFilms": [
-		4232,
-		207703,
-		604,
-		76341
-	]
+	"votableFilms": []
 }

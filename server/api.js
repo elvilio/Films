@@ -20,28 +20,28 @@ const ACTIONS = require('./client/actions.js');
 const handlers = {
 	
 	[ACTIONS.GET_FILMS]: () => {
-		logger.silly('[GET_FILMS] Got films from store');
+		logger.silly('[GET_FILMS] Getting from store');
 		return storeManager.store.films;
 	},
 	
 	[ACTIONS.GET_USERS]: () => {
-		logger.silly('[GET_USERS] Got users from store');
+		logger.silly('[GET_USERS] Getting users from store');
 		return storeManager.store.users;
 	},
 	
 	[ACTIONS.ADD_FILM]: ({ filmID, userID, external, ...options }) => {
 		if (storeManager.store.films[filmID]) {
-			logger.silly('[ADD_FILM] err: film already present');
+			logger.warn('[ADD_FILM] err: film already present');
 			return { error: 'film already present' };
 		}
 		else if (!storeManager.store.users[userID]) {
-			logger.silly('[ADD_FILM] err: invalid user');
+			logger.warn('[ADD_FILM] err: invalid user');
 			return { error: 'invalid user' };
 		}
 		else {
 			if (Object.keys(options).length > 10) {
 				throw 'Forse "' + userID + '" sta tentanto di hackerare qualcosa...'
-				logger.silly('[ADD_FILM] err: Forse "' + userID + '" sta tentanto di hackerare qualcosa...');
+				logger.error('[ADD_FILM] err: Forse "' + userID + '" sta tentanto di hackerare qualcosa...');
 				return { error: 'internal error' };
 			}
 
@@ -80,7 +80,7 @@ const handlers = {
 	},
 	
 	[ACTIONS.GET_APIKEYS]: () => {
-		logger.silly('[GET_APIKEYS] Got ApiKey');
+		logger.silly('[GET_APIKEYS] Getting ApiKey');
 		return API_KEYS;
 	},
 	
@@ -97,7 +97,7 @@ const handlers = {
 			}
 		}
 		else {
-			logger.silly('[GET_USER] err: user not found');
+			logger.warn('[GET_USER] err: user not found');
 			return { error: 'user not found' };
 		}
 	},
@@ -128,6 +128,7 @@ const handlers = {
 			film.votedBy = [];
 
 			storeManager.store.votableFilms.push(film.id);
+			logger.debug('[CHOOSE_RANDOM_SET] Chosen ' + film.id);
 		});
 
 		storeManager.saveStore();
@@ -137,7 +138,7 @@ const handlers = {
 	[ACTIONS.CLOSE_POLL]: () => {
 		
 		if (!storeManager.store.votableFilms.length) {
-			logger.info('[CLOSE_POLL] err: no poll open');
+			logger.warn('[CLOSE_POLL] err: no poll open');
 			return { error: 'no poll open' };
 		}
 
@@ -182,21 +183,21 @@ const handlers = {
 	},
 
 	[ACTIONS.GET_NEXTUP]: () => {
+		logger.debug('[GET_NEXTUP] Getting next film');
 		return { nextUp: storeManager.store.nextUp || null };
-		logger.silly('[GET_NEXTUP] Got next film');
 	},
 
 	[ACTIONS.VOTEFILM]: ({ filmID, userID }) => {
 		if (!storeManager.store.votableFilms.length) {
-			logger.silly('[VOTEFILM] err: no poll open');
+			logger.warn('[VOTEFILM] err: no poll open');
 			return { error: 'no poll open' };
 		}
 		else if (!storeManager.store.users[userID]) {
-			logger.silly('[VOTEFILM] err: invalid user');
+			logger.warn('[VOTEFILM] err: invalid user');
 			return { error: 'invalid user' };
 		}
 		else if(storeManager.store.films[filmID].votedBy.indexOf(userID) >= 0){
-			logger.silly('[VOTEFILM] err: already voted');
+			logger.warn('[VOTEFILM] err: already voted');
 			return { error: 'already voted' };
 		}
 		else {
@@ -208,15 +209,15 @@ const handlers = {
 
 	[ACTIONS.UNVOTEFILM]: ({ filmID, userID }) => {
 		if (!storeManager.store.votableFilms.length) {
-			logger.silly('[UNVOTEFILM] err: no poll open');
+			logger.warn('[UNVOTEFILM] err: no poll open');
 			return { error: 'no poll open' };
 		}
 		else if (!storeManager.store.users[userID]) {
-			logger.silly('[UNVOTEFILM] err: invalid user');
+			logger.warn('[UNVOTEFILM] err: invalid user');
 			return { error: 'invalid user' };
 		}
 		else if(storeManager.store.films[filmID].votedBy.indexOf(userID) < 0){
-			logger.silly('[UNVOTEFILM] err: already unvoted');
+			logger.warn('[UNVOTEFILM] err: already unvoted');
 			return { error: 'already unvoted' };
 		}
 		else {
@@ -229,7 +230,7 @@ const handlers = {
 
 	[ACTIONS.GETFILMVOTED]: ({ userID }) => {
 		if (!storeManager.store.users[userID]) {
-			logger.silly('[GETFILMVOTED] err: invalid user');
+			logger.warn('[GETFILMVOTED] err: invalid user');
 			return { error: 'invalid user' };
 		}
 		else {
@@ -244,7 +245,7 @@ const handlers = {
 					RetObj[film.id] = false;
 				}
 			})
-			logger.silly('[GETFILMVOTED] Got list of voted films');
+			logger.debug('[GETFILMVOTED] Got list of voted films');
 			return RetObj;
 		}
 	}
@@ -280,90 +281,5 @@ router.get('/close-poll', (req, res) => {
 		success: 'closed the poll'
 	});
 });
-
-/*
-router.post('/film/add', (req, res) => {
-
-	let { filmID, userID, addedOn, external, name } = req.body;
-
-	if (storeManager.store.films[filmID]) {
-		res.status(410).json('film already present!')
-	}
-	else {
-
-		// Creating the film
-		storeManager.store.films[filmID] = {
-			id: filmID,
-			addedBy: userID,
-			addedOn: addedOn || moment().format('YYYY/MM/DD HH:mm'),
-			votedBy: { },
-			seen: "False",
-		};
-
-		// Adding additional field if not external
-		if (!external) {
-			axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?language=it-IT&api_key=${ API_KEYS.tmdb }`)
-				.then(req => {
-					// retrive name and image and save the store to disk
-					storeManager.store.films[filmID].title = req.data.title;
-					storeManager.store.films[filmID].image = req.data.poster_path ? req.data.poster_path : 'https://via.placeholder.com/200x350';
-					storeManager.saveStore();
-					res.sendStatus(200);
-				})
-				.catch(err => {
-					console.log('Error during request for "' + filmID + '" provided by user ' + userID);
-					console.log(err);
-					res.sendStatus(500);
-				});
-		}
-		else {
-			// adds the name passed by the user and saves the store to disk
-			storeManager.store.films[filmID].title = title;
-			storeManager.saveStore();
-		}
-	}
-});
-
-router.post('/film/vote', (req, res) => {
-	let { filmID, userID } = req.body;
-
-	// if one is not present return 404
-	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
-		res.sendStatus(404);
-	}
-	else {
-		let film = storeManager.store.films[filmID];
-		let user = storeManager.store.users[userID];
-		
-		film.votedBy[userID] = 1;
-		user.votedFilms[filmID] = 1;
-
-		storeManager.saveStore();
-
-		res.sendStatus(200);
-	}
-});
-
-router.post('/film/unvote', (req, res) => {
-	let { filmID, userID } = req.body;
-
-	
-	// if one is not present return 404
-	if (!storeManager.store.films[filmID] || !storeManager.store.users[userID]) {
-		res.sendStatus(404);
-	}
-	else {
-		let film = storeManager.store.films[filmID];
-		let user = storeManager.store.users[userID];
-		
-		delete film.votedBy[userID];
-		delete user.votedFilms[filmID];
-		
-		storeManager.saveStore();
-
-		res.sendStatus(200);
-	}
-})
-*/
 
 module.exports = router;

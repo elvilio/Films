@@ -70,7 +70,7 @@ x A Knight's tale
 x La La Land
 x Shawshank redemption
 x The hateful eight
-? Communism - a love story (è un libro)
+? Capitalism - a love story (è un libro)
 x Bowling a Columbine ---------
 x American psycho
 x Gangs of New York
@@ -89,4 +89,3 @@ x World of Tomorrow
 x Requiem for a dream
 x Three billboards outside Ebbing
 x Arrival
-
