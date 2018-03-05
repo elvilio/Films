@@ -47,6 +47,8 @@ const app = new Vue({
 				filmID: film.id,
 				userID: this.username
 			});
+			var element = document.getElementById(film.id);
+			element.innerHTML = parseInt(element.innerHTML) + 1;
 		},
 		async unvotafilm(film) {
 			await axios.post('/api', {
@@ -54,6 +56,8 @@ const app = new Vue({
 				filmID: film.id,
 				userID: this.username
 			});
+			var element = document.getElementById(film.id);
+			element.innerHTML = parseInt(element.innerHTML) - 1;
 		},
 		numberOfVotes(film) {
 			return film.votedBy.length.toString();

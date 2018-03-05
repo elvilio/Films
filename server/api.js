@@ -185,22 +185,21 @@ const handlers = {
 			storeManager.saveStore();
 		}
 	},
-	[ACTIONS.UNVOTEFILM]: (filmID, userID) => {
+	[ACTIONS.UNVOTEFILM]: ({filmID, userID}) => {
 		if (!storeManager.store.votableFilms.length) {
 			return { error: 'no poll open' };
 		}
 		else if (!storeManager.store.users[userID]) {
 			return { error: 'invalid user' };
 		}
+		else if(storeManager.store.films[filmID].votedBy.indexOf(userID) < 0){
+			return { error: 'already unvoted' };
+		}
 		else {
-			var index = storeManager.store.films[filmID].votedBy.indexOf(userID);
-			if (index >= 0){
-				storeManager.store.films[filmID].votedBy = storeManager.store.films[filmID].votedBy.splice(index, 1);
-				storeManager.saveStore();
-			}
-			else {
-				return { error: 'already unvoted' };
-			}
+			var rObj = storeManager.store.films[filmID];
+			rObj.votedBy = rObj.votedBy.filter(item => item !== userID);
+
+			storeManager.saveStore();
 		}
 	},
 }

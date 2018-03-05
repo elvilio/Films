@@ -63,11 +63,11 @@
 				<div class="title" :title="film.overview">
 					<div class="votableFilms">
 						<h3 class="left">{{film.title}}</h3>
-						<h3 class="right">{{numberOfVotes(film)}}</h3>
+						<h3 :id="film.id" class="right">{{numberOfVotes(film)}}</h3>
 					</div>
 				</div>
 				<div class="voting" v-if="username">
-					<button v-if="" @click="votafilm(film)">Vota?</button> <!-- e qui non so come andare avanti -->
+					<button v-if="film.votedBy.indexOf(username)" @click="votafilm(film)">Vota?</button>
 					<button v-else @click="unvotafilm(film)">Unvota?</button>
 				</div>
 			</div>
