@@ -5,14 +5,16 @@ const app = new Vue({
 		username: '',
 		nextUp: null,
 		isadm: false,
+		switchVoting: [],
 	},
 	created() {
 		this.getJSONFilms();
 		this.getNextUp();
-		
+
 		this.username = localStorage.getItem('maquindi-films-username');
 
 		this.isAdmin();
+		this.getFilmVoted();
 	},
 	methods: {
 		async getJSONFilms() {
@@ -23,11 +25,51 @@ const app = new Vue({
 			let res = await axios.post('/api', { action: ACTIONS.GET_NEXTUP });
 			this.nextUp = res.data.nextUp;
 		},
-		async isAdmin() {
-			let res = await axios.post('/api', { action: ACTIONS.ISADMIN, userID: this.username });
-			console.log(res.data);
-			this.isadm = res.data;
+		async getFilmVoted() {
+			let res = await axios.post('/api', { action: ACTIONS.GETFILMVOTED, userID: this.username });
+			this.switchVoting = Object.values(res)[0];
 		},
+		async isAdmin() {
+			if(this.username != '') {
+				let res = await axios.post('/api', { action: ACTIONS.ISADMIN, userID: this.username });
+				this.isadm = res.data;
+			}
+			else {
+				this.isadm = false;
+			}
+		},
+		async newPoll(){
+			await axios.post('/api', { action: ACTIONS.CHOOSE_RANDOM_SET });
+			location.replace('/'); // bisognerebbe fare un update ma non so come
+		},
+		async closePoll() {
+			await axios.post('/api', { action: ACTIONS.CLOSE_POLL });
+			location.replace('/'); // perchè solo alcuni div devono cambiare non tutti
+			// e non voglio mettere l'intera lista dei 4 film nel data in modo da chiamare un watch
+		},
+		async votafilm(film) {
+			await axios.post('/api', {
+				action: ACTIONS.VOTEFILM,
+				filmID: film.id,
+				userID: this.username
+			});
+			var element = document.getElementById(film.id);
+			element.innerHTML = parseInt(element.innerHTML) + 1;
+			this.getFilmVoted();
+		},
+		async unvotafilm(film) {
+			await axios.post('/api', {
+				action: ACTIONS.UNVOTEFILM,
+				filmID: film.id,
+				userID: this.username
+			});
+			var element = document.getElementById(film.id);
+			element.innerHTML = parseInt(element.innerHTML) - 1;
+			this.getFilmVoted();
+		},
+		numberOfVotes(film) {
+			return film.votedBy.length.toString();
+		}
 	},
 	computed: {
 		sortedFilms () {
@@ -41,20 +83,6 @@ const app = new Vue({
 		},
 		sortedFilmsToVote () {
 			return this.sortedFilms.filter(film => film.votingOpen);
-		},
-		async votafilm(film) {
-			try {
-				; /* to do */
-			} catch (e) {
-				console.log(e);
-			}
-		},
-		async unvotafilm(film) {
-			try {
-				; /* to do */
-			} catch (e) {
-				console.log(e);
-			}
 		},
 	}
 });
