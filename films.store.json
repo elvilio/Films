@@ -407,6 +407,15 @@
 			"votingOpen": false,
 			"nextUp": false
 		},
+		"19995": {
+			"filmID": 19995,
+			"addedBy": "aziis98",
+			"addedOn": "2018/03/05 22:07",
+			"votedBy": [],
+			"action": "ADD_FILM",
+			"title": "Avatar",
+			"image": "/44aaqZf0BfT5bdtIMFHgT5VYOCQ.jpg"
+		},
 		"22538": {
 			"id": 22538,
 			"addedBy": "everyone",
@@ -637,6 +646,15 @@
 			"seen": false,
 			"votingOpen": false,
 			"nextUp": false
+		},
+		"247845": {
+			"filmID": 247845,
+			"addedBy": "aziis98",
+			"addedOn": "2018/03/05 22:09",
+			"votedBy": [],
+			"action": "ADD_FILM",
+			"title": "La Grande Guerra Marziana",
+			"image": "/n1saih6oGqd6qGUe2BLLSHG4QVS.jpg"
 		},
 		"251516": {
 			"id": 251516,

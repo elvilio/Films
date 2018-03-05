@@ -27,7 +27,8 @@ const app = new Vue({
 		async aggiungi_film(film) {
 			try {
 				// TODO: Fixare qua
-				await axios.post('/api/film/add', {
+				await axios.post('/api', {
+					action: ACTIONS.ADD_FILM,
 					filmID: film.id,
 					userID: this.username,
 				});
