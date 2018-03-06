@@ -14,7 +14,6 @@ const app = new Vue({
 		this.username = localStorage.getItem('maquindi-films-username');
 
 		this.isAdmin();
-		this.getFilmVoted();
 	},
 	methods: {
 		async getJSONFilms() {
@@ -24,10 +23,6 @@ const app = new Vue({
 		async getNextUp() {
 			let res = await axios.post('/api', { action: ACTIONS.GET_NEXTUP });
 			this.nextUp = res.data.nextUp;
-		},
-		async getFilmVoted() {
-			let res = await axios.post('/api', { action: ACTIONS.GETFILMVOTED, userID: this.username });
-			this.switchVoting = Object.values(res)[0];
 		},
 		async isAdmin() {
 			if(this.username != '') {
@@ -57,9 +52,8 @@ const app = new Vue({
 				filmID: film.id,
 				userID: this.username
 			});
-			var element = document.getElementById(film.id);
-			element.innerHTML = parseInt(element.innerHTML) + 1;
-			this.getFilmVoted();
+			// Ok, questo si può ottimizzare
+			this.getJSONFilms();
 		},
 		async unvotafilm(film) {
 			await axios.post('/api', {
@@ -67,12 +61,8 @@ const app = new Vue({
 				filmID: film.id,
 				userID: this.username
 			});
-			var element = document.getElementById(film.id);
-			element.innerHTML = parseInt(element.innerHTML) - 1;
-			this.getFilmVoted();
-		},
-		numberOfVotes(film) {
-			return film.votedBy.length.toString();
+			// Ok, questo si può ottimizzare
+			this.getJSONFilms();
 		}
 	},
 	computed: {
@@ -87,6 +77,9 @@ const app = new Vue({
 		},
 		sortedFilmsToVote () {
 			return this.sortedFilms.filter(film => film.votingOpen);
+		},
+		votedFilms () {
+			return this.sortedFilmsToVote.filter(film => film.votedBy.includes(this.username)).map(film => film.id)
 		},
 	}
 });

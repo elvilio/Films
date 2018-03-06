@@ -64,7 +64,7 @@ typings/
 .env
 
 # Database Store File
-# *.store.json
+*.store.json
 
 # End of https://www.gitignore.io/api/web,node
 
