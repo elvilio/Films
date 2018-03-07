@@ -19,13 +19,18 @@
 	<div class="img2" id="img2" background="./photos/w2@small.jpg"></div>
 
 	<main id="app" class="column">
-		<div class="nav row"> <!-- menu -->
-			<div class="nav-item active"><a href="#"><div>Home</div></a></div>
 
+		<!-- Nav Bar -->
+		<div class="nav row">
+			<!-- Home -->
+			<div class="nav-item active">
+				<a href="#"><div>Home</div></a>
+			</div>
+			<!-- Add New -->
 			<div class="nav-item" v-if="username">
 				<a href="/addfilm"><div>Add New</div></a>
 			</div>
-			
+			<!-- Login -->
 			<div class="nav-item">
 				<a href="/login">
 					<div v-if="!username">Login</div>
@@ -34,64 +39,64 @@
 			</div>
 		</div>
 
-		<!-- per admin e basta:
-		1) stoppare la sessione di voto
-		2) ripescare 4 film da votare (in teoria da non utilizzare mai) -->
+		<!-- Sezione | Admin -->
+		<section class="admin" v-if="isadm">
+			<h2>Sezione Admin</h2>
+			<div class="row">
+				<button @click="newPoll">New Poll</button>
+				<button @click="closePoll">Close Poll</button>
+			</div>
+		</section>
 
-		<div class="row" v-if="isadm">
-			<button @click="closePoll">Close Poll</button>
-			<button @click="newPoll">New Poll</button>
-		</div>
-
-		<div class="column"  v-if="nextUp !== null"> <!-- film vincitore della votazione -->
-			<div class="film-list winner">
-				<h1>Vincitore:</h1>
-				<div class="film">
+		<!-- Sezione | Vincitore -->
+		<section class="winner" v-if="nextUp !== null">
+			<h1>Vincitore</h1>
+			<div class="film-list">
+				<div class="film simple">
 					<img :src="'http://image.tmdb.org/t/p/w200' + films[nextUp].image" alt="" title="Poster">
-					<div class="title" :title="films[nextUp].overview">
-						<h3>{{films[nextUp].title}}</h3>
-					</div>
+					<h3 class="title">{{films[nextUp].title}}</h3>
 				</div>
 			</div>
-		</div>
+		</section>
 		
-
-		<h1 v-if="sortedFilmsToVote.length > 0">Film da votare</h1>
-		<div class="film-list column" v-if="sortedFilmsToVote.length > 0"> <!-- film che si possono votare -->
-			<div class="film" v-for="film in sortedFilmsToVote">
-				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
-				<div class="title" :title="film.overview">
-					<div class="votableFilms">
-						<h3 class="left">{{film.title}}</h3>
-						<h3 :id="film.id" class="right">{{numberOfVotes(film)}}</h3>
+		<!-- Sezione | Votaggio -->
+		<section class="voting" v-if="sortedFilmsToVote.length > 0">
+			<h1>Film da votare</h1>
+			<div class="film-list">
+				<div class="film votable" v-for="film in sortedFilmsToVote">	
+					<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
+					<h3 class="title">{{film.title}}</h3>
+					<div class="votes">{{film.votedBy.length}} {{film.votedBy.length == 1 ? 'voto' : 'voti'}} per ora</div>
+					<div class="voting" v-if="username">
+						<button v-if="!film.votedBy.includes(username)" @click="votafilm(film)">Vota</button>
+						<button v-else @click="unvotafilm(film)">Unvota</button>
 					</div>
 				</div>
-				<div class="voting" v-if="username">
-					<button v-if="!switchVoting[film.id]" @click="votafilm(film)">Vota?</button>
-					<button v-else @click="unvotafilm(film)">Unvota?</button>
-				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class="film-list column">
+		<!-- Sezione | Liste dei film -->
+		<section class="lists">
+			<!-- Film da vedere -->
 			<h2>Film in lista</h2>
-			<div class="film" v-for="film in sortedFilmsNotSeen"> <!-- film che sono in lista -->
-				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
-				<div class="title" :title="film.overview">
-					<h3>{{film.title}}</h3>
+			<div class="film-list">
+				<div class="film simple" v-for="film in sortedFilmsNotSeen">
+					<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
+					<h3 class="title">{{film.title}}</h3>
 				</div>
 			</div>
-
+	
 			<div class="divider"></div>
 
+			<!-- Film già visti -->
 			<h2>Film già visti</h2>
-			<div class="film" v-for="film in sortedFilmsSeen">  <!-- film che sono già stati visti -->
-				<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
-				<div class="title" :title="film.overview">
-					<h3>{{film.title}}</h3>
+			<div class="film-list">
+				<div class="film simple" v-for="film in sortedFilmsSeen">
+					<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
+					<h3 class="title">{{film.title}}</h3>
 				</div>
 			</div>
-		</div>
+		</section>
 	</main>
 
 

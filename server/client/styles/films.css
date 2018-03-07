@@ -1,19 +1,41 @@
+
+/* ------------- */
+
+section.admin .row {
+	margin-top: 2em;
+}
+
+/* ------------- */
+
 .film-list {
-	background-color: #FFFFFF88;
-	padding: 50px;
-	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	margin-top: 3em;
 }
 
 .film {
 	display: grid;
-	grid-template-rows: 100px;
-	grid-template-columns: 100px auto 150px;
-	grid-template-areas:
-		"img title voting";
-	width: 100%;
-	height: 100px;
 
+	width: 100%;
 	margin-bottom: 10px;
+}
+
+.film.simple {
+	grid-template-rows: 100px;
+	grid-template-columns: 80px auto;
+	grid-template-areas: 
+		"img title";
+}
+
+.film.votable {
+	grid-template-rows: auto 20px 50px;
+	grid-template-columns: 80px 5px auto 120px;
+	grid-template-areas: 
+		"img . title buttons"
+		"img . votes ."
+		"img . . .";
 }
 
 .film img {
@@ -23,55 +45,58 @@
 
 .film .title {
 	grid-area: title;
+	text-align: left !important;
+}
 
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-
-	width: 100%;
-	height: 100%;
+.film .votes {
+	grid-area: votes;
+	font-size: 1em;
 }
 
 .film .voting {
-	grid-area: voting;
-	width: 100%;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	
-}
-
-.winner {
-	background-color: #08BB2E30;
-	color: #08BB2E;
-}
-
-.winner h1 {
-	text-align: center;
+	grid-area: buttons;
+	justify-self: end;
 }
 
 .divider {
 	height: 50px;
 	width: calc(100% + 100px);
+	transform: translateX(-50px);
 	background-color: #FFFFFF20;
+	margin: 3em 0;
 }
 
-.votableFilms {
-	width: 100%;
-	height: 100%;
-	display: grid;
-	grid-template-columns: auto 20px auto;
-	grid-template-areas:
-		"lft . rght";
-	align-items: center;
+@media only screen and (max-width: 768px) {
+
+
+	.film.votable {
+		grid-template-rows: auto 30px auto 45px 5px;
+		grid-template-columns: 100px 10px auto;
+		grid-template-areas: 
+			"img . title"
+			"img . votes"
+			"img . ."
+			"img . buttons"
+			"img . .";
+	}
+
+	.film.votable img {
+		width: 100%;
+		height: unset;
+	}
+
+	.film .voting {
+		width: 100%;
+		justify-self: stretch;
+	}
+
+	.film .voting button {
+		width: 100%;
+	}
+
+	.divider {
+		width: calc(100% + 20px);
+		transform: translateX(-10px);
+	}
 }
 
-.left {
-	grid-area: lft;
-}
-
-.right {
-	grid-area: rght;
-	justify-self: right;
-}
