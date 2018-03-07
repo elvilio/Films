@@ -35,14 +35,11 @@ const app = new Vue({
 		},
 		async newPoll(){
 			await axios.post('/api', { action: ACTIONS.CHOOSE_RANDOM_SET });
-			// location.replace('/'); // bisognerebbe fare un update ma non so come			
 			this.getJSONFilms();
 			this.getNextUp();
 		},
 		async closePoll() {
 			await axios.post('/api', { action: ACTIONS.CLOSE_POLL });
-			// location.replace('/'); // perchè solo alcuni div devono cambiare non tutti
-			// e non voglio mettere l'intera lista dei 4 film nel data in modo da chiamare un watch
 			this.getJSONFilms();
 			this.getNextUp();
 		},
