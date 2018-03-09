@@ -53,7 +53,9 @@
 			<h1>Vincitore</h1>
 			<div class="film-list">
 				<div class="film simple">
-					<img :src="'http://image.tmdb.org/t/p/w200' + films[nextUp].image" alt="" title="Poster">
+					<a :href="getfilm_imdb(film.id)">
+						<img :src="'http://image.tmdb.org/t/p/w200' + films[nextUp].image" alt="" :title="film.title">
+					</a>
 					<h3 class="title">{{films[nextUp].title}}</h3>
 				</div>
 			</div>
@@ -63,8 +65,10 @@
 		<section class="voting" v-if="sortedFilmsToVote.length > 0">
 			<h1>Film da votare</h1>
 			<div class="film-list">
-				<div class="film votable" v-for="film in sortedFilmsToVote">	
-					<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
+				<div class="film votable" v-for="film in sortedFilmsToVote">
+					<a :href="getfilm_imdb(film.id)">
+						<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" :title="film.title">
+					</a>	
 					<h3 class="title">{{film.title}}</h3>
 					<div class="votes">{{film.votedBy.length}} {{film.votedBy.length == 1 ? 'voto' : 'voti'}} per ora</div>
 					<div class="voting" v-if="username">
@@ -81,7 +85,7 @@
 			<h2>Film in lista</h2>
 			<div class="film-list">
 				<div class="film simple" v-for="film in sortedFilmsNotSeen">
-					<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
+					<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" :title="film.title">
 					<h3 class="title">{{film.title}}</h3>
 				</div>
 			</div>
@@ -92,7 +96,7 @@
 			<h2>Film già visti</h2>
 			<div class="film-list">
 				<div class="film simple" v-for="film in sortedFilmsSeen">
-					<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" title="Poster">
+					<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" :title="film.title">
 					<h3 class="title">{{film.title}}</h3>
 				</div>
 			</div>

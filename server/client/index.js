@@ -60,6 +60,13 @@ const app = new Vue({
 			});
 			// Ok, questo si può ottimizzare
 			this.getJSONFilms();
+		},
+		async getfilm_imdb (film) {
+			let variable = await axios.post('/api', {
+				action: ACTIONS.GETFILM_IMDB,
+				filmID: film.id,
+			});
+			return variable;
 		}
 	},
 	computed: {
@@ -77,6 +84,6 @@ const app = new Vue({
 		},
 		votedFilms () {
 			return this.sortedFilmsToVote.filter(film => film.votedBy.includes(this.username)).map(film => film.id)
-		},
+		}
 	}
 });
