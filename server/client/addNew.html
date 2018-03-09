@@ -33,35 +33,45 @@
 			</div>
 		</div>
 
-		<h1>Add new film</h1>
 		
-		<div class="container column">
-			<p>Cerca nuovi film da aggiungere</p>
+		<section class="searching">
+			<h1>Aggiungi nuovo film</h1>
 			
-			<div class="row search">
+			<!-- Ricerca di film -->
+			<p>Cerca nuovi film da aggiungere</p>
+			<div class="row">
 				<input type="text" v-model="search" @keyup.enter="searchFilm">
 				<button @click="searchFilm">Cerca</button>
 			</div>
 
-			<div v-if="tmdbResults.length > 0">
-				<h2>Risultati</h2>
-				<div class="results">
-					<div class="film" v-for="film in tmdbResults">
-						<div class="poster">
-							<img :src="film.poster_path ? 'http://image.tmdb.org/t/p/w200' + film.poster_path : 'https://via.placeholder.com/120x180'" alt="" title="Poster">
-						</div>
-						<h3>
-							{{ film.original_title }}
-							<span v-if="film.original_title !== film.title"> | {{ film.title }}</span>
-							({{film.release_date.split('-')[0]}})
-						</h3>
-						<p>{{ film.overview }}</p>
-						<button v-if="!film.added" @click="aggiungi_film(film)">aggiungi</button>
-						<div v-else class="button disabled">aggiunto</div>
+			<!-- Risultati -->
+			<h2 v-if="tmdbResults.length > 0">Risultati</h2>
+			<div class="column" v-if="tmdbResults.length > 0">
+				<!-- Lista dei film -->
+				<div class="film" v-for="film in tmdbResults">
+					<!-- Poster -->
+					<div class="poster">
+						<img :src="film.poster_path ? 'http://image.tmdb.org/t/p/w200' + film.poster_path : 'https://via.placeholder.com/120x180'" alt="" title="Poster">
 					</div>
+					<!-- Titolo -->
+					<h3>
+						{{ film.original_title }}
+						<span v-if="film.original_title !== film.title"> | {{ film.title }}</span>
+						({{film.release_date.split('-')[0]}})
+					</h3>
+					<!-- Descrizione -->
+					<p>
+						{{ film.overview.length < 400 ?
+							film.overview : film.overview.substring(0, 400) + '...'
+						}}
+					</p>
+					<!-- Pulsanti -->
+					<button v-if="!film.added" @click="aggiungi_film(film)">aggiungi</button>
+					<div v-else class="button disabled">aggiunto</div>
 				</div>
 			</div>
-		</div>
+	
+		</section>
 	</main>
 
 	<!-- VueJS & Axios -->

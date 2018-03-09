@@ -13,6 +13,7 @@ section.admin .row {
 	align-items: center;
 
 	margin-top: 3em;
+	width: 100%;
 }
 
 .film {
@@ -30,7 +31,7 @@ section.admin .row {
 }
 
 .film.votable {
-	grid-template-rows: auto 20px 50px;
+	grid-template-rows: 50px 20px 50px;
 	grid-template-columns: 80px 5px auto 120px;
 	grid-template-areas: 
 		"img . title buttons"
@@ -58,10 +59,13 @@ section.admin .row {
 	justify-self: end;
 }
 
+section.admin > .row {
+	width: 100%;
+}
+
 .divider {
 	height: 50px;
 	width: calc(100% + 100px);
-	transform: translateX(-50px);
 	background-color: #FFFFFF20;
 	margin: 3em 0;
 }
@@ -86,17 +90,11 @@ section.admin .row {
 	}
 
 	.film .voting {
-		width: 100%;
-		justify-self: stretch;
-	}
-
-	.film .voting button {
-		width: 100%;
+		justify-self: end;
 	}
 
 	.divider {
 		width: calc(100% + 20px);
-		transform: translateX(-10px);
 	}
 }
 

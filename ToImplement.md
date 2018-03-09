@@ -24,7 +24,7 @@
 
 
 ## nuove cose da fare
-- [ ] trovare il modo di mettere "..." quando il testo è troppo lungo in AddFilm. (Mi veniva in mente di utilizzare "text-overflow: ellipsis;" nel css e cacolare dinamicamente la dimensione del \<p>)
-- [ ] in AddFilm quando cerchi robe la barra del testo si sposta a sinistra
+- [x] trovare il modo di mettere "..." quando il testo è troppo lungo in AddFilm. (Mi veniva in mente di utilizzare "text-overflow: ellipsis;" nel css e cacolare dinamicamente la dimensione del \<p>)
+- [x] in AddFilm quando cerchi robe la barra del testo si sposta a sinistra
 - [ ] in Home il testo, se lo schermo è troppo grande e quindi le immagini sono grandi, finisce sopra le immagini. (nella sezione dei film da votare)
 - [ ] gli \<h3> sono tutti messi male, cioè allineati a sinistra e in alto, mentre dovrebbero essere centrati sulla verticale (sulle y) (nella sezione dei film che si vedranno e che si sono già visti)
