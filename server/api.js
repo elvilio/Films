@@ -108,7 +108,7 @@ const handlers = {
 		return user && user.Admin; // poi cerchiamo di farelo diventare 'admin' invece di 'Admin' per coerenza
 	},
 
-	[ACTIONS.CHOOSE_RANDOM_SET]: () => {
+	[ACTIONS.CHOOSE_RANDOM_SET]: ({ userID }) => {
 		if (!storeManager.store.users[userID]) {
 			logger.warn('[CHOOSE_RANDOM_SET] err: invalid user');
 			return { error: 'invalid user' };
@@ -136,7 +136,7 @@ const handlers = {
 			film.votedBy = [];
 
 			storeManager.store.votableFilms.push(film.id);
-			logger.debug('[CHOOSE_RANDOM_SET] Chosen ' + film.id);
+			logger.debug('[CHOOSE_RANDOM_SET] Chosen ' + film.id + ' (' + film.title + ')');
 		});
 
 		storeManager.saveStore();
@@ -249,23 +249,20 @@ const handlers = {
 			return { error: 'invalid user' };
 		}
 		else {
-			// (?) Ma questo non è proprio:
-			// 	storeManager.store.votableFilms.map(filmID => storeManager.store.films[filmID])
-
-			/* possibile ma ho paura di cambiare troppo che non so come funziona node */
-			var InObj = Object.values(storeManager.store.films).filter(film => film.votingOpen);
-			var RetObj = {};
-			InObj.map(function (film){
-				var bool = film.votedBy.indexOf(userID);
-				if (bool >= 0){
-					RetObj[film.id] = true;
-				}
-				else {
-					RetObj[film.id] = false;
-				}
-			})
-			logger.debug('[GETFILMVOTED] Got list of voted films');
-			return RetObj;
+			var votableFilms = storeManager.store.votableFilms.map(filmID => storeManager.store.films[filmID]);
+			return _.fromPairs(votableFilms.map(film => [film.id, film.votedBy.includes(userID)]));
+			// var RetObj = {};
+			// votableFilms.map(function (film){
+			// 	var bool = film.votedBy.indexOf(userID);
+			// 	if (bool >= 0){
+			// 		RetObj[film.id] = true;
+			// 	}
+			// 	else {
+			// 		RetObj[film.id] = false;
+			// 	}
+			// })
+			// logger.debug('[GETFILMVOTED] Got list of voted films');
+			// return RetObj;
 		}
 	},
 }
@@ -275,7 +272,8 @@ router.post('/', (req, res) => {
 
 	if (handler) {
 		let result = handler(req.body);
-		logger.info('[' + req.body.action + ']');
+		// Visto che ce ne sono mille di cosi che loggano cose questo in effetti è superfluo
+		// logger.info('[' + req.body.action + ']');
 		res.json(result);
 	}
 	else {

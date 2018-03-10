@@ -25,6 +25,12 @@ const app = new Vue({
 		async getJSONFilms() {
 			let res = await axios.post('/api', { action: ACTIONS.GET_FILMS });
 			this.films = res.data;
+
+			Object.values(this.films).forEach(film => {
+				if (film.votingOpen || film.nextUp) {
+					this.populateFilm(film);
+				}
+			});
 		},
 		async getNextUp() {
 			let res = await axios.post('/api', { action: ACTIONS.GET_NEXTUP });
@@ -95,11 +101,7 @@ const app = new Vue({
 			return this.sortedFilms.filter(film => !film.seen);
 		},
 		sortedFilmsToVote () {
-			return this.sortedFilms.filter(film => film.votingOpen).map(film => {
-				// Poi aggiusto questa cosa cattiva
-				this.populateFilm(film);
-				return film;
-			});
+			return this.sortedFilms.filter(film => film.votingOpen);
 		},
 		votedFilms () {
 			return this.sortedFilmsToVote.filter(film => film.votedBy.includes(this.username)).map(film => film.id)

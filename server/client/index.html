@@ -53,8 +53,8 @@
 			<h1>Vincitore</h1>
 			<div class="film-list">
 				<div class="film simple">
-					<a :href="getfilm_imdb(film.id)">
-						<img :src="'http://image.tmdb.org/t/p/w200' + films[nextUp].image" alt="" :title="film.title">
+					<a :href="'https://www.imdb.com/title/' + films[nextUp].link + '/'" target="_blank">
+						<img :src="'http://image.tmdb.org/t/p/w200' + films[nextUp].image" alt="" :title="films[nextUp].title">
 					</a>
 					<h3 class="title">{{films[nextUp].title}}</h3>
 				</div>
