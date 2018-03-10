@@ -1,14 +1,15 @@
 :root{
-	--font_color: #221E22;
-	--active_nav: #ECA72C85;
-	--nav: #EE562285;
-	--main_background: #FFFFFF88;
+	--font_color: #180F10;
+	--active_nav: #E26D5C85;
+	--nav: #FFE1A885;
+	--main_background: #E4E5D188;
 	--text_shadow: #FFFFFF;
-	--input_background: #F7F4EE;
-	--button_background: #44355B;
-	--button_text: #FFFFFF;
-	--button_disabled: #685488;
-	--button_disabled_text: #B9A2DE;
+	--input_background: #FFFBF5;
+	--button: #723D46;
+	--button_text: #FFFBF5;
+	--button_disabled: #934F5A;
+	--button_disabled_text: #C9CBA3;
+	--button_hover: #472D30;
 }
 
 * {
@@ -148,7 +149,7 @@ input[type=text] {
 button, .button {
 	text-transform: uppercase;
 	outline: 0;
-	background: var(--button_background);
+	background: var(--button);
 
 	display: block;
 	height: 45px;
@@ -171,7 +172,7 @@ button, .button {
 }
 
 button:hover {
-	background: #422174;
+	background: var(--button_hover);
 }
 
 .row {
