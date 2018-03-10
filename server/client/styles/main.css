@@ -195,12 +195,20 @@ section .row, section .column {
 	}
 
 	.row {
-		/* grid-auto-flow: row; */
 		flex-direction: column;
+		width: 100%;
+	}
+
+	.row button, .row input {
+		width: 100%;
 	}
 
 	input[type=text] {
 		min-width: unset;
+	}
+
+	section .row, section .column {
+		margin-top: 1.5em;
 	}
 }
 
