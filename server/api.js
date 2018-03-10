@@ -10,7 +10,6 @@ const router = express.Router();
 
 const storeManager = require('./store.js');
 
-
 // Dipendenze cicliche a parte per ora è ok
 const logger = require('./index.js');
 
@@ -56,6 +55,7 @@ const handlers = {
 			}
 
 			if (!external) {
+				// Richiede le altre informazioni sul film al registo di tmdb
 				axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?language=it-IT&api_key=${ API_KEYS.tmdb }`)
 					.then(req => {
 						// retrive name and image and save the store to disk
@@ -105,10 +105,12 @@ const handlers = {
 	[ACTIONS.ISADMIN]: ({ userID, auth }) => {
 		let user = storeManager.store.users[userID];
 		logger.silly('[ISADMIN] Checked for admin');
-		return user && user.Admin;
+		return user && user.Admin; // poi cerchiamo di farelo diventare 'admin' invece di 'Admin' per coerenza
 	},
 
 	[ACTIONS.CHOOSE_RANDOM_SET]: () => {
+
+		// TODO: Controllare se è un admin a fare questa cosa
 
 		storeManager.store.votableFilms = [];
 		storeManager.store.nextUp = null;
@@ -136,6 +138,8 @@ const handlers = {
 	},
 
 	[ACTIONS.CLOSE_POLL]: () => {
+
+		// TODO: Controllare se è un admin a fare questa cosa
 		
 		if (!storeManager.store.votableFilms.length) {
 			logger.warn('[CLOSE_POLL] err: no poll open');
@@ -252,30 +256,35 @@ const handlers = {
 		}
 	},
 
-	[ACTIONS.GETFILM_IMDB]: ({ filmID }) => {
-		if(storeManager.store.films[filmID]) {
-			logger.warn('[GETFILM_IMDB] err: film not present');
-			return { error: 'film not present' };
-		}
-		else {
-			axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?language=it-IT&api_key=${ API_KEYS.tmdb }`)
-			.then(req => {
-					let imdb_id = '';
-					if (req.data.imdb_id){
-						imdb_id = req.data.imdb_id;
-					}
-					else {
-						imdb_id = '';
-					}
-				})
-				.catch(err => {
-					logger.warn('[GETFILM_IMDB] Error during request for "' + filmID);
-					logger.warn(err);
-				});
-			logger.silly('[GETFILM_IMDB] Got Film imdb link of' + imdb_id);
-			return "https://www.imdb.com/title/" + imdb_id + "/";
-		}
-	}
+	// Pultroppo col sistema attuale questa cosa non si può fare
+
+	// [ACTIONS.GETFILM_IMDB]: ({ filmID }) => {
+	// 	if(storeManager.store.films[filmID]) {
+	// 		logger.warn('[GETFILM_IMDB] err: film not present');
+	// 		return { error: 'film not present' };
+	// 	}
+	// 	else {
+	// 		axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?language=it-IT&api_key=${ API_KEYS.tmdb }`)
+	// 			.then(req => {
+	
+	// Una volta che viene chiamata la Promise è già tardi per chiamare il return della funzione di fuori che intanto è già finita.
+
+	// 				let imdb_id = '';
+	// 				if (req.data.imdb_id){
+	// 					imdb_id = req.data.imdb_id;
+	// 				}
+	// 				else {
+	// 					imdb_id = '';
+	// 				}
+	// 			})
+	// 			.catch(err => {
+	// 				logger.warn('[GETFILM_IMDB] Error during request for "' + filmID);
+	// 				logger.warn(err);
+	// 			});
+	// 		logger.silly('[GETFILM_IMDB] Got Film imdb link of' + imdb_id);
+	// 		return "https://www.imdb.com/title/" + imdb_id + "/";
+	// 	}
+	// }
 }
 
 router.post('/', (req, res) => {

@@ -48,7 +48,7 @@
 			</div>
 		</section>
 
-		<!-- Sezione | Vincitore -->
+		<!-- Sezione | Winner -->
 		<section class="winner" v-if="nextUp !== null">
 			<h1>Vincitore</h1>
 			<div class="film-list">
@@ -61,12 +61,12 @@
 			</div>
 		</section>
 		
-		<!-- Sezione | Votaggio -->
+		<!-- Sezione | Voting -->
 		<section class="voting" v-if="sortedFilmsToVote.length > 0">
 			<h1>Film da votare</h1>
 			<div class="film-list">
 				<div class="film votable" v-for="film in sortedFilmsToVote">
-					<a :href="getfilm_imdb(film.id)">
+					<a :href="'https://www.imdb.com/title/' + film.link + '/'" target="_blank">
 						<img :src="'http://image.tmdb.org/t/p/w200' + film.image" alt="" :title="film.title">
 					</a>	
 					<h3 class="title">{{film.title}}</h3>
@@ -79,7 +79,7 @@
 			</div>
 		</section>
 
-		<!-- Sezione | Liste dei film -->
+		<!-- Sezione | Film lists -->
 		<section class="lists">
 			<!-- Film da vedere -->
 			<h2>Film in lista</h2>
