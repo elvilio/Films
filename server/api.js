@@ -10,6 +10,7 @@ const router = express.Router();
 
 const storeManager = require('./store.js');
 
+
 // Dipendenze cicliche a parte per ora è ok
 const logger = require('./index.js');
 
@@ -64,7 +65,7 @@ const handlers = {
 						storeManager.saveStore();
 					})
 					.catch(err => {
-						logger.warn('Error during request for "' + filmID + '" provided by user ' + userID);
+						logger.warn('[ADD_FILM] Error during request for "' + filmID + '" provided by user ' + userID);
 						logger.warn(err);
 					});
 			}
@@ -249,13 +250,33 @@ const handlers = {
 			logger.debug('[GETFILMVOTED] Got list of voted films');
 			return RetObj;
 		}
+	},
+
+	[ACTIONS.GETFILM_IMDB]: ({ filmID }) => {
+		if(storeManager.store.films[filmID]) {
+			logger.warn('[GETFILM_IMDB] err: film not present');
+			return { error: 'film not present' };
+		}
+		else {
+			axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?language=it-IT&api_key=${ API_KEYS.tmdb }`)
+			.then(req => {
+					let imdb_id = '';
+					if (req.data.imdb_id){
+						imdb_id = req.data.imdb_id;
+					}
+					else {
+						imdb_id = '';
+					}
+				})
+				.catch(err => {
+					logger.warn('[GETFILM_IMDB] Error during request for "' + filmID);
+					logger.warn(err);
+				});
+			logger.silly('[GETFILM_IMDB] Got Film imdb link of' + imdb_id);
+			return "https://www.imdb.com/title/" + imdb_id + "/";
+		}
 	}
 }
-
-
-
-
-
 
 router.post('/', (req, res) => {
 	let handler = handlers[req.body.action];
@@ -271,24 +292,5 @@ router.post('/', (req, res) => {
 		throw 'No handler for "' + req.body.action + '"';
 	}
 });
-
-
-
-
-
-// Non credo servano più questi
-// router.get('/random-films', (req, res) => {
-// 	handlers[ACTIONS.CHOOSE_RANDOM_SET]();
-// 	res.json({
-// 		success: 'Selected 4 random films for the voting'
-// 	});
-// });
-
-// router.get('/close-poll', (req, res) => {
-// 	handlers[ACTIONS.CLOSE_POLL]();
-// 	res.json({
-// 		success: 'closed the poll'
-// 	});
-// });
 
 module.exports = router;
