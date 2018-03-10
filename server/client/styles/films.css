@@ -74,7 +74,7 @@ section.admin > .row {
 .divider {
 	height: 50px;
 	width: calc(100% + 100px);
-	background-color: var(--divider_background);
+	background-color: var(--divider-background);
 	margin: 3em 0;
 }
 
