@@ -1,3 +1,6 @@
+:root {
+	--divider_background: #FFFFFF20;
+}
 
 /* ------------- */
 
@@ -71,12 +74,11 @@ section.admin > .row {
 .divider {
 	height: 50px;
 	width: calc(100% + 100px);
-	background-color: #FFFFFF20;
+	background-color: var(--divider_background);
 	margin: 3em 0;
 }
 
 @media only screen and (max-width: 768px) {
-
 
 	.film.votable {
 		grid-template-rows: auto 30px auto 45px 5px;
@@ -102,4 +104,3 @@ section.admin > .row {
 		width: calc(100% + 20px);
 	}
 }
-

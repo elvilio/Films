@@ -109,8 +109,14 @@ const handlers = {
 	},
 
 	[ACTIONS.CHOOSE_RANDOM_SET]: () => {
-
-		// TODO: Controllare se è un admin a fare questa cosa
+		if (!storeManager.store.users[userID]) {
+			logger.warn('[CHOOSE_RANDOM_SET] err: invalid user');
+			return { error: 'invalid user' };
+		}
+		else if (!storeManager.store.users[userID].Admin) {
+			logger.warn('[CHOOSE_RANDOM_SET] err: invalid admin');
+			return { error: 'invalid admin' };
+		}
 
 		storeManager.store.votableFilms = [];
 		storeManager.store.nextUp = null;
@@ -137,11 +143,16 @@ const handlers = {
 		logger.info('[CHOOSE_RANDOM_SET] Chose 4 films');
 	},
 
-	[ACTIONS.CLOSE_POLL]: () => {
-
-		// TODO: Controllare se è un admin a fare questa cosa
-		
-		if (!storeManager.store.votableFilms.length) {
+	[ACTIONS.CLOSE_POLL]: ({ userID }) => {
+		if (!storeManager.store.users[userID]) {
+			logger.warn('[CLOSE_POLL] err: invalid user');
+			return { error: 'invalid user' };
+		}
+		else if (!storeManager.store.users[userID].Admin) {
+			logger.warn('[CLOSE_POLL] err: invalid admin');
+			return { error: 'invalid admin' };
+		}
+		else if (!storeManager.store.votableFilms.length) {
 			logger.warn('[CLOSE_POLL] err: no poll open');
 			return { error: 'no poll open' };
 		}
@@ -240,6 +251,8 @@ const handlers = {
 		else {
 			// (?) Ma questo non è proprio:
 			// 	storeManager.store.votableFilms.map(filmID => storeManager.store.films[filmID])
+
+			/* possibile ma ho paura di cambiare troppo che non so come funziona node */
 			var InObj = Object.values(storeManager.store.films).filter(film => film.votingOpen);
 			var RetObj = {};
 			InObj.map(function (film){
@@ -255,36 +268,6 @@ const handlers = {
 			return RetObj;
 		}
 	},
-
-	// Pultroppo col sistema attuale questa cosa non si può fare
-
-	// [ACTIONS.GETFILM_IMDB]: ({ filmID }) => {
-	// 	if(storeManager.store.films[filmID]) {
-	// 		logger.warn('[GETFILM_IMDB] err: film not present');
-	// 		return { error: 'film not present' };
-	// 	}
-	// 	else {
-	// 		axios.get(`https://api.themoviedb.org/3/movie/${ filmID }?language=it-IT&api_key=${ API_KEYS.tmdb }`)
-	// 			.then(req => {
-	
-	// Una volta che viene chiamata la Promise è già tardi per chiamare il return della funzione di fuori che intanto è già finita.
-
-	// 				let imdb_id = '';
-	// 				if (req.data.imdb_id){
-	// 					imdb_id = req.data.imdb_id;
-	// 				}
-	// 				else {
-	// 					imdb_id = '';
-	// 				}
-	// 			})
-	// 			.catch(err => {
-	// 				logger.warn('[GETFILM_IMDB] Error during request for "' + filmID);
-	// 				logger.warn(err);
-	// 			});
-	// 		logger.silly('[GETFILM_IMDB] Got Film imdb link of' + imdb_id);
-	// 		return "https://www.imdb.com/title/" + imdb_id + "/";
-	// 	}
-	// }
 }
 
 router.post('/', (req, res) => {

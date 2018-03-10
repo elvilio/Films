@@ -1,10 +1,24 @@
+:root{
+	--font_color: #221E22;
+	--active_nav: #ECA72C85;
+	--nav: #EE562285;
+	--main_background: #FFFFFF88;
+	--link_color: #221E22;
+	--text_shadow: white;
+	--input_background: #F7F4EE;
+	--button_background: #44355B;
+	--button_text: #FFFFFF;
+	--button_disabled: #685488;
+	--button_disabled_text: #B9A2DE;
+}
+
 * {
 	box-sizing: border-box;
 }
 
 html, body {
 	/* Monospace di riserva */
-	color: #221E22;
+	color: var(--font_color);
 	font-family: Menlo, Helvetica, 'Inconsolata', sans-serif;
 	font-size: 13px;
 
@@ -26,11 +40,11 @@ body {
 }
 
 .nav-item.active {
-	background-color: #ECA72C85;
+	background-color: var(--active_nav);
 }
 
 .nav-item {
-	background-color: #EE562285;
+	background-color: var(--nav);
 	width: 100%;
 	height: 40px;
 	font-size: 17px;
@@ -83,7 +97,7 @@ section {
 	flex-direction: column;
 	align-items: center;
 	
-	background-color: #FFFFFF88;
+	background-color: var(--main_background);
 	margin-bottom: 50px;
 	padding: 50px;
 	max-width: 900px;
@@ -91,11 +105,11 @@ section {
 
 a:link, a:visited {
 	text-decoration: none;
-	color: #221E22;
-}	
+	color: var(--link_color);
+}
 
 h1, h2, h3 {
-	text-shadow: 1px 2px 10px white;
+	text-shadow: 1px 2px 10px var(--text_shadow);
 	text-align: center;
 	margin: 0;
 }	
@@ -119,13 +133,12 @@ p {
 
 input[type=text] {
 	outline: 0;
-	background: #F7F4EE;
+	background: var(--input_background);
 	
 	min-width: 300px;
 	height: 45px;
 
 	border: 0;
-	/* margin: 0 0 15px; */
 	padding: 15px;
 	box-sizing: border-box;
 	font-size: 14px;
@@ -136,7 +149,7 @@ input[type=text] {
 button, .button {
 	text-transform: uppercase;
 	outline: 0;
-	background: #44355B;
+	background: var(--button_background);
 
 	display: block;
 	height: 45px;
@@ -144,7 +157,7 @@ button, .button {
 
 	border: 0;
 	padding: 15px 30px;
-	color: #FFFFFF;
+	color: var(--button_text);
 	font-size: 14px;
 	transition: all 0.3s ease;
 	cursor: pointer;
@@ -153,8 +166,8 @@ button, .button {
 }
 
 .button.disabled, button.disabled {
-	background: #685488;
-	color: #b9a2de;
+	background: var(--button_disabled);
+	color: var(--button_disabled_text);
 	cursor: not-allowed;
 }
 

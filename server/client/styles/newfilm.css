@@ -1,5 +1,10 @@
+:root {
+	--conteiner_background: rgba(255, 255, 255, 0.5);
+	--film_background: #000; /* trovare un colore migliore per questo bg */
+}
+
 .container {
-	background: rgba(255, 255, 255, 0.5);	
+	background: var(--conteiner_background);
 	max-width: 800px;
 	padding: 50px;
 	margin-bottom: 100px;
@@ -29,7 +34,7 @@
 	grid-area: img;
 	width: 100%;
 	height: 100%;
-	background: #000; /* trovare un colore migliore per questo bg */
+	background: var(--film_background);
 	display: flex;
 	align-items: center;
 }

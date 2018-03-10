@@ -42,12 +42,18 @@ const app = new Vue({
 		},
 		
 		async newPoll(){
-			await axios.post('/api', { action: ACTIONS.CHOOSE_RANDOM_SET });
+			await axios.post('/api', {
+				action: ACTIONS.CHOOSE_RANDOM_SET,
+				userID: this.username
+			});
 			this.getJSONFilms();
 			this.getNextUp();
 		},
 		async closePoll() {
-			await axios.post('/api', { action: ACTIONS.CLOSE_POLL });
+			await axios.post('/api', {
+				action: ACTIONS.CLOSE_POLL,
+				userID: this.username
+			});
 			this.getJSONFilms();
 			this.getNextUp();
 		},
@@ -74,7 +80,7 @@ const app = new Vue({
 		// Per ora credo che questa sia la cosa migliore
 		async populateFilm(film) {
 			let res = await axios.get(`https://api.themoviedb.org/3/movie/${ film.id }?language=it-IT&api_key=${ this.apikeys.tmdb }`);
-			// Non chiedere perché si fa così e non basta fare: film.link = res.data.imdb_id;
+			// Non chiedere perché si fa così e non basta fare: film.link = res.data.imdb_id
 			this.$set(film, 'link', res.data.imdb_id);
 		}
 	},

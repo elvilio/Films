@@ -21,7 +21,7 @@ if (fs.existsSync('./films.store.json')) {
 	loadStore();
 }
 else {
-	logger.warn('[Log] No store found, creating it');
+	logger.error('[Log] No store found, creating it');
 
 	store = {
 		films: {
