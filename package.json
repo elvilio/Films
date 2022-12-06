@@ -5,7 +5,7 @@
   "author": "aziis98 <antonio.delucreziis@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.2"
   },
   "scripts": {
     "dev:client": "http-server ./server/client",
@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "lodash": "^4.17.19",
     "moment": "^2.20.1",
     "ramda": "^0.25.0",
